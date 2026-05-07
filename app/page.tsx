@@ -1,11 +1,13 @@
 'use client'
 
+import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
 import Footer from "@/components/shared/Footer";
 import OrnamentalDivider from "@/components/shared/OrnamentalDivider";
 import SectionBreadcrumb from "@/components/shared/breadcrumb/SectionBreadcrumb";
 import LinkButton from "@/components/shared/button/LinkButton";
 import PublicNavbar from "@/components/shared/navbar/PublicNavbar";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { SELAR_URL } from "@/lib/constants/site";
+import { ArrowRight, ChevronDown, ShoppingBag } from "lucide-react";
 
 /* ─── Data ──────────────────────────────────────────────────────── */
 
@@ -107,7 +109,7 @@ export default function Home() {
 
         <div className="section-padding relative z-10 flex flex-col items-center text-center gap-8 pt-36 pb-20">
           {/* Pre-headline badge */}
-          <div className="flex items-center gap-3">
+          <div className="hidden sm:flex items-center gap-3 animate-fade-in-up">
             <div className="h-px w-8" style={{ background: "var(--gold)", opacity: 0.6 }} />
             <p
               className="font-cinzel text-xs tracking-[0.3em] uppercase"
@@ -120,8 +122,8 @@ export default function Home() {
 
           {/* Main headline */}
           <h1
-            className="font-cormorant font-light text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] max-w-4xl"
-            style={{ color: "var(--hero-foreground)" }}
+            className="font-cormorant font-light text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] max-w-4xl animate-fade-in-up"
+            style={{ color: "var(--hero-foreground)", animationDelay: "150ms" }}
           >
             She Who Is Restored in Her Identity{" "}
             <span className="italic" style={{ color: "var(--primary)" }}>
@@ -131,20 +133,24 @@ export default function Home() {
           </h1>
 
           {/* Ornament */}
-          <OrnamentalDivider theme="light" className="w-full max-w-sm" />
+          <div className="animate-fade-in-up w-full max-w-sm" style={{ animationDelay: "300ms" }}>
+            <OrnamentalDivider theme="light" className="w-full" />
+          </div>
 
           {/* Sub-headline */}
-          <p
-            className="text-lg sm:text-xl leading-relaxed max-w-2xl font-sans font-light"
-            style={{ color: "var(--hero-foreground)", opacity: 0.75 }}
-          >
-            I guide high-capacity women through the sacred, structured work of identity restoration,
-            trauma healing, and generational rebuilding — so they can lead their lives, their families,
-            and their legacies from a place of wholeness, not wounds.
-          </p>
+          <div className="animate-fade-in-up" style={{ animationDelay: "450ms" }}>
+            <p
+              className="text-lg sm:text-xl leading-relaxed max-w-2xl font-sans font-light"
+              style={{ color: "var(--hero-foreground)", opacity: 0.75 }}
+            >
+              I guide high-capacity women through the sacred, structured work of identity restoration,
+              trauma healing, and generational rebuilding — so they can lead their lives, their families,
+              and their legacies from a place of wholeness, not wounds.
+            </p>
+          </div>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
+          <div className="flex flex-col sm:flex-row items-center gap-4 mt-4 animate-fade-in-up" style={{ animationDelay: "600ms" }}>
             <LinkButton to="/inner-circle" variant="primary" size="lg" className="gap-3">
               Enter the Healing Harbour
               <ArrowRight size={16} />
@@ -155,7 +161,7 @@ export default function Home() {
           </div>
 
           {/* Scroll cue */}
-          <div className="mt-8 flex flex-col items-center gap-2 opacity-40">
+          <div className="mt-8 flex flex-col items-center gap-2 opacity-40 animate-fade-in-up" style={{ animationDelay: "750ms" }}>
             <span className="font-cinzel text-xs tracking-widest uppercase" style={{ color: "var(--gold)" }}>
               Scroll
             </span>
@@ -169,7 +175,7 @@ export default function Home() {
       ══════════════════════════════════════════════════ */}
       <section className="section-padding bg-secondary">
         <div className="max-w-5xl mx-auto flex flex-col gap-12">
-          <div className="flex flex-col gap-4 text-center">
+          <AnimateOnScroll animation="up" className="flex flex-col gap-4 text-center">
             <SectionBreadcrumb title="Is This You?" />
             <h2
               className="font-cormorant font-light text-4xl sm:text-5xl leading-tight"
@@ -180,7 +186,7 @@ export default function Home() {
             <p className="text-muted-foreground max-w-2xl mx-auto font-sans leading-relaxed">
               On the outside she is capable, accomplished, and moving — a professional, an entrepreneur, a leader, a builder. On the inside, something is unresolved.
             </p>
-          </div>
+          </AnimateOnScroll>
 
           <div className="grid sm:grid-cols-2 gap-6">
             {[
@@ -189,19 +195,20 @@ export default function Home() {
               "Burnout and misalignment — giving everything to her work, ministry, or family while running on empty inside",
               "The weight of being the woman who holds everything together, with no safe space to be held herself",
             ].map((pain, i) => (
-              <div
-                key={i}
-                className="flex gap-4 items-start p-6 bg-white rounded-sm border-l-2"
-                style={{ borderColor: "var(--primary)" }}
-              >
-                <span
-                  className="font-cinzel text-xs tracking-widest mt-0.5 shrink-0"
-                  style={{ color: "var(--gold)" }}
+              <AnimateOnScroll key={i} animation="up" delay={i * 100}>
+                <div
+                  className="flex gap-4 items-start p-6 bg-white rounded-sm border-l-2 h-full"
+                  style={{ borderColor: "var(--primary)" }}
                 >
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <p className="text-foreground/80 font-sans leading-relaxed text-sm">{pain}</p>
-              </div>
+                  <span
+                    className="font-cinzel text-xs tracking-widest mt-0.5 shrink-0"
+                    style={{ color: "var(--gold)" }}
+                  >
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <p className="text-foreground/80 font-sans leading-relaxed text-sm">{pain}</p>
+                </div>
+              </AnimateOnScroll>
             ))}
           </div>
 
@@ -224,7 +231,7 @@ export default function Home() {
       ══════════════════════════════════════════════════ */}
       <section className="section-padding bg-background">
         <div className="max-w-5xl mx-auto flex flex-col gap-12">
-          <div className="flex flex-col gap-4 text-center">
+          <AnimateOnScroll animation="up" className="flex flex-col gap-4 text-center">
             <SectionBreadcrumb title="What Changes" />
             <h2 className="font-cormorant font-light text-4xl sm:text-5xl leading-tight">
               The work is deep. The results are{" "}
@@ -232,21 +239,23 @@ export default function Home() {
                 generational.
               </span>
             </h2>
-          </div>
+          </AnimateOnScroll>
 
-          <div className="grid sm:grid-cols-3 gap-8">
-            {benefits.map((b) => (
-              <div key={b.number} className="flex flex-col gap-5 p-8 bg-secondary rounded-sm">
-                <span
-                  className="font-cinzel text-4xl font-light"
-                  style={{ color: "var(--gold)", opacity: 0.5 }}
-                >
-                  {b.number}
-                </span>
-                <div className="h-px w-8" style={{ background: "var(--primary)" }} />
-                <h3 className="font-cormorant text-2xl font-semibold">{b.title}</h3>
-                <p className="text-muted-foreground font-sans text-sm leading-relaxed">{b.body}</p>
-              </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((b, i) => (
+              <AnimateOnScroll key={b.number} animation="up" delay={i * 150}>
+                <div className="flex flex-col gap-5 p-8 bg-secondary rounded-sm h-full">
+                  <span
+                    className="font-cinzel text-4xl font-light"
+                    style={{ color: "var(--gold)", opacity: 0.5 }}
+                  >
+                    {b.number}
+                  </span>
+                  <div className="h-px w-8" style={{ background: "var(--primary)" }} />
+                  <h3 className="font-cormorant text-2xl font-semibold">{b.title}</h3>
+                  <p className="text-muted-foreground font-sans text-sm leading-relaxed">{b.body}</p>
+                </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>
@@ -267,7 +276,7 @@ export default function Home() {
           }}
         />
         <div className="max-w-5xl mx-auto flex flex-col gap-14 relative z-10">
-          <div className="flex flex-col gap-4">
+          <AnimateOnScroll animation="left" className="flex flex-col gap-4">
             <SectionBreadcrumb title="The Transformation Pathway" light align="left" />
             <h2
               className="font-cormorant font-light text-4xl sm:text-5xl leading-tight max-w-2xl"
@@ -278,12 +287,12 @@ export default function Home() {
                 Wholeness.
               </span>
             </h2>
-          </div>
+          </AnimateOnScroll>
 
           <div className="flex flex-col gap-0">
             {stages.map((stage, i) => (
+              <AnimateOnScroll key={stage.code} animation="up" delay={i * 80}>
               <div
-                key={stage.code}
                 className="group flex gap-6 sm:gap-10 items-start py-8 border-b last:border-b-0"
                 style={{ borderColor: "rgba(255,255,255,0.06)" }}
               >
@@ -319,13 +328,28 @@ export default function Home() {
                   </p>
                 </div>
               </div>
+              </AnimateOnScroll>
             ))}
           </div>
 
-          <LinkButton to="/transformation-pathway" variant="outlineGold" size="sm" className="self-start gap-3">
-            See the Full Pathway
-            <ArrowRight size={14} />
-          </LinkButton>
+          <AnimateOnScroll animation="up">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <LinkButton to="/transformation-pathway" variant="outlineGold" size="sm" className="gap-3">
+              See the Full Pathway
+              <ArrowRight size={14} />
+            </LinkButton>
+            <a
+              href={SELAR_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 font-cinzel text-xs tracking-widest uppercase px-4 py-2 border border-primary/50 text-primary hover:bg-primary hover:text-white transition-all duration-200"
+            >
+              <ShoppingBag size={12} />
+              Browse Courses
+              <ArrowRight size={12} />
+            </a>
+          </div>
+          </AnimateOnScroll>
         </div>
       </section>
 
@@ -333,8 +357,9 @@ export default function Home() {
           SECTION 5 — ABOUT SNIPPET
       ══════════════════════════════════════════════════ */}
       <section className="section-padding bg-background">
-        <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Placeholder for image */}
+          <AnimateOnScroll animation="left">
           <div
             className="w-full aspect-3/4 max-w-sm mx-auto lg:mx-0 rounded-sm flex items-end justify-center relative overflow-hidden"
             style={{ background: "var(--secondary)" }}
@@ -355,8 +380,10 @@ export default function Home() {
               <p className="section-label mt-2">Photo coming soon</p>
             </div>
           </div>
+          </AnimateOnScroll>
 
           {/* Text */}
+          <AnimateOnScroll animation="right">
           <div className="flex flex-col gap-7">
             <div>
               <SectionBreadcrumb title="About Lady Cyd" align="left" className="mb-3" />
@@ -393,6 +420,7 @@ export default function Home() {
               <ArrowRight size={14} />
             </LinkButton>
           </div>
+          </AnimateOnScroll>
         </div>
       </section>
 
@@ -412,10 +440,10 @@ export default function Home() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-8">
-            {testimonials.map((t) => (
+            {testimonials.map((t, i) => (
+              <AnimateOnScroll key={t.name} animation="scale" delay={i * 150}>
               <div
-                key={t.name}
-                className="flex flex-col gap-6 p-8 bg-white rounded-sm relative"
+                className="flex flex-col gap-6 p-8 bg-white rounded-sm relative h-full"
                 style={{ boxShadow: "0 2px 20px rgba(197,75,140,0.06)" }}
               >
                 <span
@@ -438,8 +466,7 @@ export default function Home() {
                     {t.name}
                   </span>
                 </div>
-              </div>
-            ))}
+              </div>              </AnimateOnScroll>            ))}
           </div>
         </div>
       </section>
@@ -458,7 +485,7 @@ export default function Home() {
               "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(197,75,140,0.14) 0%, transparent 70%)",
           }}
         />
-        <div className="max-w-3xl mx-auto flex flex-col items-center gap-8 text-center relative z-10">
+        <AnimateOnScroll animation="up" className="max-w-3xl mx-auto flex flex-col items-center gap-8 text-center relative z-10">
           <p
             className="font-great-vibes text-4xl sm:text-5xl"
             style={{ color: "var(--primary)" }}
@@ -510,7 +537,7 @@ export default function Home() {
             Enter the Healing Harbour
             <ArrowRight size={16} />
           </LinkButton>
-        </div>
+        </AnimateOnScroll>
       </section>
 
       <Footer />

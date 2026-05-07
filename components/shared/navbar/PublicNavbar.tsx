@@ -6,11 +6,13 @@ import Logo from '../Logo';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
+import { SELAR_URL } from '@/lib/constants/site';
 
 const navItems = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
   { label: 'Transformation', to: '/transformation-pathway' },
+  { label: 'Work With Me', to: '/work-with-me' },
   { label: 'Blog', to: '/blog' },
 ];
 
@@ -39,13 +41,13 @@ export default function PublicNavbar() {
         <Logo />
 
         {/* Desktop Links */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
           {navItems.map((item) => (
             <Link
               key={item.to}
               href={item.to}
               className={clsx(
-                'font-cinzel text-sm tracking-widest uppercase transition-colors duration-200',
+                'font-cinzel text-[11px] xl:text-sm tracking-[0.15em] xl:tracking-widest uppercase transition-colors duration-200',
                 location === item.to
                   ? 'text-gold'
                   : 'text-white/80 hover:text-gold'
@@ -54,13 +56,21 @@ export default function PublicNavbar() {
               {item.label}
             </Link>
           ))}
+          <a
+            href={SELAR_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-cinzel text-[11px] xl:text-sm tracking-[0.15em] xl:tracking-widest uppercase transition-colors duration-200 text-white/80 hover:text-gold"
+          >
+            Courses
+          </a>
         </nav>
 
         {/* CTA */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-4">
           <Link
             href="/inner-circle"
-            className="font-cinzel text-sm tracking-widest uppercase px-6 py-2.5 border border-gold text-gold hover:bg-gold hover:text-foreground transition-all duration-200 rounded-none"
+            className="font-cinzel text-[11px] xl:text-sm tracking-[0.15em] xl:tracking-widest uppercase px-4 xl:px-6 py-2.5 border border-gold text-gold hover:bg-gold hover:text-foreground transition-all duration-200 rounded-none"
           >
             Join Inner Circle
           </Link>
@@ -69,7 +79,7 @@ export default function PublicNavbar() {
         {/* Mobile Toggle */}
         <button
           onClick={() => setMobileOpen((prev) => !prev)}
-          className="md:hidden text-white"
+          className="lg:hidden text-white"
           aria-label="Toggle menu"
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -78,7 +88,7 @@ export default function PublicNavbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-hero-bg/98 backdrop-blur-md border-t border-white/10 px-6 py-6 flex flex-col gap-6">
+        <div className="lg:hidden bg-hero-bg/98 backdrop-blur-md border-t border-white/10 px-6 py-6 flex flex-col gap-6">
           {navItems.map((item) => (
             <Link
               key={item.to}
@@ -92,6 +102,15 @@ export default function PublicNavbar() {
               {item.label}
             </Link>
           ))}
+          <a
+            href={SELAR_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMobileOpen(false)}
+            className="font-cinzel text-sm tracking-widest uppercase transition-colors duration-200 text-white/80 hover:text-gold"
+          >
+            Courses
+          </a>
           <Link
             href="/inner-circle"
             onClick={() => setMobileOpen(false)}

@@ -1,31 +1,32 @@
 import Logo from "./Logo";
 import Link from "next/link";
 import { Instagram, Youtube } from "lucide-react";
+import { SELAR_URL } from "@/lib/constants/site";
 
 const footerNav = [
   {
     heading: "Explore",
     links: [
-      { name: "About Lady Cyd", href: "/about" },
-      { name: "Transformation Pathway", href: "/transformation-pathway" },
-      { name: "Blog & Teachings", href: "/blog" },
+      { name: "About Lady Cyd", href: "/about", external: false },
+      { name: "Transformation Pathway", href: "/transformation-pathway", external: false },
+      { name: "Blog & Teachings", href: "/blog", external: false },
     ],
   },
   {
     heading: "Work With Me",
     links: [
-      { name: "Healing Harbour Inner Circle", href: "/inner-circle" },
-      { name: "Coaching Programmes", href: "/inner-circle#programmes" },
-      { name: "Clarity Call", href: "/work-with-me" },
+      { name: "Healing Harbour Inner Circle", href: "/inner-circle", external: false },
+      { name: "Courses & Programmes", href: SELAR_URL, external: true },
+      { name: "Clarity Call", href: "/work-with-me", external: false },
     ],
   },
   {
     heading: "Legal",
     links: [
-      { name: "Privacy Policy", href: "/privacy-policy" },
-      { name: "Terms & Conditions", href: "/terms" },
-      { name: "Refund Policy", href: "/refund-policy" },
-      { name: "Intellectual Property", href: "/intellectual-property" },
+      { name: "Privacy Policy", href: "/privacy-policy", external: false },
+      { name: "Terms & Conditions", href: "/terms", external: false },
+      { name: "Refund Policy", href: "/refund-policy", external: false },
+      { name: "Intellectual Property", href: "/intellectual-property", external: false },
     ],
   },
 ];
@@ -40,7 +41,7 @@ function Footer() {
         <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gold to-transparent opacity-40" />
       </div>
 
-      <div className="section-padding flex flex-col gap-16">
+      <div className="section-padding flex flex-col gap-10 lg:gap-16">
         {/* Main content */}
         <div className="flex flex-col lg:flex-row gap-12 justify-between">
           {/* Brand column */}
@@ -83,7 +84,7 @@ function Footer() {
           </div>
 
           {/* Nav columns */}
-          <div className="flex flex-wrap gap-12 lg:gap-16">
+          <div className="flex flex-wrap gap-8 sm:gap-12 lg:gap-16">
             {footerNav.map((section) => (
               <div key={section.heading} className="flex flex-col gap-4 min-w-[140px]">
                 <span className="font-cinzel text-xs tracking-[0.2em] uppercase text-gold">
@@ -92,12 +93,23 @@ function Footer() {
                 <ul className="flex flex-col gap-2.5">
                   {section.links.map((link) => (
                     <li key={link.name}>
-                      <Link
-                        href={link.href}
-                        className="text-dark-section-foreground/60 text-sm hover:text-gold transition-colors duration-200"
-                      >
-                        {link.name}
-                      </Link>
+                      {link.external ? (
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-dark-section-foreground/60 text-sm hover:text-gold transition-colors duration-200"
+                        >
+                          {link.name}
+                        </a>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          className="text-dark-section-foreground/60 text-sm hover:text-gold transition-colors duration-200"
+                        >
+                          {link.name}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
