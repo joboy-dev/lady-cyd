@@ -4,6 +4,7 @@ import OrnamentalDivider from "@/components/shared/OrnamentalDivider";
 import SectionBreadcrumb from "@/components/shared/breadcrumb/SectionBreadcrumb";
 import LinkButton from "@/components/shared/button/LinkButton";
 import PublicNavbar from "@/components/shared/navbar/PublicNavbar";
+import RandomLadyCydImage from "@/components/shared/RandomLadyCydImage";
 import type { Metadata } from "next";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
@@ -144,34 +145,10 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Image placeholder side */}
+            {/* Image side */}
             <AnimateOnScroll animation="right" delay={200}>
-            <div
-              className="w-full max-w-sm lg:max-w-full aspect-3/4 relative overflow-hidden flex items-end justify-center mx-auto"
-              style={{
-                background:
-                  "linear-gradient(160deg, var(--dark-section) 0%, rgba(197,75,140,0.12) 100%)",
-                border: "1px solid rgba(201,168,76,0.15)",
-              }}
-            >
-              <div
-                className="absolute inset-0 pointer-events-none"
-                style={{
-                  background:
-                    "linear-gradient(to top, rgba(13,3,8,0.8) 0%, transparent 50%)",
-                }}
-              />
-              <div className="relative z-10 p-6 text-center mb-2">
-                <p className="font-great-vibes text-3xl" style={{ color: "var(--primary)" }}>
-                  Lady Cyd
-                </p>
-                <p
-                  className="font-cinzel text-xs tracking-widest uppercase mt-1"
-                  style={{ color: "var(--gold)", opacity: 0.5 }}
-                >
-                  Photo coming soon
-                </p>
-              </div>
+            <div className="w-full max-w-sm lg:max-w-full aspect-3/4 relative overflow-hidden mx-auto rounded-sm">
+              <RandomLadyCydImage />
             </div>
             </AnimateOnScroll>
           </div>

@@ -6,6 +6,7 @@ import OrnamentalDivider from "@/components/shared/OrnamentalDivider";
 import SectionBreadcrumb from "@/components/shared/breadcrumb/SectionBreadcrumb";
 import LinkButton from "@/components/shared/button/LinkButton";
 import PublicNavbar from "@/components/shared/navbar/PublicNavbar";
+import RandomLadyCydImage from "@/components/shared/RandomLadyCydImage";
 import { SELAR_URL } from "@/lib/constants/site";
 import { ArrowRight, ChevronDown, ShoppingBag } from "lucide-react";
 
@@ -358,27 +359,10 @@ export default function Home() {
       ══════════════════════════════════════════════════ */}
       <section className="section-padding bg-background">
         <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          {/* Placeholder for image */}
+          {/* Image */}
           <AnimateOnScroll animation="left">
-          <div
-            className="w-full aspect-3/4 max-w-sm mx-auto lg:mx-0 rounded-sm flex items-end justify-center relative overflow-hidden"
-            style={{ background: "var(--secondary)" }}
-          >
-            <div
-              className="absolute inset-0"
-              style={{
-                background: "linear-gradient(135deg, var(--secondary) 0%, rgba(197,75,140,0.1) 100%)",
-              }}
-            />
-            <div className="relative z-10 p-6 text-center">
-              <p
-                className="font-great-vibes text-3xl"
-                style={{ color: "var(--primary)" }}
-              >
-                Cyd Alex-Emenike
-              </p>
-              <p className="section-label mt-2">Photo coming soon</p>
-            </div>
+          <div className="w-full aspect-3/4 max-w-sm mx-auto lg:mx-0 rounded-sm overflow-hidden">
+            <RandomLadyCydImage />
           </div>
           </AnimateOnScroll>
 
