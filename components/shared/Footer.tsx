@@ -50,9 +50,12 @@ function Footer() {
             <p className="text-dark-section-foreground/70 text-sm leading-relaxed font-sans">
               Trauma-Informed Coach · Family Systems Strategist · Generational Restoration Guide.
             </p>
-            <p className="text-gold/80 text-xs font-cinzel tracking-widest uppercase">
+            <a
+              href="mailto:Hello@ladycyd.online"
+              className="text-gold/80 text-xs font-cinzel tracking-widest uppercase hover:text-gold transition-colors duration-200"
+            >
               Hello@ladycyd.online
-            </p>
+            </a>
             {/* Social links */}
             <div className="flex items-center gap-4 mt-2">
               <a

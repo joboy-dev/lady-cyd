@@ -11,9 +11,17 @@ import { ArrowRight, BookOpen } from "lucide-react";
 import Badge from "@/components/shared/Badge";
 
 export const metadata: Metadata = {
-  title: "The Journal | Lady Cyd",
+  title: "The Journal | Trauma Healing & Generational Patterns | Lady Cyd",
   description:
-    "Teachings, reflections, and honest writing from Lady Cyd on identity, healing, generational restoration, and what it means to lead your life from a place of wholeness.",
+    "Learn how to heal from family trauma, break generational cycles, and restore your identity. Trauma-informed teachings on identity crisis, healing childhood trauma, and Christian coaching for women by Lady Cyd.",
+  keywords: [
+    "how to break generational cycles",
+    "healing from family trauma",
+    "identity crisis coach",
+    "trauma healing for high-achieving women",
+    "how to heal from childhood family trauma as an adult",
+    "why do I keep repeating the same patterns in relationships",
+  ],
 };
 
 /* ─── Types ─────────────────────────────────────────────────────── */

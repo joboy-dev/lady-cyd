@@ -9,9 +9,17 @@ import type { Metadata } from "next";
 import { ArrowRight, CheckCircle2, Clock, MessageCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Apply for a Clarity Call | Lady Cyd",
+  title: "Apply for a Clarity Call | Private Coaching with Lady Cyd Nigeria",
   description:
-    "Apply for a private Clarity Call with Lady Cyd — the threshold where you and Lady Cyd discern together whether you are ready for the most intimate level of transformation work.",
+    "Apply for private 1:1 trauma-informed coaching with Lady Cyd. Identity restoration, family systems healing, and generational pattern work for high-achieving women in Nigeria and Africa. Christian Kingdom coaching.",
+  keywords: [
+    "trauma-informed coach Nigeria",
+    "private Christian life coach Africa",
+    "identity crisis coach",
+    "trauma healing for high-achieving women",
+    "family systems coach Africa",
+    "Kingdom coach for women",
+  ],
 };
 
 /* ─── Data ───────────────────────────────────────────────────────── */

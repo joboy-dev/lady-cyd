@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import { Cormorant_Garamond, Cinzel, DM_Sans, Great_Vibes } from "next/font/google";
+import StructuredData from "@/components/shared/StructuredData";
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
@@ -32,18 +33,30 @@ const greatVibes = Great_Vibes({
 });
 
 export const metadata: Metadata = {
-  title: "Cyd Alex-Emenike — Trauma-Informed Coach & Generational Restoration Guide",
+  title: "Lady Cyd — Trauma-Informed Coach Nigeria | Christian Life Coach Africa",
   description:
-    "Lady Cyd is a Trauma-Informed Certified Coach and Family Systems Strategist helping high-capacity women rebuild their identity, restore their family systems, and build generational legacies.",
+    "Certified trauma-informed coach and family systems strategist helping high-capacity women in Nigeria and Africa break generational cycles, restore identity, and heal family trauma through Christian Kingdom coaching.",
+  keywords: [
+    "trauma-informed coach Nigeria",
+    "Christian life coach Africa",
+    "generational healing coach",
+    "identity restoration coach",
+    "family systems coach Africa",
+    "trauma coach for women",
+    "Kingdom coach for women",
+    "soul restoration coach",
+    "Lady Cyd coach",
+    "Cyd Chioma Alex-Emenike",
+  ],
   icons: {
     icon: "/favicon/favicon.ico",
     shortcut: "/favicon/favicon-16x16.png",
     apple: "/favicon/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Cyd Alex-Emenike — Trauma-Informed Coach & Generational Restoration Guide",
+    title: "Lady Cyd — Trauma-Informed Coach Nigeria | Generational Healing & Identity Restoration",
     description:
-      "I guide high-capacity women through the sacred, structured work of identity restoration, trauma healing, and generational rebuilding.",
+      "Trauma-informed certified coach for women in Nigeria & Africa. Break generational cycles, restore identity, heal family systems through Christian coaching.",
     url: "https://ladycyd.online",
     siteName: "Lady Cyd",
     locale: "en_US",
@@ -60,6 +73,9 @@ export default function RootLayout({
     <>
       <Toaster position="bottom-right" reverseOrder={false} />
       <html lang="en">
+        <head>
+          <StructuredData />
+        </head>
         <body
           className={`${cormorantGaramond.variable} ${cinzel.variable} ${dmSans.variable} ${greatVibes.variable} bg-background antialiased`}
           style={{ fontFamily: "var(--font-dm-sans), system-ui, sans-serif" }}

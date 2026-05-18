@@ -8,9 +8,18 @@ import type { Metadata } from "next";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Lady Cyd | Cyd Alex-Emenike",
+  title: "About Lady Cyd | Certified Trauma-Informed Coach Nigeria | Cyd Alex-Emenike",
   description:
-    "Trauma-Informed Coach, Family Systems Strategist, and Generational Restoration Guide. Learn about Lady Cyd's journey, methodology, and the work she does with high-capacity women.",
+    "Meet Cyd Chioma Alex-Emenike — Certified trauma-informed transformational coach, family systems strategist, and generational restoration guide. Christian coaching for women in Nigeria and Africa seeking identity healing and breaking generational patterns.",
+  keywords: [
+    "Cyd Chioma Alex-Emenike",
+    "Lady Cyd coach",
+    "trauma-informed coach Nigeria",
+    "Christian coaching for women Africa",
+    "generational patterns coaching",
+    "identity restoration coach",
+    "women's transformation coach",
+  ],
 };
 
 /* Role titles — directly from client brief */

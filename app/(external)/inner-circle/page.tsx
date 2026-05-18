@@ -9,9 +9,17 @@ import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "The Healing Harbour | Lady Cyd",
+  title: "The Healing Harbour | Free Christian Coaching Community for Women | Lady Cyd",
   description:
-    "Join Lady Cyd's free inner circle community — a curated, intentional space for high-capacity women beginning, continuing, or deepening their journey of healing, identity restoration, and generational transformation.",
+    "Join Lady Cyd's free inner circle community — Christian coaching for women seeking healing from family trauma, identity restoration, and breaking generational patterns. Trauma-informed support for high-capacity women in Nigeria and Africa.",
+  keywords: [
+    "Christian coaching for women Africa",
+    "trauma coach for women",
+    "healing from family trauma",
+    "generational healing coach",
+    "women's transformation coach",
+    "free coaching community",
+  ],
 };
 
 const benefits = [

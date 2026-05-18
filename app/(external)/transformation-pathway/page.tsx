@@ -9,9 +9,17 @@ import { ArrowRight, ShoppingBag } from "lucide-react";
 import { SELAR_URL } from "@/lib/constants/site";
 
 export const metadata: Metadata = {
-  title: "The Transformation Pathway | Lady Cyd",
+  title: "The Transformation Pathway | 5-Stage Journey to Wholeness | Lady Cyd",
   description:
-    "Five stages. One destination: Wholeness. Discover the structured journey Lady Cyd walks high-capacity women through — from Enter to Emerge.",
+    "Five stages from healing to wholeness: Enter, Encounter, Engage, Elevate, Emerge. Structured trauma-informed coaching pathway for women breaking generational cycles and restoring identity through Christian family systems work.",
+  keywords: [
+    "generational patterns coaching",
+    "soul restoration coach",
+    "identity restoration coach",
+    "family systems coach Africa",
+    "transformation coaching for women",
+    "trauma-informed coaching for Christian women",
+  ],
 };
 
 const stages = [
