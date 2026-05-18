@@ -96,7 +96,7 @@ export default function AboutPage() {
           }}
         />
 
-        <div className="section-padding relative z-10 pt-40 pb-20">
+        <div className="section-padding relative z-10 mt-32 sm:mt-44 pb-20">
           <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-end">
             {/* Text side */}
             <div className="flex flex-col gap-6">

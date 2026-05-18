@@ -91,7 +91,7 @@ export default function WorkWithMePage() {
           }}
         />
 
-        <div className="section-padding relative z-10 flex flex-col items-center text-center gap-6 pt-40 pb-16">
+        <div className="section-padding relative z-10 flex flex-col items-center text-center gap-6 mt-32 sm:mt-44 pb-16">
           <div className="animate-fade-in-up">
             <SectionBreadcrumb title="Private 1:1 Coaching" light />
           </div>

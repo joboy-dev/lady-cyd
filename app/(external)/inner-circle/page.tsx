@@ -86,7 +86,7 @@ export default function InnerCirclePage() {
           }}
         />
 
-        <div className="section-padding relative z-10 flex flex-col items-center text-center gap-8 pt-36 pb-20">
+        <div className="section-padding relative z-10 flex flex-col items-center text-center gap-8 mt-32 sm:mt-40 pb-20">
           <div className="animate-fade-in-up">
             <SectionBreadcrumb title="Free Inner Circle Community" light />
           </div>
