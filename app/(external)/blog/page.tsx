@@ -201,7 +201,7 @@ export default function BlogPage() {
                         <div className="h-px w-8" style={{ background: "var(--primary)" }} />
 
                         {/* Excerpt */}
-                        <p className="font-sans text-sm leading-relaxed text-muted-foreground line-clamp-3">
+                        <p className="font-sans text-[17px] leading-relaxed text-muted-foreground line-clamp-3">
                           {post.excerpt}
                         </p>
 
@@ -261,7 +261,7 @@ export default function BlogPage() {
             </h2>
             <OrnamentalDivider theme="light" className="justify-start" />
             <p
-              className="font-sans text-base leading-relaxed"
+              className="font-sans text-[17px] leading-relaxed"
               style={{ color: "rgba(255,255,255,0.65)" }}
             >
               Lady Cyd writes from the inside of the work — not as an observer, but as someone
@@ -335,7 +335,7 @@ export default function BlogPage() {
                       {topic.label}
                     </p>
                     <p
-                      className="font-sans text-sm leading-relaxed"
+                      className="font-sans text-[17px] leading-relaxed"
                       style={{ color: "rgba(255,255,255,0.5)" }}
                     >
                       {topic.desc}
@@ -383,7 +383,7 @@ export default function BlogPage() {
             </span>
           </h2>
           <p
-            className="font-sans text-base leading-relaxed"
+            className="font-sans text-[17px] leading-relaxed"
             style={{ color: "rgba(255,255,255,0.65)" }}
           >
             Members of the Healing Harbour are the first to receive new writings, teachings,

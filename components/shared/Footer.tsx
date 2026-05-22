@@ -1,6 +1,6 @@
 import Logo from "./Logo";
 import Link from "next/link";
-import { Instagram, Youtube } from "lucide-react";
+import { LucideInstagram, LucideYoutube, LucideLinkedin } from "lucide-react";
 import { SELAR_URL } from "@/lib/constants/site";
 
 const footerNav = [
@@ -65,7 +65,7 @@ function Footer() {
                 aria-label="Instagram"
                 className="text-dark-section-foreground/50 hover:text-gold transition-colors duration-200"
               >
-                <Instagram size={18} />
+                <LucideInstagram size={18} />
               </a>
               <a
                 href="https://www.threads.net/@cydalexemenike"
@@ -77,11 +77,33 @@ function Footer() {
                 @
               </a>
               <a
-                href="#"
-                aria-label="YouTube (coming soon)"
-                className="text-dark-section-foreground/30 cursor-default"
+                href="https://www.youtube.com/@LADYCYD"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className="text-dark-section-foreground/50 hover:text-gold transition-colors duration-200"
               >
-                <Youtube size={18} />
+                <LucideYoutube size={18} />
+              </a>
+              <a
+                href="https://substack.com/@ladycyd"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Substack"
+                className="text-dark-section-foreground/50 hover:text-gold transition-colors duration-200"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M22.539 8.242H1.46V5.406h21.08zM1.46 10.812V24L12 18.11 22.54 24V10.812zM22.54 0H1.46v2.836h21.08z" />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/ladycyd"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-dark-section-foreground/50 hover:text-gold transition-colors duration-200"
+              >
+                <LucideLinkedin size={18} />
               </a>
             </div>
           </div>

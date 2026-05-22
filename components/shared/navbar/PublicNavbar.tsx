@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import { SELAR_URL } from '@/lib/constants/site';
+import ThemeToggle from '../ThemeToggle';
 
 const navItems = [
   { label: 'Home', to: '/' },
@@ -68,6 +69,7 @@ export default function PublicNavbar() {
 
         {/* CTA */}
         <div className="hidden lg:flex items-center gap-4">
+          <ThemeToggle />
           <Link
             href="/inner-circle"
             className="font-cinzel text-[11px] xl:text-sm tracking-[0.15em] xl:tracking-widest uppercase px-4 xl:px-6 py-2.5 border border-gold text-gold hover:bg-gold hover:text-foreground transition-all duration-200 rounded-none"
@@ -77,13 +79,16 @@ export default function PublicNavbar() {
         </div>
 
         {/* Mobile Toggle */}
-        <button
-          onClick={() => setMobileOpen((prev) => !prev)}
-          className="lg:hidden text-white"
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="lg:hidden flex items-center gap-3">
+          <ThemeToggle />
+          <button
+            onClick={() => setMobileOpen((prev) => !prev)}
+            className="text-white"
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}

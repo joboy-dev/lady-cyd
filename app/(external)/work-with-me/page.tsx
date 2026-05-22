@@ -28,17 +28,17 @@ const callIncludes = [
   {
     icon: <MessageCircle size={18} />,
     title: "Private & Focused",
-    desc: "Uninterrupted space — no agenda except the honest work of understanding where you are.",
+    desc: "Uninterrupted space, no agenda except the honest work of understanding where you are and what is truly driving it.",
   },
   {
     icon: <CheckCircle2 size={18} />,
     title: "Honest Discernment",
-    desc: "Together you and Lady Cyd discern what is truly at the root — and whether you are ready to go deeper into the transformation work.",
+    desc: "Together you and Lady Cyd discern what is truly at the root and whether private one-on-one coaching is the right and honest next step for you.",
   },
   {
     icon: <Clock size={18} />,
     title: "Clarity on Your Next Step",
-    desc: "You leave with a clearer understanding of where you are, what has been shaping it, and what the right path forward looks like.",
+    desc: "You leave with a precise understanding of where you are, what has been shaping it, and what the right path forward looks like — whether that path continues with Lady Cyd or not.",
   },
 ];
 
@@ -133,9 +133,9 @@ export default function WorkWithMePage() {
               className="font-sans text-lg leading-relaxed font-light"
               style={{ color: "rgba(255,255,255,0.7)" }}
             >
-              A private, focused session with Lady Cyd. The threshold — where you
+              A private, focused session with Lady Cyd. This is the threshold where you
               and Lady Cyd discern together whether you are ready for the most intimate
-              level of transformation work. This is not open to everyone.
+              and rigorous level of transformation work available. This is not open to everyone.
             </p>
           </div>
 
@@ -180,34 +180,20 @@ export default function WorkWithMePage() {
             </h2>
             <OrnamentalDivider theme="light" className="justify-start" />
             <p
-              className="font-sans text-base leading-relaxed"
+              className="font-sans text-[17px] leading-relaxed"
               style={{ color: "var(--muted-foreground)" }}
             >
-              A Clarity Call is not a general coaching taster. It is a structured, 
-              intentional session designed to help you move from confusion or stagnation 
-              into clear understanding and a defined next step.
+              A Clarity Call is not a general coaching taster. It is a structured,
+              intentional session designed to help you move from internal overwhelm and
+              reactive patterns into clear understanding and a defined next step.
             </p>
             <p
-              className="font-sans text-base leading-relaxed"
+              className="font-sans text-[17px] leading-relaxed"
               style={{ color: "var(--muted-foreground)" }}
             >
-              Lady Cyd will hold space for you to be fully honest — and will use her 
-              training in trauma-informed coaching and family systems work to help you 
-              see what you may not be able to see alone.
-            </p>
-            <p
-              className="font-cormorant italic text-xl leading-relaxed"
-              style={{ color: "var(--primary)" }}
-            >
-              &ldquo;This is the threshold — where we discern together whether you are ready for
-              the most intimate level of transformation work. This is not open to everyone.
-              It is for the woman who is truly ready.&rdquo;
-            </p>
-            <p
-              className="font-cinzel text-xs tracking-widest uppercase"
-              style={{ color: "var(--muted-foreground)", opacity: 0.7 }}
-            >
-              — From the Transformation Pathway
+              Lady Cyd will create the conditions for you to be fully honest and will use
+              her training in trauma-informed coaching and her working knowledge of identity
+              and systemic patterns to help you see what you may not be able to see alone.
             </p>
           </AnimateOnScroll>
 
@@ -234,7 +220,7 @@ export default function WorkWithMePage() {
                       {item.title}
                     </p>
                     <p
-                      className="font-sans text-sm leading-relaxed"
+                      className="font-sans text-[17px] leading-relaxed"
                       style={{ color: "var(--muted-foreground)" }}
                     >
                       {item.desc}
@@ -301,7 +287,7 @@ export default function WorkWithMePage() {
                   </p>
                   {/* Description */}
                   <p
-                    className="font-sans text-sm leading-relaxed"
+                    className="font-sans text-[17px] leading-relaxed"
                     style={{ color: "rgba(255,255,255,0.55)" }}
                   >
                     {step.desc}
@@ -335,7 +321,7 @@ export default function WorkWithMePage() {
             </h2>
             <OrnamentalDivider theme="light" className="justify-center" />
             <p
-              className="font-sans text-base leading-relaxed"
+              className="font-sans text-[17px] leading-relaxed"
               style={{ color: "var(--muted-foreground)" }}
             >
               Be honest. Be specific. The quality of your application determines the depth
@@ -346,7 +332,7 @@ export default function WorkWithMePage() {
           <AnimateOnScroll animation="scale">
             <div
               className="border p-6 sm:p-10"
-              style={{ borderColor: "rgba(197,75,140,0.15)", background: "white" }}
+              style={{ borderColor: "rgba(197,75,140,0.15)", background: "var(--card)" }}
             >
               <ClarityCallForm />
             </div>
@@ -389,7 +375,7 @@ export default function WorkWithMePage() {
             </span>
           </h2>
           <p
-            className="font-sans text-base leading-relaxed"
+            className="font-sans text-[17px] leading-relaxed"
             style={{ color: "rgba(255,255,255,0.6)" }}
           >
             If a private session feels like a big step right now, begin in the community.

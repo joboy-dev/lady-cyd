@@ -198,7 +198,7 @@ export default function Home() {
             ].map((pain, i) => (
               <AnimateOnScroll key={i} animation="up" delay={i * 100}>
                 <div
-                  className="flex gap-4 items-start p-6 bg-white rounded-sm border-l-2 h-full"
+                  className="flex gap-4 items-start p-6 bg-card rounded-sm border-l-2 h-full"
                   style={{ borderColor: "var(--primary)" }}
                 >
                   <span
@@ -254,7 +254,7 @@ export default function Home() {
                   </span>
                   <div className="h-px w-8" style={{ background: "var(--primary)" }} />
                   <h3 className="font-cormorant text-2xl font-semibold">{b.title}</h3>
-                  <p className="text-muted-foreground font-sans text-sm leading-relaxed">{b.body}</p>
+                  <p className="text-muted-foreground font-sans text-[17px] leading-relaxed">{b.body}</p>
                 </div>
               </AnimateOnScroll>
             ))}
@@ -322,7 +322,7 @@ export default function Home() {
                     {stage.tagline}
                   </p>
                   <p
-                    className="font-sans text-sm leading-relaxed"
+                    className="font-sans text-[17px] leading-relaxed"
                     style={{ color: "var(--dark-section-foreground)", opacity: 0.55 }}
                   >
                     {stage.description}
@@ -427,7 +427,7 @@ export default function Home() {
             {testimonials.map((t, i) => (
               <AnimateOnScroll key={t.name} animation="scale" delay={i * 150}>
               <div
-                className="flex flex-col gap-6 p-8 bg-white rounded-sm relative h-full"
+                className="flex flex-col gap-6 p-8 bg-card rounded-sm relative h-full"
                 style={{ boxShadow: "0 2px 20px rgba(197,75,140,0.06)" }}
               >
                 <span

@@ -155,7 +155,7 @@ export default function InnerCirclePage() {
 
           <OrnamentalDivider theme="dark" />
 
-          <div className="flex flex-col gap-6 font-sans text-muted-foreground leading-[1.9] text-base">
+          <div className="flex flex-col gap-6 font-sans text-muted-foreground leading-[1.9] text-[17px]">
             <p>
               The Healing Harbour is Lady Cyd&apos;s free inner circle — a carefully tended,
               intentional community for women who are serious about healing, identity, and
@@ -247,7 +247,7 @@ export default function InnerCirclePage() {
                   {b.title}
                 </h3>
                 <p
-                  className="font-sans text-sm leading-relaxed"
+                  className="font-sans text-[17px] leading-relaxed"
                   style={{ color: "rgba(255,255,255,0.55)" }}
                 >
                   {b.body}
@@ -285,7 +285,7 @@ export default function InnerCirclePage() {
             {forWho.map((item, i) => (
               <AnimateOnScroll key={i} animation="up" delay={i * 80}>
               <div
-                className="flex gap-4 items-start p-6 bg-white border-l-2 h-full"
+                className="flex gap-4 items-start p-6 bg-card border-l-2 h-full"
                 style={{ borderColor: "var(--primary)" }}
               >
                 <span
@@ -294,7 +294,7 @@ export default function InnerCirclePage() {
                 >
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <p className="font-sans text-sm leading-relaxed text-foreground/80">{item}</p>
+                <p className="font-sans text-[17px] leading-relaxed text-foreground/80">{item}</p>
               </div>
               </AnimateOnScroll>
             ))}
@@ -347,7 +347,7 @@ export default function InnerCirclePage() {
           </h2>
 
           <p
-            className="font-sans text-base leading-relaxed max-w-lg"
+            className="font-sans text-[17px] leading-relaxed max-w-lg"
             style={{ color: "rgba(255,255,255,0.65)" }}
           >
             Join free. Show up honestly. Let the work begin. The Harbour receives you exactly as

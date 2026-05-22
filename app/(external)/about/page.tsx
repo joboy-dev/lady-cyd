@@ -4,7 +4,7 @@ import OrnamentalDivider from "@/components/shared/OrnamentalDivider";
 import SectionBreadcrumb from "@/components/shared/breadcrumb/SectionBreadcrumb";
 import LinkButton from "@/components/shared/button/LinkButton";
 import PublicNavbar from "@/components/shared/navbar/PublicNavbar";
-import RandomLadyCydImage from "@/components/shared/RandomLadyCydImage";
+import ImageComponent from "@/components/shared/Image";
 import type { Metadata } from "next";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
@@ -23,28 +23,56 @@ export const metadata: Metadata = {
   ],
 };
 
-/* Role titles — directly from client brief */
 const roleTitles = [
-  "Trauma-Informed Transformational Coach",
-  "Family Systems Strategist",
-  "Generational Restoration Guide",
-  "Kingdom Formation Discipler",
-  "Writer & Speaker",
+  "Soul Restoration Strategist",
+  "Trauma-Informed Coach",
+  "Keynote Speaker",
+  "Author",
 ];
 
-/* Formal certifications — as stated in client brief */
 const certifications = [
   {
-    title: "Trauma-Informed Coaching",
-    detail: "Certified — formal certification equipping her to work with women navigating complex emotional experiences, identity fracture, and unresolved personal and generational trauma with clinical sensitivity and structured care.",
+    title: "Trauma-Informed Coaching Certification",
+    detail: "A formal certification equipping Lady Cyd to work with high-capacity leaders navigating complex emotional experiences, identity fracture, and unresolved personal and generational trauma — with clinical sensitivity and structured, evidence-informed care.",
   },
   {
-    title: "Minister's Formation — Certified Graduate",
-    detail: "Mathetheuo School of Ministry · Under the Apostolic Mentorship of Dr. Dele Osunmakinde. A rigorous formation programme designed to develop and release ministers into their Kingdom mandate.",
+    title: "Advanced Leadership Formation Programme",
+    detail: "Certified · Under the Mentorship of Debola Deji-Kurunmi — transformational coach, bestselling author, and one of Africa's most respected leadership development architects. This programme developed her capacity for structured leadership thinking, high-capacity women's development, and the systematic formation of visionary leaders.",
   },
   {
-    title: "Intensive Leadership Discipleship Programme",
-    detail: "Certified · Under the Mentorship of Debola Deji-Kurunmi (DDK) — one of Africa's foremost leadership development voices. This programme sharpened her capacity for structured thinking, disciplined leadership formation, and the systematic development of high-capacity women.",
+    title: "Advanced Formation & Leadership Studies",
+    detail: "Mathetheuo Institute · Under Dr. Dele Osunmakinde — a rigorous formation programme designed to develop leaders of depth, character, and sustained influence.",
+  },
+];
+
+const methodologyStages = [
+  {
+    number: "01",
+    name: "Regulation",
+    description:
+      "Understanding how the nervous system holds pain and how accumulated stress, trauma, and pressure shape leadership patterns — and rebuilding the internal capacity to lead from stability rather than survival.",
+    result: "She leads from regulation, not reaction.",
+  },
+  {
+    number: "02",
+    name: "Roots",
+    description:
+      "Mapping the invisible architecture of family systems, inherited roles, relational dynamics, and generational patterns that shaped how she loves, leads, and processes pain.",
+    result: "She understands what she inherited and consciously chooses what she carries forward.",
+  },
+  {
+    number: "03",
+    name: "Reconstruction",
+    description:
+      "Rebuilding identity from the inside out — separating self-worth from performance, productivity, responsibility, and external validation.",
+    result: "She leads from identity, not performance.",
+  },
+  {
+    number: "04",
+    name: "Reintegration",
+    description:
+      "Creating sustainable internal alignment through structured practices, emotional integration, value congruence, and intentional living that supports long-term transformation.",
+    result: "Her wholeness becomes sustainable, embodied, and self-led.",
   },
 ];
 
@@ -108,26 +136,19 @@ export default function AboutPage() {
                 className="font-cormorant font-light leading-[1.05] animate-fade-in-up"
                 style={{ color: "white", fontSize: "clamp(2.8rem, 6vw, 5rem)", animationDelay: "150ms" }}
               >
-                Cyd Chioma{" "}
+                Cyd <br />{" "}
                 <span className="italic" style={{ color: "var(--primary)" }}>
                   Alex-Emenike
                 </span>
               </h1>
 
-              <div className="flex flex-col gap-1 animate-fade-in-up" style={{ animationDelay: "300ms" }}>
-                {[
-                  "Trauma-Informed Coach",
-                  "Family Systems Strategist",
-                  "Generational Restoration Guide",
-                ].map((title) => (
-                  <p
-                    key={title}
-                    className="font-cinzel text-xs tracking-[0.25em] uppercase"
-                    style={{ color: "var(--gold)", opacity: 0.75 }}
-                  >
-                    {title}
-                  </p>
-                ))}
+              <div className="animate-fade-in-up" style={{ animationDelay: "300ms" }}>
+                <p
+                  className="font-cinzel text-xs tracking-[0.25em] uppercase"
+                  style={{ color: "var(--gold)", opacity: 0.75 }}
+                >
+                  Soul Restoration Coach for High-Capacity Leaders
+                </p>
               </div>
 
               <div className="animate-fade-in-up" style={{ animationDelay: "450ms" }}>
@@ -140,7 +161,7 @@ export default function AboutPage() {
                   style={{ color: "rgba(255,255,255,0.65)" }}
                 >
                   &ldquo;I did not arrive at this work through theory alone. I arrived through the
-                  long, costly, sacred road of my own healing.&rdquo;
+                  long, costly, deeply personal road of my own restoration.&rdquo;
                 </p>
               </div>
             </div>
@@ -148,7 +169,14 @@ export default function AboutPage() {
             {/* Image side */}
             <AnimateOnScroll animation="right" delay={200}>
             <div className="w-full max-w-sm lg:max-w-full aspect-3/4 relative overflow-hidden mx-auto rounded-sm">
-              <RandomLadyCydImage />
+              <ImageComponent
+                src="/images/lady-cyd/image-6.jpg"
+                alt="Cyd Alex-Emenike - Lady Cyd"
+                objectFit="cover"
+                width="100%"
+                height="100%"
+                className="w-full h-full"
+              />
             </div>
             </AnimateOnScroll>
           </div>
@@ -176,24 +204,27 @@ export default function AboutPage() {
 
           <OrnamentalDivider theme="dark" />
 
-          <div className="flex flex-col gap-6 font-sans text-muted-foreground leading-[1.9] text-base">
+          <div className="flex flex-col gap-6 font-sans text-muted-foreground leading-[1.9] text-[17px]">
             <p>
-              Cyd Chioma Alex-Emenike — known as Lady Cyd — is not a coach who found a course and
-              built a business. She is a woman who was taken through the furnace, rebuilt from the
-              inside out, and then commissioned to walk others through the same sacred, structured
-              work of transformation.
+              Cyd Alex-Emenike — known as Lady Cyd — is not a coach who found a course and built a
+              business. She is a woman who was taken through the furnace, rebuilt from the inside
+              out, and equipped to walk others through the same structured, transformational work of
+              restoration.
             </p>
             <p>
-              Her own journey began in the private places — the quiet grief of fractured family
+              Her own journey began in the private places, the quiet grief of fractured family
               systems, the slow discovery of how deeply inherited pain shapes identity, and the
               relentless, costly pursuit of wholeness in the face of cycles that seemed determined
-              to repeat themselves. What she discovered through that process was not only personal
-              freedom — it was a methodology. A framework. A map.
+              to repeat themselves.
             </p>
             <p>
-              She came to understand that most women who are high-functioning and high-achieving
-              are not thriving from wholeness — they are performing from wounds. That beneath the
-              capability, the productivity, the spiritual vocabulary, and the leadership gifting,
+              What she discovered through that process was not only personal freedom. It was a
+              methodology. A framework. A map.
+            </p>
+            <p>
+              She came to understand that most women who are high-functioning and high-achieving are
+              not thriving from wholeness, they are performing from wounds. That beneath the
+              capability, the productivity, the language of resilience, and the leadership gifting,
               there is often an unaddressed identity fracture quietly governing everything.
             </p>
             <p>
@@ -225,9 +256,9 @@ export default function AboutPage() {
             className="font-cormorant italic leading-relaxed"
             style={{ color: "white", fontSize: "clamp(1.5rem, 3.5vw, 2.25rem)" }}
           >
-            &ldquo;I am not here to motivate you. I am here to{" "}
-            <span style={{ color: "var(--primary)" }}>restructure you</span>.{" "}
-            That is a different thing entirely.&rdquo;
+            &ldquo;My work is not motivation. It is {" "}
+            <span style={{ color: "var(--primary)" }}>restoration</span>{" "}
+            &rdquo;
           </p>
           <OrnamentalDivider theme="light" />
           <p
@@ -244,55 +275,66 @@ export default function AboutPage() {
       ══════════════════════════════════════════════════ */}
       <section className="section-padding bg-background">
         <AnimateOnScroll animation="up" className="max-w-3xl mx-auto flex flex-col gap-10">
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3 text-center">
             <SectionBreadcrumb title="The Methodology" />
             <h2
-              className="font-cormorant font-light text-4xl sm:text-5xl leading-tight text-center"
+              className="font-cormorant font-light text-4xl sm:text-5xl leading-tight"
               style={{ color: "var(--foreground)" }}
             >
-              Where science, faith, and{" "}
+              The Integral Restoration{" "}
               <span className="italic" style={{ color: "var(--primary)" }}>
-                systems meet.
+                Framework
               </span>
             </h2>
+            <p className="font-cinzel text-xs tracking-[0.2em] uppercase text-muted-foreground">
+              Where neuroscience, systems thinking, and strategic restoration meet.
+            </p>
           </div>
 
           <OrnamentalDivider theme="dark" />
 
-          <div className="flex flex-col gap-6 font-sans text-muted-foreground leading-[1.9] text-base">
-            <p>
-              Lady Cyd&apos;s work sits at the intersection of four distinct disciplines — and the
-              integration of all four is what makes it unlike anything else available to women
-              today.
-            </p>
-            <p>
-              <strong className="text-foreground font-medium">Trauma science</strong> provides the
-              understanding of how the nervous system holds pain, how early experiences wire
-              identity, and what it actually takes — physiologically and psychologically — to heal
-              at the root rather than manage symptoms at the surface.
-            </p>
-            <p>
-              <strong className="text-foreground font-medium">Family systems theory</strong> makes
-              visible the invisible architecture of the family — the roles, the patterns, the
-              unspoken rules, the relational dynamics passed across generations — and gives women
-              the tools to understand what they inherited and how to choose differently.
-            </p>
-            <p>
-              <strong className="text-foreground font-medium">Prophetic identity</strong> addresses
-              the spiritual dimension of who a woman is — her calling, her design, her God-given
-              purpose — and the way that unhealed wounds distort, delay, or disqualify women from
-              walking in that identity with clarity and confidence.
-            </p>
-            <p>
-              <strong className="text-foreground font-medium">Kingdom discipleship</strong> anchors
-              all transformation in Scripture, prayer, and a relational posture toward God — not
-              as a religious add-on, but as the bedrock from which all lasting change grows.
-            </p>
-            <p>
-              This is not surface-level work. It is not a weekend workshop or a motivational
-              programme. It is deep, structured, transformational work — and it produces deep,
-              structured, lasting results.
-            </p>
+          <p className="font-sans text-muted-foreground leading-[1.9] text-[17px]">
+            Most leadership development addresses what you do. The Integral Restoration™ Framework
+            addresses who you are beneath what you do. It is a four-stage restoration process
+            designed for high-capacity leaders whose external excellence has outpaced their internal
+            wholeness — leaders who are performing at the highest levels while privately carrying
+            unresolved pain, fragmented identity, and accumulated pressure that no productivity
+            system has ever been able to fix.
+          </p>
+
+          <div className="flex flex-col gap-8">
+            {methodologyStages.map((stage, i) => (
+              <AnimateOnScroll key={stage.number} animation="up" delay={i * 80}>
+                <div
+                  className="flex flex-col gap-3 border-l-2 pl-6"
+                  style={{ borderColor: "var(--primary)" }}
+                >
+                  <div className="flex items-center gap-3">
+                    <span
+                      className="font-cinzel text-xs tracking-widest"
+                      style={{ color: "var(--gold)", opacity: 0.7 }}
+                    >
+                      {stage.number}
+                    </span>
+                    <h3
+                      className="font-cinzel text-sm tracking-widest uppercase"
+                      style={{ color: "var(--foreground)" }}
+                    >
+                      {stage.name}
+                    </h3>
+                  </div>
+                  <p className="font-sans text-[17px] leading-relaxed text-muted-foreground">
+                    {stage.description}
+                  </p>
+                  <p
+                    className="font-cormorant italic text-base"
+                    style={{ color: "var(--primary)" }}
+                  >
+                    Result: {stage.result}
+                  </p>
+                </div>
+              </AnimateOnScroll>
+            ))}
           </div>
         </AnimateOnScroll>
       </section>
@@ -322,7 +364,7 @@ export default function AboutPage() {
             {pillars.map((p, i) => (
               <AnimateOnScroll key={p.number} animation="up" delay={i * 150}>
               <div
-                className="flex flex-col gap-5 p-8 bg-white border border-primary/10 hover:border-primary/30 transition-colors duration-300 h-full"
+                className="flex flex-col gap-5 p-8 bg-card border border-primary/10 hover:border-primary/30 transition-colors duration-300 h-full"
               >
                 <span
                   className="font-cinzel text-4xl font-light"
@@ -332,7 +374,7 @@ export default function AboutPage() {
                 </span>
                 <div className="h-px w-8" style={{ background: "var(--primary)" }} />
                 <h3 className="font-cormorant text-2xl font-semibold">{p.title}</h3>
-                <p className="text-muted-foreground font-sans text-sm leading-relaxed">{p.body}</p>
+                <p className="text-muted-foreground font-sans text-[17px] leading-relaxed">{p.body}</p>
               </div>
               </AnimateOnScroll>
             ))}
@@ -407,7 +449,7 @@ export default function AboutPage() {
                     <p className="font-cinzel text-xs tracking-wider uppercase text-foreground/90">
                       {cert.title}
                     </p>
-                    <p className="font-sans text-sm leading-relaxed text-muted-foreground">
+                    <p className="font-sans text-[17px] leading-relaxed text-muted-foreground">
                       {cert.detail}
                     </p>
                   </div>
@@ -531,7 +573,7 @@ export default function AboutPage() {
             </span>
           </h2>
           <p
-            className="font-sans text-base leading-relaxed"
+            className="font-sans text-[17px] leading-relaxed"
             style={{ color: "rgba(255,255,255,0.65)" }}
           >
             The Healing Harbour is Lady Cyd&apos;s free inner circle community — where the journey

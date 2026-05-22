@@ -47,6 +47,22 @@
   --dark-section-foreground: #f3e8f0;
 }
 
+/* ─── Dark mode overrides ─────────────────────────────────────────── */
+.dark {
+  --background: #1a0b14;
+  --foreground: #f3e8f0;
+  --card: #220e1b;
+  --card-foreground: #f3e8f0;
+  --popover: #220e1b;
+  --popover-foreground: #f3e8f0;
+  --secondary: #220e1b;
+  --secondary-foreground: #f3e8f0;
+  --muted: #220e1b;
+  --muted-foreground: #c4a0b5;
+  --border: rgba(255, 255, 255, 0.09);
+  --input: #220e1b;
+}
+
 /* ─── Tailwind theme mapping ────────────────────────────────────── */
 @theme {
   --breakpoint-sm: 480px;

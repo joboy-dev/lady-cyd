@@ -33,8 +33,8 @@ const FormInput: React.FC<FormInputProps> = ({
   return (
     <div className="w-full mb-4">
       {label && <label className="block text-left text-sm font-medium text-foreground mb-1">{label} {props.required ? <span className="text-red-500">*</span> : ""}</label>}
-      <div 
-        className={`w-full h-[40px] flex items-start justify-start gap-5 text-xs p-2 border rounded-lg outline-none ${activeField && "ring-1 ring-primary"} ${errors[name] ? 'border-red-500' : 'border-gray-300'} ${className}`}
+      <div
+        className={`w-full h-[40px] flex items-start justify-start gap-5 text-xs p-2 border rounded-lg outline-none bg-input ${activeField && "ring-1 ring-primary"} ${errors[name] ? 'border-red-500' : 'border-border'} ${className}`}
         onFocus={() => setActiveField(true)}
         onBlur={() => setActiveField(false)}
       >
@@ -44,9 +44,9 @@ const FormInput: React.FC<FormInputProps> = ({
           type={type}
           placeholder={placeholder}
           {...register(name, {
-            valueAsNumber: type === "number",            
+            valueAsNumber: type === "number",
           })}
-          className="outline-none w-full h-full text-[14px]"
+          className="outline-none w-full h-full text-[14px] bg-transparent text-foreground placeholder:text-muted-foreground"
           // className={`w-full text-xs p-2 border rounded outline-none focus:ring-1 focus:ring-primary ${error ? 'border-red-500' : 'border-gray-300'} ${className}`}
           {...props}
         />

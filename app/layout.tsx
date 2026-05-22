@@ -3,6 +3,7 @@ import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import { Cormorant_Garamond, Cinzel, DM_Sans, Great_Vibes } from "next/font/google";
 import StructuredData from "@/components/shared/StructuredData";
+import ThemeProvider from "@/components/shared/ThemeProvider";
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
@@ -72,15 +73,23 @@ export default function RootLayout({
   return (
     <>
       <Toaster position="bottom-right" reverseOrder={false} />
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <head>
           <StructuredData />
+          {/* Anti-flash: apply stored theme before first paint */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(function(){try{var p=JSON.parse(localStorage.getItem('lady-cyd-preferences'));var t=p&&p.state&&p.state.theme;document.documentElement.classList.toggle('dark',t!=='light')}catch(e){document.documentElement.classList.add('dark')}})()`,
+            }}
+          />
         </head>
         <body
           className={`${cormorantGaramond.variable} ${cinzel.variable} ${dmSans.variable} ${greatVibes.variable} bg-background antialiased`}
           style={{ fontFamily: "var(--font-dm-sans), system-ui, sans-serif" }}
         >
-          {children}
+          <ThemeProvider>
+            {children}
+          </ThemeProvider>
         </body>
       </html>
     </>

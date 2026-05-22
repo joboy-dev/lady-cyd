@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
 interface Breadcrumb {
     title: string;
@@ -12,14 +13,24 @@ interface GeneralState {
     theme: Theme;
     setBreadcrumb: (breadcrumb: Breadcrumb) => void;
     setTheme: (theme: Theme) => void;
+    toggleTheme: () => void;
 }
 
-export const useGeneralStore = create<GeneralState>((set) => ({
-  breadcrumb: {
-    title: "",
-    subtitle: "",
-  },
-  theme: "light",
-  setBreadcrumb: (breadcrumb) => set({ breadcrumb }),
-  setTheme: (theme) => set({ theme }),
-}));
+export const useGeneralStore = create<GeneralState>()(
+  persist<GeneralState>(
+    (set, get) => ({
+      breadcrumb: {
+        title: "",
+        subtitle: "",
+      },
+      theme: "dark",
+      setBreadcrumb: (breadcrumb) => set({ breadcrumb }),
+      setTheme: (theme) => set({ theme }),
+      toggleTheme: () => set({ theme: get().theme === "dark" ? "light" : "dark" }),
+    }),
+    {
+      name: "lady-cyd-preferences",
+      partialize: (state) => ({ theme: state.theme }) as GeneralState,
+    }
+  )
+);

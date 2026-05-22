@@ -264,7 +264,7 @@ export default function TransformationPathwayPage() {
 
               {/* Description */}
               <p
-                className="font-sans text-base leading-relaxed"
+                className="font-sans text-[17px] leading-relaxed"
                 style={{
                   color: stage.dark
                     ? "rgba(255,255,255,0.6)"
@@ -294,7 +294,7 @@ export default function TransformationPathwayPage() {
                         ✦
                       </span>
                       <span
-                        className="font-sans text-sm leading-relaxed"
+                        className="font-sans text-[17px] leading-relaxed"
                         style={{
                           color: stage.dark
                             ? "rgba(255,255,255,0.65)"
@@ -399,7 +399,7 @@ export default function TransformationPathwayPage() {
                 Browse the courses.
               </span>
             </h2>
-            <p className="font-sans text-sm leading-relaxed" style={{ color: "var(--muted-foreground)" }}>
+            <p className="font-sans text-[17px] leading-relaxed" style={{ color: "var(--muted-foreground)" }}>
               Lady Cyd’s structured courses and programmes are available on Selar — the ENGAGE
               layer of the pathway, where insight becomes lived change. Browse what is currently
               open for enrolment.
@@ -421,7 +421,7 @@ export default function TransformationPathwayPage() {
           {/* Accent block */}
           <div
             className="shrink-0 w-full sm:w-56 flex flex-col gap-3 sm:gap-4 p-5 sm:p-8 border-t-2 sm:border-t-0 sm:border-l-2"
-            style={{ borderColor: "var(--primary)", background: "white" }}
+            style={{ borderColor: "var(--primary)", background: "var(--card)" }}
           >
             {[
               "Group coaching cohorts",
@@ -470,7 +470,7 @@ export default function TransformationPathwayPage() {
             </span>
           </h2>
           <p
-            className="font-sans text-base leading-relaxed"
+            className="font-sans text-[17px] leading-relaxed"
             style={{ color: "rgba(255,255,255,0.65)" }}
           >
             You do not need to have it all figured out. You do not need to be ready for every
