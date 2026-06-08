@@ -23,10 +23,10 @@ const footerNav = [
   {
     heading: "Legal",
     links: [
-      { name: "Privacy Policy", href: "/privacy-policy", external: false },
-      { name: "Terms & Conditions", href: "/terms", external: false },
-      { name: "Refund Policy", href: "/refund-policy", external: false },
-      { name: "Intellectual Property", href: "/intellectual-property", external: false },
+      { name: "Privacy Policy", href: "/legal/privacy-policy", external: false },
+      { name: "Terms & Conditions", href: "/legal/terms", external: false },
+      { name: "Refund Policy", href: "/legal/refund-policy", external: false },
+      { name: "Intellectual Property", href: "/legal/intellectual-property", external: false },
     ],
   },
 ];
