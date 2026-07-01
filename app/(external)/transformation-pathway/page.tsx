@@ -9,105 +9,111 @@ import { ArrowRight, ShoppingBag } from "lucide-react";
 import { SELAR_URL } from "@/lib/constants/site";
 
 export const metadata: Metadata = {
-  title: "The Transformation Pathway | 5-Stage Journey to Wholeness | Lady Cyd",
+  title: "The WHOLE Pathway™ | 5-Stage Journey to Wholeness | Lady Cyd",
   description:
-    "Five stages from healing to wholeness: Enter, Encounter, Engage, Elevate, Emerge. Structured trauma-informed coaching pathway for women breaking generational cycles and restoring identity through Christian family systems work.",
+    "Five stages from recognition to wholeness: Recognize, Reveal, Rebuild, Restore, WHOLE™. The structured transformational pathway by Lady Cyd — Grit & Graceful Coaching Company — for high-capacity women returning to God's original design.",
   keywords: [
-    "generational patterns coaching",
     "soul restoration coach",
     "identity restoration coach",
-    "family systems coach Africa",
-    "transformation coaching for women",
     "trauma-informed coaching for Christian women",
+    "WHOLE Pathway Lady Cyd",
+    "Eden Life Design",
+    "Wound Point Assessment",
   ],
 };
 
 const stages = [
   {
     code: "01",
-    name: "ENTER",
-    tagline: "Choose to stop carrying alone what was never meant to be carried alone.",
+    name: "RECOGNIZE",
+    tagline: "Encounter the message.",
     description:
-      "Every journey begins with a decision. ENTER is the act of choosing — choosing to stop isolating in your pain, choosing to be received by a community that understands the weight you carry, and choosing to take the first step toward the life you were designed for.",
+      "RECOGNIZE is where it begins — before a programme, before a community, before a decision. Free content, teachings, podcast episodes, social media, speaking engagements, newsletter content, and public resources. This is where women first encounter the work of Lady Cyd and Grit & Graceful Coaching Company.",
     what: [
-      "Join the Healing Harbour inner circle community (free)",
-      "Receive a welcome and orientation into Lady Cyd's world",
-      "Connect with a sisterhood of women walking the same road",
-      "Access your first resources — teachings, reflections, and community sessions",
+      "Free teachings, reflections, and written content via The Journal",
+      "META-FORMATION HQ Podcast — Identity, Emotional Wellness, Leadership, Faith",
+      "Social media content and speaking engagements",
+      "Lady Cyd's Substack newsletter — bi-weekly, always free",
     ],
     forWho:
-      "Any woman who knows something is unresolved inside her and is ready to stop carrying it alone.",
-    cta: { label: "Enter the Healing Harbour", href: "/inner-circle", external: false },
+      "Any woman who has encountered the message and felt something stir — who knows, even before she can name it, that this work is for her.",
+    cta: null,
     dark: false,
   },
   {
     code: "02",
-    name: "ENCOUNTER",
-    tagline: "Transformation begins in the mind before it moves to the life.",
+    name: "REVEAL",
+    tagline: "Take the Wound Point Assessment.",
     description:
-      "ENCOUNTER is where the foundations shift. Through teachings, frameworks, and carefully curated content, you begin to see what you could not see before — the patterns, the roots, the inherited agreements that have been quietly shaping your world. Awareness is the beginning of change.",
+      "REVEAL is the diagnostic gateway into the ecosystem. The Wound Point Assessment is where every woman begins. Through ten wound categories — Identity, Purpose, Capacity, Rhythm, Relational, Voice, Generational, Stewardship, Leadership, and Legacy — she identifies where alignment has been compromised and where her restoration work should begin.",
     what: [
-      "Weekly teachings, Bible studies, and prophetic insight sessions",
-      "Access to Lady Cyd's signature frameworks on identity and family systems",
-      "Transformational book reading club and guided review",
-      "Live community calls and Q&A sessions",
+      "The Wound Point Assessment — the ten wound categories that map her restoration journey",
+      "Identification of her primary and secondary wound points",
+      "Clarity on where alignment has broken down and where to begin",
+      "A defined pathway forward into the ecosystem",
     ],
     forWho:
-      "The woman who is in the Healing Harbour and is actively engaging — showing up, consuming, reflecting, and beginning to see herself differently.",
-    cta: null,
+      "Every woman entering the Grit & Graceful ecosystem. The Wound Point Assessment is the first step — without exception.",
+    cta: { label: "Take The Wound Point Assessment", href: "/whole/assessment", external: false },
     dark: true,
   },
   {
     code: "03",
-    name: "ENGAGE",
-    tagline: "This is where theory becomes practice and insight becomes change.",
+    name: "REBUILD",
+    tagline: "Enter Eden Life Design™.",
     description:
-      "ENGAGE is the immersive layer. Here, the structured work deepens through group coaching programmes, workshops, and intensive experiences designed to move transformation from the head to the hands — from understanding to actual, embodied change in how you live, relate, and lead.",
+      "REBUILD is the foundational formation layer. Eden Life Design™ is the learning ecosystem where women return to God's original design through Biblical truth, emotional formation, transformational teaching, practical tools, and intentional community. It is not a course platform — it is a developmental environment.",
     what: [
-      "Structured group coaching programmes (cohort-based)",
-      "Signature workshops and intensives",
-      "Immersive retreat experiences",
-      "Accountability and peer coaching structures",
+      "Foundational Courses — structured learning for identity and formation",
+      "Guided Learning Experiences — cohort-based formation journeys",
+      "Community Conversations — intentional peer connection and accountability",
+      "Growth Resources — frameworks, tools, and formation materials",
+      "Formation Tools — practitioner-grade instruments for personal transformation",
+      "Healing Harbour Live — Free Monthly Masterclass (exclusively inside Eden Life Design™)",
     ],
     forWho:
-      "The woman who has encountered the work and is ready to go deeper — to do it, not just understand it.",
-    cta: { label: "Browse Courses & Programmes", href: SELAR_URL, external: true },
+      "The woman who has taken the Wound Point Assessment and is ready to enter a structured, intentional environment for formation — not just information.",
+    cta: { label: "Explore Eden Life Design™", href: "/eden-life-design", external: false },
     dark: false,
   },
   {
     code: "04",
-    name: "ELEVATE",
-    tagline: "Apply for a Clarity Call — the threshold of intimate transformation.",
+    name: "RESTORE",
+    tagline: "Attend Healing Harbour Live.",
     description:
-      "ELEVATE is not open to everyone. It is for the woman who has moved through the earlier stages, who has done the work in community, and who is now ready for the most intimate and intensive form of transformation available — private, one-on-one coaching with Lady Cyd herself.",
+      "RESTORE is where the monthly work happens. Healing Harbour Live is the free monthly masterclass exclusively available inside Eden Life Design™. Every 4th Friday. 90 Minutes. Zoom + Skool Live. One Wound Point. One Framework. One Pathway Forward. This is not a general teaching session — it is structured, targeted restoration work.",
     what: [
-      "One-on-one private coaching containers with Lady Cyd",
-      "Deep-dive identity and family systems work",
-      "Personalised transformation framework and roadmap",
-      "Access by application and Clarity Call only",
+      "Free Monthly Masterclass — every 4th Friday, 90 minutes",
+      "One Wound Point addressed per session with a full framework",
+      "Live on Zoom + Skool — accessible wherever you are",
+      "A single, clear pathway forward from each session",
+      "Exclusively available inside Eden Life Design™",
     ],
     forWho:
-      "The woman who is serious, who has demonstrated readiness, and who is willing to invest deeply in her own transformation.",
-    cta: { label: "Apply for a Clarity Call", href: "/work-with-me" },
+      "Every woman inside Eden Life Design™. Healing Harbour Live exists as the consistent, structured, free monthly touchpoint — the heartbeat of the ecosystem.",
+    cta: { label: "Register For Healing Harbour Live", href: "/inner-circle", external: false },
     dark: true,
-    gated: true,
   },
   {
     code: "05",
-    name: "EMERGE",
-    tagline: "Not who you were. Who you were always called to become.",
+    name: "WHOLE™",
+    tagline: "Enter the flagship coaching programme.",
     description:
-      "EMERGE is not an end — it is a beginning. The woman who walks through the full pathway emerges healed in her identity, clear in her calling, and equipped to lead her life, her family, and her legacy from a place of wholeness rather than wounds. She becomes the woman who breaks the cycle and builds something different.",
+      "WHOLE™ is the primary transformational coaching experience within the Grit & Graceful ecosystem. Designed for high-capacity women who have moved through the foundational stages and are ready for the most intimate, rigorous, and structured level of personal transformation available. WHOLE™ is not open yet — but it is coming.",
     what: [
-      "A healed and restored sense of self — at the root",
-      "Clarity on calling, purpose, and Kingdom assignment",
-      "Broken generational cycles and rebuilt family patterns",
-      "The capacity to lead, love, and build from wholeness",
+      "Identity Restoration — rebuilding selfhood at the root",
+      "Emotional Formation — structured healing of emotional architecture",
+      "Spiritual Alignment — reconnecting with God's original design",
+      "Relational Health — healing the relational patterns that govern how she loves and leads",
+      "Purpose Clarity — defining assignment and building from it",
+      "Sustainable Rhythms — designing a life that can hold what she is building",
+      "Legacy Building — intentionally constructing what remains",
     ],
     forWho:
-      "Every woman who enters the pathway with honesty, commitment, and the willingness to do the deep work.",
-    cta: { label: "Begin Your Journey — Enter", href: "/inner-circle" },
+      "High-capacity women who have done the foundational work and are ready for the most rigorous, intimate level of transformation. Available by application only.",
+    cta: null,
     dark: false,
+    comingSoon: true,
   },
 ];
 
@@ -140,7 +146,7 @@ export default function TransformationPathwayPage() {
 
         <div className="section-padding relative z-10 flex flex-col items-center text-center gap-8 mt-32 sm:mt-40 pb-20">
           <div className="animate-fade-in-up">
-            <SectionBreadcrumb title="The Transformation Pathway" light />
+            <SectionBreadcrumb title="The WHOLE Pathway™" light />
           </div>
 
           <h1
@@ -151,7 +157,7 @@ export default function TransformationPathwayPage() {
             <span className="italic" style={{ color: "var(--primary)" }}>
               One destination:
             </span>{" "}
-            Wholeness.
+            WHOLE.
           </h1>
 
           <div className="animate-fade-in-up" style={{ animationDelay: "300ms" }}>
@@ -164,8 +170,14 @@ export default function TransformationPathwayPage() {
               style={{ color: "rgba(255,255,255,0.7)" }}
             >
               This is not a programme. It is a pathway — a structured, intentional journey from
-              where you are to where you were always designed to be. Each stage is a threshold. Each
-              threshold is an invitation.
+              where you are to where you were always designed to be. Each stage is a threshold.
+              Each threshold is an invitation toward WHOLE.
+            </p>
+            <p
+              className="font-cinzel text-xs tracking-widest uppercase mt-4"
+              style={{ color: "var(--gold)", opacity: 0.65 }}
+            >
+              A Grit &amp; Graceful Coaching Company Experience
             </p>
           </div>
 
@@ -231,7 +243,7 @@ export default function TransformationPathwayPage() {
                 >
                   {stage.name}
                 </h2>
-                {stage.gated && (
+                {stage.comingSoon && (
                   <span
                     className="inline-block mt-2 font-cinzel text-[10px] tracking-widest uppercase px-3 py-1 border"
                     style={{
@@ -239,7 +251,7 @@ export default function TransformationPathwayPage() {
                       borderColor: "rgba(201,168,76,0.4)",
                     }}
                   >
-                    By Application Only
+                    Coming Soon
                   </span>
                 )}
               </div>
@@ -339,32 +351,26 @@ export default function TransformationPathwayPage() {
               {/* CTA */}
               {stage.cta && (
                 <div>
-                  {stage.cta.external ? (
-                    <a
-                      href={stage.cta.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`inline-flex items-center gap-3 font-cinzel text-sm tracking-widest uppercase px-5 py-2.5 transition-all duration-200 ${
-                        stage.dark
-                          ? 'border border-gold text-gold hover:bg-gold hover:text-foreground'
-                          : 'bg-primary text-white hover:bg-primary/85'
-                      }`}
-                    >
-                      <ShoppingBag size={14} />
-                      {stage.cta.label}
-                      <ArrowRight size={14} />
-                    </a>
-                  ) : (
-                    <LinkButton
-                      to={stage.cta.href}
-                      variant={stage.dark ? "outlineGold" : "primary"}
-                      size="md"
-                      className="gap-3"
-                    >
-                      {stage.cta.label}
-                      <ArrowRight size={14} />
-                    </LinkButton>
-                  )}
+                  <LinkButton
+                    to={stage.cta.href}
+                    variant={stage.dark ? "outlineGold" : "primary"}
+                    size="md"
+                    className="gap-3"
+                  >
+                    {stage.cta.label}
+                    <ArrowRight size={14} />
+                  </LinkButton>
+                </div>
+              )}
+              {stage.comingSoon && (
+                <div>
+                  <button
+                    disabled
+                    className="inline-flex items-center gap-3 font-cinzel text-sm tracking-widest uppercase px-5 py-2.5 border cursor-not-allowed opacity-40"
+                    style={{ borderColor: "var(--primary)", color: "var(--primary)" }}
+                  >
+                    WHOLE™ — Coming Soon
+                  </button>
                 </div>
               )}
             </AnimateOnScroll>
@@ -380,7 +386,7 @@ export default function TransformationPathwayPage() {
       ))}
 
       {/* ══════════════════════════════════════════════════
-          COURSES CALLOUT
+          EDEN LIFE DESIGN CALLOUT
       ══════════════════════════════════════════════════ */}
       <section
         className="section-padding relative overflow-hidden"
@@ -389,31 +395,35 @@ export default function TransformationPathwayPage() {
         <AnimateOnScroll animation="up" className="max-w-4xl mx-auto flex flex-col sm:flex-row items-stretch gap-8 sm:gap-12">
           {/* Text */}
           <div className="flex flex-col gap-4 sm:gap-5 flex-1">
-            <SectionBreadcrumb title="ENGAGE — Stage 03" />
+            <SectionBreadcrumb title="REBUILD — Stage 03" />
             <h2
               className="font-cormorant font-light text-3xl sm:text-4xl leading-tight"
               style={{ color: "var(--foreground)" }}
             >
-              Ready to go deeper?{" "}
+              Ready to enter the{" "}
               <span className="italic" style={{ color: "var(--primary)" }}>
-                Browse the courses.
+                formation ecosystem?
               </span>
             </h2>
             <p className="font-sans text-[17px] leading-relaxed" style={{ color: "var(--muted-foreground)" }}>
-              Lady Cyd’s structured courses and programmes are available on Selar — the ENGAGE
-              layer of the pathway, where insight becomes lived change. Browse what is currently
-              open for enrolment.
+              Eden Life Design™ is the foundational learning ecosystem — the place where women
+              return to God&apos;s original design through structured courses, guided learning,
+              community, formation tools, and Healing Harbour Live (the free monthly masterclass).
             </p>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-2">
+              <LinkButton to="/eden-life-design" variant="primary" size="md" className="gap-3">
+                Explore Eden Life Design™
+                <ArrowRight size={14} />
+              </LinkButton>
               <a
                 href={SELAR_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex w-full sm:w-auto justify-center items-center gap-2.5 sm:gap-3 font-cinzel text-xs sm:text-sm tracking-[0.12em] sm:tracking-widest uppercase px-4 sm:px-6 py-3 bg-primary text-white hover:bg-primary/85 transition-all duration-200"
+                className="inline-flex items-center gap-2 font-cinzel text-xs tracking-widest uppercase px-4 py-2.5 border transition-all duration-200"
+                style={{ borderColor: "var(--primary)", color: "var(--primary)" }}
               >
-                <ShoppingBag size={15} />
-                Browse Courses on Selar
-                <ArrowRight size={14} />
+                <ShoppingBag size={12} />
+                Browse Courses
               </a>
             </div>
           </div>
@@ -424,10 +434,11 @@ export default function TransformationPathwayPage() {
             style={{ borderColor: "var(--primary)", background: "var(--card)" }}
           >
             {[
-              "Group coaching cohorts",
-              "Signature workshops",
-              "Immersive intensives",
-              "Retreat experiences",
+              "Foundational Courses",
+              "Guided Learning Experiences",
+              "Community Conversations",
+              "Formation Tools",
+              "Healing Harbour Live",
             ].map((item) => (
               <div key={item} className="flex items-start gap-3">
                 <span className="text-xs shrink-0" style={{ color: "var(--primary)" }}>✦</span>
@@ -466,7 +477,7 @@ export default function TransformationPathwayPage() {
           >
             The first step is{" "}
             <span className="italic" style={{ color: "var(--gold)" }}>
-              entering the Harbour.
+              The Wound Point Assessment.
             </span>
           </h2>
           <p
@@ -474,11 +485,12 @@ export default function TransformationPathwayPage() {
             style={{ color: "rgba(255,255,255,0.65)" }}
           >
             You do not need to have it all figured out. You do not need to be ready for every
-            stage. You need to take one step — and the Healing Harbour is where that step begins.
+            stage. You need to take one step — and the Wound Point Assessment is where that begins.
+            Every woman enters the ecosystem here.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4">
-            <LinkButton to="/inner-circle" variant="primary" size="lg" className="gap-3">
-              Enter the Healing Harbour
+            <LinkButton to="/whole/assessment" variant="primary" size="lg" className="gap-3">
+              Take The Wound Point Assessment
               <ArrowRight size={16} />
             </LinkButton>
             <LinkButton to="/about" variant="outlineLight" size="lg">

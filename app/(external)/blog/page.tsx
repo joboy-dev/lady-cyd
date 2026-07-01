@@ -6,6 +6,7 @@ import SectionBreadcrumb from "@/components/shared/breadcrumb/SectionBreadcrumb"
 import LinkButton from "@/components/shared/button/LinkButton";
 import Card from "@/components/shared/card/Card";
 import PublicNavbar from "@/components/shared/navbar/PublicNavbar";
+import SubscribeForm from "@/components/shared/form/appForms/SubscribeForm";
 import type { Metadata } from "next";
 import { ArrowRight, BookOpen } from "lucide-react";
 import Badge from "@/components/shared/Badge";
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
 
 /* ─── Types ─────────────────────────────────────────────────────── */
 
-type Category = "Identity" | "Healing" | "Generational Work" | "Faith" | "Coaching";
+type Category = "Identity" | "Healing" | "Emotional Wellness" | "Faith" | "Coaching";
 
 type Post = {
   slug: string;
@@ -40,7 +41,7 @@ type Post = {
 const categories: Category[] = [
   "Identity",
   "Healing",
-  "Generational Work",
+  "Emotional Wellness",
   "Faith",
   "Coaching",
 ];
@@ -52,7 +53,7 @@ const posts: Post[] = [];
 const categoryColour: Record<Category, string> = {
   Identity: "var(--primary)",
   Healing: "var(--gold)",
-  "Generational Work": "#9b59b6",
+  "Emotional Wellness": "#9b59b6",
   Faith: "#4a9e8a",
   Coaching: "#c0392b",
 };
@@ -225,7 +226,7 @@ export default function BlogPage() {
             <AnimateOnScroll animation="scale">
               <ListEmpty
                 title="posts"
-                subtitle="Lady Cyd's writing is coming soon. Subscribe to the Healing Harbour to be notified when new pieces are published."
+                subtitle="Lady Cyd's writing is coming soon. Enter Eden Life Design™ to be the first to receive new journal entries, teachings, and reflections."
               />
             </AnimateOnScroll>
           )}
@@ -349,7 +350,7 @@ export default function BlogPage() {
       </section>
 
       {/* ══════════════════════════════════════════════════
-          CTA — JOIN THE HARBOUR TO GET NOTIFIED
+          CTA — ENTER EDEN LIFE DESIGN TO GET NOTIFIED
       ══════════════════════════════════════════════════ */}
       <section
         className="section-padding relative overflow-hidden"
@@ -377,7 +378,7 @@ export default function BlogPage() {
             className="font-cormorant font-light text-3xl sm:text-4xl leading-tight"
             style={{ color: "white" }}
           >
-            Join the Healing Harbour{" "}
+            Enter Eden Life Design™{" "}
             <span className="italic" style={{ color: "var(--gold)" }}>
               to receive every new journal entry.
             </span>
@@ -386,12 +387,15 @@ export default function BlogPage() {
             className="font-sans text-[17px] leading-relaxed"
             style={{ color: "rgba(255,255,255,0.65)" }}
           >
-            Members of the Healing Harbour are the first to receive new writings, teachings,
-            and reflections from Lady Cyd — alongside the full community experience.
+            Members of Eden Life Design™ are the first to receive new writings, teachings,
+            and reflections from Lady Cyd — alongside the full formation ecosystem experience,
+            including Healing Harbour Live.
           </p>
-          <div className="flex flex-col sm:flex-row items-center gap-4">
-            <LinkButton to="/inner-circle" variant="primary" size="lg" className="gap-3">
-              Enter the Healing Harbour
+          <SubscribeForm source="journal" />
+
+          <div className="flex flex-col sm:flex-row items-center gap-4 pt-2 border-t border-white/10">
+            <LinkButton to="/eden-life-design" variant="primary" size="lg" className="gap-3">
+              Enter Eden Life Design™
               <ArrowRight size={16} />
             </LinkButton>
             <LinkButton to="/about" variant="outlineLight" size="lg">

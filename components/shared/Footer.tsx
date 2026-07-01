@@ -8,14 +8,16 @@ const footerNav = [
     heading: "Explore",
     links: [
       { name: "About Lady Cyd", href: "/about", external: false },
-      { name: "Transformation Pathway", href: "/transformation-pathway", external: false },
-      { name: "Blog & Teachings", href: "/blog", external: false },
+      { name: "The WHOLE Pathway™", href: "/transformation-pathway", external: false },
+      { name: "Eden Life Design™", href: "/eden-life-design", external: false },
+      { name: "The Journal", href: "/blog", external: false },
+      { name: "Podcast", href: "/podcast", external: false },
     ],
   },
   {
     heading: "Work With Me",
     links: [
-      { name: "Healing Harbour Inner Circle", href: "/inner-circle", external: false },
+      { name: "Healing Harbour Live", href: "/inner-circle", external: false },
       { name: "Courses & Programmes", href: SELAR_URL, external: true },
       { name: "Clarity Call", href: "/work-with-me", external: false },
     ],
@@ -30,6 +32,8 @@ const footerNav = [
     ],
   },
 ];
+
+const year = new Date().getFullYear()
 
 function Footer() {
   return (
@@ -48,7 +52,9 @@ function Footer() {
           <div className="flex flex-col gap-6 max-w-xs">
             <Logo />
             <p className="text-dark-section-foreground/70 text-sm leading-relaxed font-sans">
-              Trauma-Informed Coach · Family Systems Strategist · Generational Restoration Guide.
+              Soul Restoration Coach for High-Capacity Women
+              <br />
+              Founder, Grit &amp; Graceful Coaching Company
             </p>
             <a
               href="mailto:Hello@ladycyd.online"
@@ -146,7 +152,10 @@ function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-dark-section-foreground/40 text-xs font-sans">
-            &copy; {new Date().getFullYear()} Cyd Alex-Emenike · Lady Cyd. All rights reserved.
+            &copy; {year}  Grit &amp; Graceful Coaching Company · All Rights Reserved
+            <br className="sm:hidden" />
+            <span className="hidden sm:inline"> · </span>
+            A Lady Cyd Alex-Emenike Brand · ladycyd.online
           </p>
           <p className="font-great-vibes text-primary text-lg">
             She who is restored becomes unstoppable.

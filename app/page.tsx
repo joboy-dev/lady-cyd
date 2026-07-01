@@ -33,33 +33,33 @@ const benefits = [
 const stages = [
   {
     code: "01",
-    name: "ENTER",
-    tagline: "Choose to stop carrying alone what was never meant to be carried alone.",
-    description: "Join the Healing Harbour. The community receives you. The journey begins.",
+    name: "RECOGNIZE",
+    tagline: "Encounter the message.",
+    description: "Free content, teachings, podcast episodes, social media, speaking engagements, newsletter content, and public resources. This is where women first encounter the work.",
   },
   {
     code: "02",
-    name: "ENCOUNTER",
-    tagline: "Transformation begins in the mind before it moves to the life.",
-    description: "Engage with teachings, frameworks, and resources that shift your perspective and awaken your awareness.",
+    name: "REVEAL",
+    tagline: "Take the Wound Point Assessment.",
+    description: "The diagnostic gateway into the ecosystem. Every woman begins here. Through ten wound categories she identifies where alignment has been compromised and where restoration work should begin.",
   },
   {
     code: "03",
-    name: "ENGAGE",
-    tagline: "This is where theory becomes practice and insight becomes change.",
-    description: "Go deeper through structured group programmes, workshops, and immersive experiences.",
+    name: "REBUILD",
+    tagline: "Enter Eden Life Design™.",
+    description: "The foundational learning ecosystem — helping women return to God's original design through Biblical truth, emotional formation, transformational teaching, practical tools, and intentional community.",
   },
   {
     code: "04",
-    name: "ELEVATE",
-    tagline: "Apply for a Clarity Call — the threshold of intimate transformation.",
-    description: "This is not open to everyone. It is for the woman who is truly ready to do the deep work.",
+    name: "RESTORE",
+    tagline: "Attend Healing Harbour Live.",
+    description: "Free Monthly Masterclass. Every 4th Friday. 90 Minutes. One Wound Point. One Framework. One Pathway Forward. Exclusively available inside Eden Life Design™.",
   },
   {
     code: "05",
-    name: "EMERGE",
-    tagline: "Not who you were. Who you were always called to become.",
-    description: "You emerge healed in your identity, clear in your purpose, and bold in your legacy.",
+    name: "WHOLE™",
+    tagline: "Enter the flagship coaching programme.",
+    description: "The primary transformational coaching experience within Grit & Graceful. Designed for high-capacity women ready to move beyond awareness into deeper, structured transformation.",
   },
 ];
 
@@ -116,7 +116,7 @@ export default function Home() {
               className="font-cinzel text-xs tracking-[0.3em] uppercase"
               style={{ color: "var(--gold)" }}
             >
-              Trauma-Informed Coach · Family Systems Strategist · Generational Restoration
+              Soul Restoration Coach · Grit &amp; Graceful Coaching Company
             </p>
             <div className="h-px w-8" style={{ background: "var(--gold)", opacity: 0.6 }} />
           </div>
@@ -152,12 +152,12 @@ export default function Home() {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center gap-4 mt-4 animate-fade-in-up" style={{ animationDelay: "600ms" }}>
-            <LinkButton to="/inner-circle" variant="primary" size="lg" className="gap-3">
-              Enter the Healing Harbour
+            <LinkButton to="/whole/assessment" variant="primary" size="lg" className="gap-3">
+              Take The Wound Point Assessment
               <ArrowRight size={16} />
             </LinkButton>
-            <LinkButton to="/transformation-pathway" variant="outlineGold" size="lg">
-              Explore the Transformation Pathway
+            <LinkButton to="/inner-circle" variant="outlineGold" size="lg">
+              Register For Healing Harbour Live
             </LinkButton>
           </div>
 
@@ -192,7 +192,7 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 gap-6">
             {[
               "Generational cycles and family wounds that quietly shape her decisions, relationships, and self-worth",
-              "A deep sense of calling that feels blocked, delayed, or distorted by unhealed identity fractures",
+              "A deep sense of calling that feels blocked, delayed, or distorted by unhealed identity wounds",
               "Burnout and misalignment — giving everything to her work, ministry, or family while running on empty inside",
               "The weight of being the woman who holds everything together, with no safe space to be held herself",
             ].map((pain, i) => (
@@ -278,14 +278,14 @@ export default function Home() {
         />
         <div className="max-w-5xl mx-auto flex flex-col gap-14 relative z-10">
           <AnimateOnScroll animation="left" className="flex flex-col gap-4">
-            <SectionBreadcrumb title="The Transformation Pathway" light align="left" />
+            <SectionBreadcrumb title="The WHOLE Pathway™" light align="left" />
             <h2
               className="font-cormorant font-light text-4xl sm:text-5xl leading-tight max-w-2xl"
               style={{ color: "var(--dark-section-foreground)" }}
             >
               Five stages. One destination:{" "}
               <span className="italic" style={{ color: "var(--primary)" }}>
-                Wholeness.
+                WHOLE.
               </span>
             </h2>
           </AnimateOnScroll>
@@ -336,7 +336,7 @@ export default function Home() {
           <AnimateOnScroll animation="up">
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <LinkButton to="/transformation-pathway" variant="outlineGold" size="sm" className="gap-3">
-              See the Full Pathway
+              See The WHOLE Pathway™
               <ArrowRight size={14} />
             </LinkButton>
             <a
@@ -456,7 +456,7 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════════════════════════════
-          SECTION 7 — HEALING HARBOUR CTA
+          SECTION 7 — EDEN LIFE DESIGN CTA
       ══════════════════════════════════════════════════ */}
       <section
         className="section-padding relative overflow-hidden"
@@ -474,39 +474,39 @@ export default function Home() {
             className="font-great-vibes text-4xl sm:text-5xl"
             style={{ color: "var(--primary)" }}
           >
-            The Healing Harbour
+            Eden Life Design™
           </p>
           <OrnamentalDivider />
           <h2
             className="font-cormorant font-light text-4xl sm:text-5xl leading-tight"
             style={{ color: "var(--hero-foreground)" }}
           >
-            Before the Programme. Before the Mentorship.{" "}
+            You Know Something Needs to Change.{" "}
             <span className="italic" style={{ color: "var(--gold)" }}>
-              There Is the Harbour.
+              Eden Life Design™ Is Where That Changes.
             </span>
           </h2>
           <p
             className="font-sans text-lg leading-relaxed"
             style={{ color: "var(--hero-foreground)", opacity: 0.7 }}
           >
-            The Healing Harbour is Lady Cyd's free inner circle community — a curated, intentional space for high-capacity women who are beginning, continuing, or deepening their journey of healing, identity restoration, and generational transformation.
+            The foundational learning ecosystem for women returning to God&apos;s original design. Biblical truth, emotional formation, transformational teaching, practical tools, and intentional community — including Healing Harbour Live, the free monthly masterclass exclusively inside Eden Life Design™.
           </p>
           <p
-            className="font-cormorant italic text-2xl"
-            style={{ color: "var(--hero-foreground)", opacity: 0.6 }}
+            className="font-cinzel text-xs tracking-widest uppercase"
+            style={{ color: "var(--gold)", opacity: 0.7 }}
           >
-            It is not a holding room. It is the beginning of the work.
+            A Grit &amp; Graceful Coaching Company Experience
           </p>
 
           {/* Feature list */}
           <ul className="flex flex-col gap-3 text-left w-full max-w-md">
             {[
-              "A sisterhood that sees, holds, and walks with you",
-              "Weekly live sessions, prayer, Bible study, and prophetic insight",
-              "Resources designed to build — not merely inspire",
+              "Foundational Courses & Guided Learning Experiences",
+              "Community Conversations & Formation Tools",
+              "Growth Resources designed to produce real change",
+              "Healing Harbour Live — Free Monthly Masterclass (Every 4th Friday)",
               "First access to coaching programmes and opportunities",
-              "Transformational book reading and review",
             ].map((item) => (
               <li key={item} className="flex gap-3 items-start">
                 <span style={{ color: "var(--gold)" }} className="mt-0.5 shrink-0">✦</span>
@@ -517,10 +517,15 @@ export default function Home() {
             ))}
           </ul>
 
-          <LinkButton to="/inner-circle" variant="primary" size="lg" className="mt-4 gap-3">
-            Enter the Healing Harbour
-            <ArrowRight size={16} />
-          </LinkButton>
+          <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
+            <LinkButton to="/eden-life-design" variant="primary" size="lg" className="gap-3">
+              Begin Eden Life Design™
+              <ArrowRight size={16} />
+            </LinkButton>
+            <LinkButton to="/inner-circle" variant="outlineLight" size="lg">
+              Register For Healing Harbour Live
+            </LinkButton>
+          </div>
         </AnimateOnScroll>
       </section>
 

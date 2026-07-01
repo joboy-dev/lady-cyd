@@ -33,11 +33,11 @@ const roleTitles = [
 const certifications = [
   {
     title: "Trauma-Informed Coaching Certification",
-    detail: "A formal certification equipping Lady Cyd to work with high-capacity leaders navigating complex emotional experiences, identity fracture, and unresolved personal and generational trauma — with clinical sensitivity and structured, evidence-informed care.",
+    detail: "A formal certification equipping Lady Cyd to work with high-capacity leaders navigating complex emotional experiences, identity wounds, and unresolved personal and generational trauma — with trauma-informed awareness and structured, evidence-informed care.",
   },
   {
     title: "Advanced Leadership Formation Programme",
-    detail: "Certified · Under the Mentorship of Debola Deji-Kurunmi — transformational coach, bestselling author, and one of Africa's most respected leadership development architects. This programme developed her capacity for structured leadership thinking, high-capacity women's development, and the systematic formation of visionary leaders.",
+    detail: "Trained · Under the Mentorship of Debola Deji-Kurunmi — transformational coach, bestselling author, and one of Africa's most respected leadership development architects. This programme developed her capacity for structured leadership thinking, high-capacity women's development, and the systematic formation of visionary leaders.",
   },
   {
     title: "Advanced Formation & Leadership Studies",
@@ -85,7 +85,7 @@ const pillars = [
   {
     number: "02",
     title: "Trauma-Informed Healing",
-    body: "Drawing on trauma science, somatic awareness, and Kingdom truth, the work meets women in the deep places — the shame, the fractures, the hidden agreements with pain — and walks them through structured, intentional healing.",
+    body: "Drawing on trauma science, somatic awareness, and Kingdom truth, the work meets women in the deep places — the shame, the wounds, the hidden agreements with pain — and walks them through structured, intentional healing.",
   },
   {
     number: "03",
@@ -212,7 +212,7 @@ export default function AboutPage() {
               restoration.
             </p>
             <p>
-              Her own journey began in the private places, the quiet grief of fractured family
+              Her own journey began in the private places, the quiet grief of wounded family
               systems, the slow discovery of how deeply inherited pain shapes identity, and the
               relentless, costly pursuit of wholeness in the face of cycles that seemed determined
               to repeat themselves.
@@ -225,7 +225,7 @@ export default function AboutPage() {
               She came to understand that most women who are high-functioning and high-achieving are
               not thriving from wholeness, they are performing from wounds. That beneath the
               capability, the productivity, the language of resilience, and the leadership gifting,
-              there is often an unaddressed identity fracture quietly governing everything.
+              there is often an unaddressed identity wound quietly governing everything.
             </p>
             <p>
               That understanding became the foundation of everything she does today.
@@ -337,6 +337,48 @@ export default function AboutPage() {
             ))}
           </div>
         </AnimateOnScroll>
+      </section>
+
+      {/* ══════════════════════════════════════════════════
+          BEYOND THE PLATFORM
+      ══════════════════════════════════════════════════ */}
+      <section className="section-padding bg-secondary">
+        <div className="max-w-3xl mx-auto flex flex-col gap-10">
+          <AnimateOnScroll animation="up" className="flex flex-col gap-4">
+            <SectionBreadcrumb title="Beyond The Platform" />
+            <h2
+              className="font-cormorant font-light text-4xl sm:text-5xl leading-tight text-center"
+              style={{ color: "var(--foreground)" }}
+            >
+              The woman{" "}
+              <span className="italic" style={{ color: "var(--primary)" }}>
+                behind the work.
+              </span>
+            </h2>
+          </AnimateOnScroll>
+
+          <OrnamentalDivider theme="dark" />
+
+          <div className="flex flex-col gap-6 font-sans text-muted-foreground leading-[1.9] text-[17px]">
+            <p>
+              Lady Cyd is an author and has carried her message across Africa and beyond —
+              speaking to women leaders, ministry communities, purpose-driven builders, and
+              high-capacity women navigating the intersection of identity, assignment, and
+              restoration.
+            </p>
+            <p>
+              She is the Founder of{" "}
+              <span className="text-foreground font-medium">Grit &amp; Graceful Coaching Company</span>
+              {" "}— the professional vehicle through which she delivers coaching, formation programmes,
+              and transformational experiences to high-capacity women.
+            </p>
+            <p>
+              She is married to her lover, friend, and covenant partner, Alex Emenike, and
+              together they are raising a family anchored in faith, purpose, and Kingdom
+              intentionality.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* ══════════════════════════════════════════════════
@@ -545,7 +587,7 @@ export default function AboutPage() {
       </section>
 
       {/* ══════════════════════════════════════════════════
-          CTA — JOIN THE HEALING HARBOUR
+          CTA — BEGIN THE JOURNEY
       ══════════════════════════════════════════════════ */}
       <section
         className="section-padding relative overflow-hidden"
@@ -567,25 +609,26 @@ export default function AboutPage() {
             className="font-cormorant font-light text-3xl sm:text-4xl leading-tight"
             style={{ color: "white" }}
           >
-            The first step is entering the Harbour.{" "}
+            The first step is{" "}
             <span className="italic" style={{ color: "var(--gold)" }}>
-              Everything grows from there.
+              The Wound Point Assessment.
             </span>
           </h2>
           <p
             className="font-sans text-[17px] leading-relaxed"
             style={{ color: "rgba(255,255,255,0.65)" }}
           >
-            The Healing Harbour is Lady Cyd&apos;s free inner circle community — where the journey
-            begins, the sisterhood receives you, and transformation takes root.
+            The diagnostic gateway into the ecosystem. Through ten wound categories, every woman
+            identifies where alignment has been compromised and where her restoration work should begin.
+            Everything in the Grit &amp; Graceful ecosystem flows from here.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4">
-            <LinkButton to="/inner-circle" variant="primary" size="lg" className="gap-3">
-              Enter the Healing Harbour
+            <LinkButton to="/whole/assessment" variant="primary" size="lg" className="gap-3">
+              Take The Wound Point Assessment
               <ArrowRight size={16} />
             </LinkButton>
             <LinkButton to="/transformation-pathway" variant="outlineLight" size="lg">
-              See the Transformation Pathway
+              See The WHOLE Pathway™
             </LinkButton>
           </div>
         </AnimateOnScroll>

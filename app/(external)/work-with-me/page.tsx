@@ -4,7 +4,7 @@ import OrnamentalDivider from "@/components/shared/OrnamentalDivider";
 import SectionBreadcrumb from "@/components/shared/breadcrumb/SectionBreadcrumb";
 import LinkButton from "@/components/shared/button/LinkButton";
 import PublicNavbar from "@/components/shared/navbar/PublicNavbar";
-import ClarityCallForm from "@/components/shared/ClarityCallForm";
+import ClarityCallForm from "@/components/shared/form/appForms/ClarityCallForm";
 import type { Metadata } from "next";
 import { ArrowRight, CheckCircle2, Clock, MessageCircle } from "lucide-react";
 
@@ -341,7 +341,7 @@ export default function WorkWithMePage() {
       </section>
 
       {/* ══════════════════════════════════════════════════
-          NOT READY YET? — Gentle nudge to Inner Circle
+          NOT READY YET? — Gentle nudge to Eden Life Design
       ══════════════════════════════════════════════════ */}
       <section
         className="section-padding relative overflow-hidden"
@@ -369,22 +369,23 @@ export default function WorkWithMePage() {
             className="font-cormorant font-light text-3xl sm:text-4xl leading-tight"
             style={{ color: "white" }}
           >
-            Start with the{" "}
+            Begin with{" "}
             <span className="italic" style={{ color: "var(--primary)" }}>
-              Healing Harbour.
+              Eden Life Design™.
             </span>
           </h2>
           <p
             className="font-sans text-[17px] leading-relaxed"
             style={{ color: "rgba(255,255,255,0.6)" }}
           >
-            If a private session feels like a big step right now, begin in the community.
-            The Healing Harbour Inner Circle is a free space to receive Lady Cyd's teachings,
-            connect with other women on the journey, and get clear on what you need.
+            If a private Clarity Call feels like a big step right now, begin in the foundational
+            ecosystem. Eden Life Design™ is the free formation environment where you receive Lady
+            Cyd&apos;s structured teachings, access courses and resources, attend Healing Harbour
+            Live (the free monthly masterclass), and get clear on exactly what you need.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4">
-            <LinkButton to="/inner-circle" variant="primary" size="lg" className="gap-3">
-              Explore the Healing Harbour
+            <LinkButton to="/eden-life-design" variant="primary" size="lg" className="gap-3">
+              Explore Eden Life Design™
               <ArrowRight size={16} />
             </LinkButton>
             <LinkButton to="/about" variant="outlineLight" size="lg">

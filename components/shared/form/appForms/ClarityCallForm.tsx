@@ -4,10 +4,12 @@ import { z } from "zod";
 import { useZodForm } from "@/lib/hooks/useZodForm";
 import { clarityCallSchema } from "@/lib/validators/general";
 import type { Option } from "@/lib/interfaces/general";
-import FormWrapper from "./form/Form";
-import FormInput from "./form/FormInput";
-import TextAreaInput from "./form/TextAreaInput";
-import SelectField from "./form/SelectField";
+import FormWrapper from "@/components/shared/form/Form";
+import FormInput from "@/components/shared/form/FormInput";
+import TextAreaInput from "@/components/shared/form/TextAreaInput";
+import SelectField from "@/components/shared/form/SelectField";
+import { submitClarityCall } from "@/app/actions/clarity-call";
+import toast from "react-hot-toast";
 
 type ClarityCallData = z.infer<typeof clarityCallSchema>;
 
@@ -15,7 +17,7 @@ const heardViaOptions: Option[] = [
   { key: 1, label: "Instagram", value: "instagram" },
   { key: 2, label: "Threads", value: "threads" },
   { key: 3, label: "Friend / Referral", value: "referral" },
-  { key: 4, label: "Healing Harbour Community", value: "healing-harbour" },
+  { key: 4, label: "Eden Life Design™ Community", value: "eden-life-design" },
   { key: 5, label: "Blog / The Journal", value: "blog" },
   { key: 6, label: "Search / Google", value: "search" },
   { key: 7, label: "Other", value: "other" },
@@ -32,8 +34,13 @@ export default function ClarityCallForm() {
   });
 
   const onSubmit = methods.handleSubmit(async (data: ClarityCallData) => {
-    // TODO: wire to API / CRM / Calendly intake
-    console.log("Clarity Call application:", data);
+    const result = await submitClarityCall(data);
+    if (result.success) {
+      toast.success("Application received. Lady Cyd will be in touch within 3–5 business days.");
+      methods.reset();
+    } else {
+      toast.error(result.error ?? "Something went wrong. Please try again.");
+    }
   });
 
   return (
@@ -42,6 +49,7 @@ export default function ClarityCallForm() {
       onSubmit={onSubmit}
       submitLabel="Submit My Application"
       submittingLabel="Sending…"
+      isSubmitting={methods.formState.isSubmitting}
       className="shadow-none! rounded-none! bg-transparent!"
       afterButtonContent={
         <p
@@ -53,7 +61,6 @@ export default function ClarityCallForm() {
         </p>
       }
     >
-      {/* Name + Email row */}
       <div className="grid sm:grid-cols-2 gap-0 sm:gap-4">
         <FormInput
           name="name"
@@ -70,7 +77,6 @@ export default function ClarityCallForm() {
         />
       </div>
 
-      {/* How did they find Lady Cyd */}
       <SelectField
         label="How did you find Lady Cyd?"
         register={methods.register("heard_via")}
@@ -78,7 +84,6 @@ export default function ClarityCallForm() {
         options={heardViaOptions}
       />
 
-      {/* Journey */}
       <TextAreaInput
         name="current_place"
         label="Where are you on your journey right now?"
@@ -87,7 +92,6 @@ export default function ClarityCallForm() {
         required
       />
 
-      {/* Desired outcome */}
       <TextAreaInput
         name="desired_outcome"
         label="What do you most want to focus on or shift?"
@@ -96,7 +100,6 @@ export default function ClarityCallForm() {
         required
       />
 
-      {/* Readiness */}
       <TextAreaInput
         name="readiness"
         label="Why do you feel ready for this work now?"
