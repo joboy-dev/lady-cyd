@@ -188,7 +188,7 @@ export default function WHOLEPage() {
           >
             Begin in{" "}
             <span className="italic" style={{ color: "var(--gold)" }}>
-              Eden Life Design™.
+              WHOLE Design™.
             </span>
           </h2>
           <p
@@ -196,16 +196,16 @@ export default function WHOLEPage() {
             style={{ color: "rgba(255,255,255,0.65)" }}
           >
             The foundational formation environment where women enter the ecosystem, do the
-            structural work, and build the internal readiness for WHOLE™. Eden Life Design™ is
+            structural work, and build the internal readiness for WHOLE™. WHOLE Design™ is
             free to enter and available now.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a
-              href="/eden-life-design"
+              href="/whole-design"
               className="inline-flex items-center gap-3 font-cinzel text-sm tracking-widest uppercase px-8 py-3 transition-all duration-200"
               style={{ background: "var(--primary)", color: "white" }}
             >
-              Enter Eden Life Design™
+              Enter WHOLE Design™
             </a>
             <a
               href="/transformation-pathway"

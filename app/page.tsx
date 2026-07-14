@@ -46,14 +46,14 @@ const stages = [
   {
     code: "03",
     name: "REBUILD",
-    tagline: "Enter Eden Life Design™.",
+    tagline: "Enter WHOLE Design™.",
     description: "The foundational learning ecosystem — helping women return to God's original design through Biblical truth, emotional formation, transformational teaching, practical tools, and intentional community.",
   },
   {
     code: "04",
     name: "RESTORE",
     tagline: "Attend Healing Harbour Live.",
-    description: "Free Monthly Masterclass. Every 4th Friday. 90 Minutes. One Wound Point. One Framework. One Pathway Forward. Exclusively available inside Eden Life Design™.",
+    description: "Free Monthly Masterclass. Every 4th Friday. 90 Minutes. One Wound Point. One Framework. One Pathway Forward. Exclusively available inside WHOLE Design™.",
   },
   {
     code: "05",
@@ -474,7 +474,7 @@ export default function Home() {
             className="font-great-vibes text-4xl sm:text-5xl"
             style={{ color: "var(--primary)" }}
           >
-            Eden Life Design™
+            WHOLE Design™
           </p>
           <OrnamentalDivider />
           <h2
@@ -483,14 +483,14 @@ export default function Home() {
           >
             You Know Something Needs to Change.{" "}
             <span className="italic" style={{ color: "var(--gold)" }}>
-              Eden Life Design™ Is Where That Changes.
+              WHOLE Design™ Is Where That Changes.
             </span>
           </h2>
           <p
             className="font-sans text-lg leading-relaxed"
             style={{ color: "var(--hero-foreground)", opacity: 0.7 }}
           >
-            The foundational learning ecosystem for women returning to God&apos;s original design. Biblical truth, emotional formation, transformational teaching, practical tools, and intentional community — including Healing Harbour Live, the free monthly masterclass exclusively inside Eden Life Design™.
+            The foundational learning ecosystem for women returning to God&apos;s original design. Biblical truth, emotional formation, transformational teaching, practical tools, and intentional community — including Healing Harbour Live, the free monthly masterclass exclusively inside WHOLE Design™.
           </p>
           <p
             className="font-cinzel text-xs tracking-widest uppercase"
@@ -518,8 +518,8 @@ export default function Home() {
           </ul>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
-            <LinkButton to="/eden-life-design" variant="primary" size="lg" className="gap-3">
-              Begin Eden Life Design™
+            <LinkButton to="/whole-design" variant="primary" size="lg" className="gap-3">
+              Begin WHOLE Design™
               <ArrowRight size={16} />
             </LinkButton>
             <LinkButton to="/inner-circle" variant="outlineLight" size="lg">

@@ -226,7 +226,7 @@ export default function BlogPage() {
             <AnimateOnScroll animation="scale">
               <ListEmpty
                 title="posts"
-                subtitle="Lady Cyd's writing is coming soon. Enter Eden Life Design™ to be the first to receive new journal entries, teachings, and reflections."
+                subtitle="Lady Cyd's writing is coming soon. Enter WHOLE Design™ to be the first to receive new journal entries, teachings, and reflections."
               />
             </AnimateOnScroll>
           )}
@@ -378,7 +378,7 @@ export default function BlogPage() {
             className="font-cormorant font-light text-3xl sm:text-4xl leading-tight"
             style={{ color: "white" }}
           >
-            Enter Eden Life Design™{" "}
+            Enter WHOLE Design™{" "}
             <span className="italic" style={{ color: "var(--gold)" }}>
               to receive every new journal entry.
             </span>
@@ -387,15 +387,15 @@ export default function BlogPage() {
             className="font-sans text-[17px] leading-relaxed"
             style={{ color: "rgba(255,255,255,0.65)" }}
           >
-            Members of Eden Life Design™ are the first to receive new writings, teachings,
+            Members of WHOLE Design™ are the first to receive new writings, teachings,
             and reflections from Lady Cyd — alongside the full formation ecosystem experience,
             including Healing Harbour Live.
           </p>
           <SubscribeForm source="journal" />
 
           <div className="flex flex-col sm:flex-row items-center gap-4 pt-2 border-t border-white/10">
-            <LinkButton to="/eden-life-design" variant="primary" size="lg" className="gap-3">
-              Enter Eden Life Design™
+            <LinkButton to="/whole-design" variant="primary" size="lg" className="gap-3">
+              Enter WHOLE Design™
               <ArrowRight size={16} />
             </LinkButton>
             <LinkButton to="/about" variant="outlineLight" size="lg">

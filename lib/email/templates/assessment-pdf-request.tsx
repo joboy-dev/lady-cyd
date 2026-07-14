@@ -54,10 +54,10 @@ export function AssessmentPdfRequestEmail({ name }: Props) {
 
           <Section style={section}>
             <Text style={body}>
-              While you wait — explore Eden Life Design™, the foundational learning ecosystem
+              While you wait — explore WHOLE Design™, the foundational learning ecosystem
               where the restoration work continues after the audit.
             </Text>
-            <Text style={ctaUrl}>ladycyd.online/eden-life-design</Text>
+            <Text style={ctaUrl}>ladycyd.online/whole-design</Text>
           </Section>
 
           <Section style={pullquote}>

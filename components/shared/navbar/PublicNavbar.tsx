@@ -20,7 +20,7 @@ const navItems: NavItem[] = [
     label: 'Explore',
     children: [
       { label: 'The WHOLE Pathway™', to: '/transformation-pathway', desc: 'Five stages from recognition to WHOLE' },
-      { label: 'Eden Life Design™', to: '/eden-life-design', desc: 'The foundational learning ecosystem' },
+      { label: 'WHOLE Design™', to: '/whole-design', desc: 'The foundational learning ecosystem' },
       { label: 'Healing Harbour Live', to: '/inner-circle', desc: 'Free monthly masterclass · Every 4th Friday' },
     ],
   },

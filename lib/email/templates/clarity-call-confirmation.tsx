@@ -36,7 +36,7 @@ export function ClarityCallConfirmationEmail({ name }: Props) {
               personally and will respond within 3–5 business days.
             </Text>
             <Text style={body}>
-              While you wait, we encourage you to explore Eden Life Design™ — the foundational
+              While you wait, we encourage you to explore WHOLE Design™ — the foundational
               learning ecosystem where the work begins, the community receives you, and
               transformation takes root.
             </Text>

@@ -9,11 +9,11 @@ import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Eden Life Design™ | Foundational Learning Ecosystem | Lady Cyd",
+  title: "WHOLE Design™ | Foundational Learning Ecosystem | Lady Cyd",
   description:
-    "Eden Life Design™ is the foundational learning ecosystem of Grit & Graceful Coaching Company — where high-capacity women return to God's original design through Biblical truth, emotional formation, transformational teaching, and intentional community.",
+    "WHOLE Design™ is the foundational learning ecosystem of Grit & Graceful Coaching Company — where high-capacity women return to God's original design through Biblical truth, emotional formation, transformational teaching, and intentional community.",
   keywords: [
-    "Eden Life Design Lady Cyd",
+    "WHOLE Design Lady Cyd",
     "Grit and Graceful Coaching Company",
     "formation ecosystem for women",
     "Healing Harbour Live masterclass",
@@ -67,7 +67,7 @@ const features = [
   {
     number: "01",
     title: "Foundational Courses",
-    body: "Structured learning experiences that form the core of the Eden Life Design™ curriculum. Each course is built to produce actual formation — not just information.",
+    body: "Structured learning experiences that form the core of the WHOLE Design™ curriculum. Each course is built to produce actual formation — not just information.",
   },
   {
     number: "02",
@@ -87,12 +87,12 @@ const features = [
   {
     number: "05",
     title: "Formation Tools",
-    body: "Practitioner-grade instruments for personal transformation — tools drawn from Lady Cyd's coaching practice, adapted for the formation journey inside Eden Life Design™.",
+    body: "Practitioner-grade instruments for personal transformation — tools drawn from Lady Cyd's coaching practice, adapted for the formation journey inside WHOLE Design™.",
   },
   {
     number: "06",
     title: "Healing Harbour Live",
-    body: "The free monthly masterclass — exclusively available inside Eden Life Design™. Every 4th Friday. 90 Minutes. One Wound Point. One Framework. One Pathway Forward.",
+    body: "The free monthly masterclass — exclusively available inside WHOLE Design™. Every 4th Friday. 90 Minutes. One Wound Point. One Framework. One Pathway Forward.",
     highlight: true,
   },
 ];
@@ -136,7 +136,7 @@ const testimonials = [
 const pathwayStages = [
   { code: "01", name: "RECOGNIZE", current: false },
   { code: "02", name: "REVEAL", current: false },
-  { code: "03", name: "REBUILD", current: true, label: "Eden Life Design™" },
+  { code: "03", name: "REBUILD", current: true, label: "WHOLE Design™" },
   { code: "04", name: "RESTORE", current: false },
   { code: "05", name: "WHOLE™", current: false, comingSoon: true },
 ];
@@ -177,7 +177,7 @@ export default function EdenLifeDesignPage() {
             className="font-great-vibes leading-none animate-fade-in-up"
             style={{ color: "var(--primary)", fontSize: "clamp(3rem, 8vw, 6.5rem)", animationDelay: "150ms" }}
           >
-            Eden Life Design™
+            WHOLE Design™
           </p>
 
           <div className="animate-fade-in-up" style={{ animationDelay: "300ms" }}>
@@ -203,13 +203,13 @@ export default function EdenLifeDesignPage() {
               className="font-cormorant italic text-xl sm:text-2xl mt-4"
               style={{ color: "var(--gold)", opacity: 0.85 }}
             >
-              Eden Life Design™ is where that changes.
+              WHOLE Design™ is where that changes.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 mt-2 animate-fade-in-up" style={{ animationDelay: "700ms" }}>
             <LinkButton to="#enter" variant="primary" size="lg" className="gap-3">
-              Begin Eden Life Design™
+              Begin WHOLE Design™
               <ArrowRight size={16} />
             </LinkButton>
             <LinkButton to="/transformation-pathway" variant="outlineLight" size="lg">
@@ -241,7 +241,7 @@ export default function EdenLifeDesignPage() {
 
           <div className="flex flex-col gap-6 font-sans text-muted-foreground leading-[1.9] text-[17px]">
             <p>
-              Eden Life Design™ is the foundational learning ecosystem of Grit &amp; Graceful
+              WHOLE Design™ is the foundational learning ecosystem of Grit &amp; Graceful
               Coaching Company — the place where women return to God&apos;s original design through
               Biblical truth, emotional formation, transformational teaching, practical tools, and
               intentional community.
@@ -252,9 +252,9 @@ export default function EdenLifeDesignPage() {
               structured work of formation. Not motivation. Not inspiration. Formation.
             </p>
             <p>
-              Eden Life Design™ exists because most women have access to more information than they
+              WHOLE Design™ exists because most women have access to more information than they
               can process — but very few have access to a structured, intentional environment where
-              that information becomes actual formation. Eden Life Design™ is that environment.
+              that information becomes actual formation. WHOLE Design™ is that environment.
             </p>
           </div>
 
@@ -267,7 +267,7 @@ export default function EdenLifeDesignPage() {
               style={{ color: "var(--foreground)" }}
             >
               &ldquo;You did not arrive broken. You arrived without a map.
-              Eden Life Design™ gives you the map — and walks with you as you use it.&rdquo;
+              WHOLE Design™ gives you the map — and walks with you as you use it.&rdquo;
             </p>
             <p
               className="font-cinzel text-xs tracking-widest uppercase mt-3"
@@ -427,7 +427,7 @@ export default function EdenLifeDesignPage() {
                   </p>
                   {feat.highlight && (
                     <p className="font-cinzel text-[10px] tracking-widest uppercase" style={{ color: "var(--primary)" }}>
-                      Exclusively Inside Eden Life Design™
+                      Exclusively Inside WHOLE Design™
                     </p>
                   )}
                 </div>
@@ -512,7 +512,7 @@ export default function EdenLifeDesignPage() {
               className="font-cormorant font-light text-3xl sm:text-4xl leading-tight"
               style={{ color: "var(--foreground)" }}
             >
-              Eden Life Design™ is Stage 03 of{" "}
+              WHOLE Design™ is Stage 03 of{" "}
               <span className="italic" style={{ color: "var(--primary)" }}>
                 The WHOLE Pathway™.
               </span>
@@ -577,7 +577,7 @@ export default function EdenLifeDesignPage() {
           <AnimateOnScroll animation="up" delay={200} className="flex flex-col items-center gap-4 text-center">
             <p className="font-sans text-muted-foreground text-[17px] leading-relaxed max-w-2xl">
               Begin with the Wound Point Assessment (Stage 02 — REVEAL). Once you have identified your
-              wound points, enter Eden Life Design™ (Stage 03 — REBUILD) to begin the structured
+              wound points, enter WHOLE Design™ (Stage 03 — REBUILD) to begin the structured
               formation work.
             </p>
             <LinkButton to="/transformation-pathway" variant="outline" size="sm" className="gap-3">
@@ -689,7 +689,7 @@ export default function EdenLifeDesignPage() {
             className="font-great-vibes text-4xl sm:text-5xl"
             style={{ color: "var(--primary)" }}
           >
-            The promise of Eden Life Design™
+            The promise of WHOLE Design™
           </p>
           <OrnamentalDivider theme="light" />
           <h2
@@ -707,11 +707,11 @@ export default function EdenLifeDesignPage() {
           >
             Not motivated. Not inspired for a week. Equipped — with language, frameworks, a
             foundation, and a community — to actually live the life you were designed for.
-            That is the promise of Eden Life Design™.
+            That is the promise of WHOLE Design™.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <LinkButton to="/inner-circle" variant="primary" size="lg" className="gap-3">
-              Begin Eden Life Design™
+              Begin WHOLE Design™
               <ArrowRight size={16} />
             </LinkButton>
             <LinkButton to="/inner-circle" variant="outlineLight" size="lg">
@@ -726,7 +726,7 @@ export default function EdenLifeDesignPage() {
             >
               Or join The Journal — stay connected with Lady Cyd's bi-weekly writings
             </p>
-            <SubscribeForm source="eden-life-design" />
+            <SubscribeForm source="whole-design" />
           </div>
 
           <p

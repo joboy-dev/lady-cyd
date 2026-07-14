@@ -23,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/eden-life-design`,
+      url: `${baseUrl}/whole-design`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,

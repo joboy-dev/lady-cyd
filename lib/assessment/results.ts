@@ -33,7 +33,7 @@ export const woundResults: Record<WoundType, WoundResult> = {
     description:
       "The achievements are real. The impact is visible. And something still feels slightly off-centre — because portions of what you have built were constructed under pressure and expectation rather than divine clarity and personal alignment. The work begins here: finding the exact assignment, not just a good one.",
     primaryCta: { label: 'Apply For a Clarity Call', href: '/work-with-me' },
-    secondaryCta: { label: 'Explore Eden Life Design™', href: '/eden-life-design' },
+    secondaryCta: { label: 'Explore WHOLE Design™', href: '/whole-design' },
   },
   legacy: {
     name: 'The Legacy Wound',
@@ -41,7 +41,7 @@ export const woundResults: Record<WoundType, WoundResult> = {
     description:
       "You are building something significant — and very little of it is structurally designed to continue beyond your direct presence. The work begins here: moving from impact thinking to inheritance architecture. Building with the next generation in mind as a daily reflex.",
     primaryCta: { label: 'Apply For a Clarity Call', href: '/work-with-me' },
-    secondaryCta: { label: 'Explore Eden Life Design™', href: '/eden-life-design' },
+    secondaryCta: { label: 'Explore WHOLE Design™', href: '/whole-design' },
   },
   rhythm: {
     name: 'The Rhythm Wound',

@@ -9,7 +9,7 @@ const footerNav = [
     links: [
       { name: "About Lady Cyd", href: "/about", external: false },
       { name: "The WHOLE Pathway™", href: "/transformation-pathway", external: false },
-      { name: "Eden Life Design™", href: "/eden-life-design", external: false },
+      { name: "WHOLE Design™", href: "/whole-design", external: false },
       { name: "The Journal", href: "/blog", external: false },
       { name: "Podcast", href: "/podcast", external: false },
     ],
