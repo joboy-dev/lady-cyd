@@ -25,9 +25,9 @@ const sections = [
   },
   {
     number: "03",
-    title: "WHOLE Design™ Community",
+    title: "WHOLE Life Design™ Community",
     content:
-      "Membership of the WHOLE Design™ community is free and operates under Grit and Graceful Coaching Company. Members agree to engage respectfully, maintain the confidentiality of other members' shared experiences, and refrain from spam or disruptive behaviour. Grit and Graceful Coaching Company reserves the right to remove any member whose conduct violates these standards.",
+      "Membership of the WHOLE Life Design™ community is free and operates under Grit and Graceful Coaching Company. Members agree to engage respectfully, maintain the confidentiality of other members' shared experiences, and refrain from spam or disruptive behaviour. Grit and Graceful Coaching Company reserves the right to remove any member whose conduct violates these standards.",
   },
   {
     number: "04",

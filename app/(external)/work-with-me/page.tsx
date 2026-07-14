@@ -341,7 +341,7 @@ export default function WorkWithMePage() {
       </section>
 
       {/* ══════════════════════════════════════════════════
-          NOT READY YET? — Gentle nudge to WHOLE Design
+          NOT READY YET? — Gentle nudge to WHOLE Life Design
       ══════════════════════════════════════════════════ */}
       <section
         className="section-padding relative overflow-hidden"
@@ -371,7 +371,7 @@ export default function WorkWithMePage() {
           >
             Begin with{" "}
             <span className="italic" style={{ color: "var(--primary)" }}>
-              WHOLE Design™.
+              WHOLE Life Design™.
             </span>
           </h2>
           <p
@@ -379,13 +379,13 @@ export default function WorkWithMePage() {
             style={{ color: "rgba(255,255,255,0.6)" }}
           >
             If a private Clarity Call feels like a big step right now, begin in the foundational
-            ecosystem. WHOLE Design™ is the free formation environment where you receive Lady
+            ecosystem. WHOLE Life Design™ is the free formation environment where you receive Lady
             Cyd&apos;s structured teachings, access courses and resources, attend Healing Harbour
             Live (the free monthly masterclass), and get clear on exactly what you need.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4">
-            <LinkButton to="/whole-design" variant="primary" size="lg" className="gap-3">
-              Explore WHOLE Design™
+            <LinkButton to="/whole-life-design" variant="primary" size="lg" className="gap-3">
+              Explore WHOLE Life Design™
               <ArrowRight size={16} />
             </LinkButton>
             <LinkButton to="/about" variant="outlineLight" size="lg">

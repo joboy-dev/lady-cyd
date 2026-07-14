@@ -285,7 +285,7 @@ export default function PodcastPage() {
           >
             The podcast is where it begins.{" "}
             <span className="italic" style={{ color: "var(--gold)" }}>
-              WHOLE Design™ is where it deepens.
+              WHOLE Life Design™ is where it deepens.
             </span>
           </h2>
           <p
@@ -294,11 +294,11 @@ export default function PodcastPage() {
           >
             META-FORMATION HQ is the RECOGNIZE stage — where women first encounter the work.
             When you are ready to go from recognition to formation, the next step is
-            The Wound Point Assessment and WHOLE Design™.
+            The Wound Point Assessment and WHOLE Life Design™.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4">
-            <LinkButton to="/whole-design" variant="primary" size="lg" className="gap-3">
-              Enter WHOLE Design™
+            <LinkButton to="/whole-life-design" variant="primary" size="lg" className="gap-3">
+              Enter WHOLE Life Design™
               <ArrowRight size={16} />
             </LinkButton>
             <a

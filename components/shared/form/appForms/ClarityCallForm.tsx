@@ -17,7 +17,7 @@ const heardViaOptions: Option[] = [
   { key: 1, label: "Instagram", value: "instagram" },
   { key: 2, label: "Threads", value: "threads" },
   { key: 3, label: "Friend / Referral", value: "referral" },
-  { key: 4, label: "WHOLE Design™ Community", value: "whole-design" },
+  { key: 4, label: "WHOLE Life Design™ Community", value: "whole-life-design" },
   { key: 5, label: "Blog / The Journal", value: "blog" },
   { key: 6, label: "Search / Google", value: "search" },
   { key: 7, label: "Other", value: "other" },

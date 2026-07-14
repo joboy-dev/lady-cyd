@@ -11,11 +11,11 @@ import { ArrowRight, Calendar, Clock, Users, Zap } from "lucide-react";
 export const metadata: Metadata = {
   title: "Healing Harbour Live | Free Monthly Masterclass | Lady Cyd",
   description:
-    "Healing Harbour Live is the free monthly masterclass exclusively inside WHOLE Design™ — by Lady Cyd, Grit & Graceful Coaching Company. Every 4th Friday. 90 minutes. One Wound Point. One Framework. One Pathway Forward.",
+    "Healing Harbour Live is the free monthly masterclass exclusively inside WHOLE Life Design™ — by Lady Cyd, Grit & Graceful Coaching Company. Every 4th Friday. 90 minutes. One Wound Point. One Framework. One Pathway Forward.",
   keywords: [
     "Healing Harbour Live masterclass",
     "free Christian coaching masterclass",
-    "WHOLE Design Lady Cyd",
+    "WHOLE Life Design Lady Cyd",
     "identity restoration masterclass",
     "Wound Point Assessment coaching",
     "Grit and Graceful Coaching Company",
@@ -41,7 +41,7 @@ const sessionFeatures = [
   {
     icon: <Users size={18} />,
     title: "Zoom + Skool Live",
-    body: "Join live from wherever you are. Healing Harbour Live is hosted on Zoom and inside the WHOLE Design™ Skool community.",
+    body: "Join live from wherever you are. Healing Harbour Live is hosted on Zoom and inside the WHOLE Life Design™ Skool community.",
   },
 ];
 
@@ -87,7 +87,7 @@ export default function HealingHarbourLivePage() {
 
         <div className="section-padding relative z-10 flex flex-col items-center text-center gap-8 mt-32 sm:mt-40 pb-20">
           <div className="animate-fade-in-up">
-            <SectionBreadcrumb title="Free Monthly Masterclass — Exclusively Inside WHOLE Design™" light />
+            <SectionBreadcrumb title="Free Monthly Masterclass — Exclusively Inside WHOLE Life Design™" light />
           </div>
 
           <p
@@ -131,7 +131,7 @@ export default function HealingHarbourLivePage() {
               style={{ color: "rgba(255,255,255,0.68)" }}
             >
               Healing Harbour Live is not a general teaching session. It is a structured, facilitated
-              masterclass inside WHOLE Design™ — where each session takes one wound point,
+              masterclass inside WHOLE Life Design™ — where each session takes one wound point,
               unpacks its framework, and delivers a single, defined pathway forward.
             </p>
           </div>
@@ -141,8 +141,8 @@ export default function HealingHarbourLivePage() {
               Register For The Next Session
               <ArrowRight size={16} />
             </LinkButton>
-            <LinkButton to="/whole-design" variant="outlineLight" size="lg">
-              Explore WHOLE Design™
+            <LinkButton to="/whole-life-design" variant="outlineLight" size="lg">
+              Explore WHOLE Life Design™
             </LinkButton>
           </div>
         </div>
@@ -171,7 +171,7 @@ export default function HealingHarbourLivePage() {
           <div className="flex flex-col gap-6 font-sans text-muted-foreground leading-[1.9] text-[17px]">
             <p>
               Healing Harbour Live is the free monthly masterclass exclusively available inside
-              WHOLE Design™ — the foundational learning ecosystem of Grit &amp; Graceful
+              WHOLE Life Design™ — the foundational learning ecosystem of Grit &amp; Graceful
               Coaching Company. It is the heartbeat of the ecosystem. The consistent, structured,
               monthly touchpoint that keeps women moving forward.
             </p>
@@ -182,7 +182,7 @@ export default function HealingHarbourLivePage() {
               insight, but direction.
             </p>
             <p>
-              It is free. It is live. And it is exclusively available inside WHOLE Design™.
+              It is free. It is live. And it is exclusively available inside WHOLE Life Design™.
             </p>
           </div>
 
@@ -334,23 +334,23 @@ export default function HealingHarbourLivePage() {
             >
               Exclusively available inside{" "}
               <span className="italic" style={{ color: "var(--primary)" }}>
-                WHOLE Design™.
+                WHOLE Life Design™.
               </span>
             </h2>
             <OrnamentalDivider className="justify-start" />
             <p className="font-sans text-[17px] leading-relaxed text-muted-foreground">
               Healing Harbour Live is not a standalone event. It lives exclusively inside
-              WHOLE Design™ — the foundational learning ecosystem of Grit &amp; Graceful
-              Coaching Company. To register for Healing Harbour Live, begin with WHOLE Design™.
+              WHOLE Life Design™ — the foundational learning ecosystem of Grit &amp; Graceful
+              Coaching Company. To register for Healing Harbour Live, begin with WHOLE Life Design™.
             </p>
             <p className="font-sans text-[17px] leading-relaxed text-muted-foreground">
-              WHOLE Design™ is free to enter. Once inside, you have access to Healing Harbour
+              WHOLE Life Design™ is free to enter. Once inside, you have access to Healing Harbour
               Live every 4th Friday — along with foundational courses, guided learning experiences,
               community conversations, growth resources, and formation tools.
             </p>
             <div className="flex flex-col sm:flex-row items-start gap-4 mt-2">
-              <LinkButton to="/whole-design" variant="primary" size="md" className="gap-3">
-                Enter WHOLE Design™
+              <LinkButton to="/whole-life-design" variant="primary" size="md" className="gap-3">
+                Enter WHOLE Life Design™
                 <ArrowRight size={14} />
               </LinkButton>
               <LinkButton to="/transformation-pathway" variant="outline" size="md">
@@ -364,7 +364,7 @@ export default function HealingHarbourLivePage() {
             style={{ borderColor: "var(--gold)", background: "var(--secondary)" }}
           >
             <p className="font-cinzel text-xs tracking-widest uppercase" style={{ color: "var(--gold)" }}>
-              Inside WHOLE Design™
+              Inside WHOLE Life Design™
             </p>
             {[
               "Foundational Courses",
@@ -423,12 +423,12 @@ export default function HealingHarbourLivePage() {
             style={{ color: "rgba(255,255,255,0.65)" }}
           >
             Every woman enters the ecosystem through the Wound Point Assessment. Take the assessment,
-            enter WHOLE Design™, and register for Healing Harbour Live — all free.
+            enter WHOLE Life Design™, and register for Healing Harbour Live — all free.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-4">
-            <LinkButton to="/whole-design" variant="primary" size="lg" className="gap-3">
-              Begin WHOLE Design™
+            <LinkButton to="/whole-life-design" variant="primary" size="lg" className="gap-3">
+              Begin WHOLE Life Design™
               <ArrowRight size={16} />
             </LinkButton>
             <LinkButton to="/transformation-pathway" variant="outlineLight" size="lg">
@@ -450,7 +450,7 @@ export default function HealingHarbourLivePage() {
             className="font-cinzel text-[10px] tracking-widest uppercase mt-2"
             style={{ color: "rgba(255,255,255,0.3)" }}
           >
-            Healing Harbour Live · Exclusively Inside WHOLE Design™ · A Grit &amp; Graceful Coaching Company Experience
+            Healing Harbour Live · Exclusively Inside WHOLE Life Design™ · A Grit &amp; Graceful Coaching Company Experience
           </p>
         </AnimateOnScroll>
       </section>

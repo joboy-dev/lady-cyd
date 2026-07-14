@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "identity restoration coach",
     "trauma-informed coaching for Christian women",
     "WHOLE Pathway Lady Cyd",
-    "WHOLE Design",
+    "WHOLE Life Design",
     "Wound Point Assessment",
   ],
 };
@@ -60,20 +60,20 @@ const stages = [
   {
     code: "03",
     name: "REBUILD",
-    tagline: "Enter WHOLE Design™.",
+    tagline: "Enter WHOLE Life Design™.",
     description:
-      "REBUILD is the foundational formation layer. WHOLE Design™ is the learning ecosystem where women return to God's original design through Biblical truth, emotional formation, transformational teaching, practical tools, and intentional community. It is not a course platform — it is a developmental environment.",
+      "REBUILD is the foundational formation layer. WHOLE Life Design™ is the learning ecosystem where women return to God's original design through Biblical truth, emotional formation, transformational teaching, practical tools, and intentional community. It is not a course platform — it is a developmental environment.",
     what: [
       "Foundational Courses — structured learning for identity and formation",
       "Guided Learning Experiences — cohort-based formation journeys",
       "Community Conversations — intentional peer connection and accountability",
       "Growth Resources — frameworks, tools, and formation materials",
       "Formation Tools — practitioner-grade instruments for personal transformation",
-      "Healing Harbour Live — Free Monthly Masterclass (exclusively inside WHOLE Design™)",
+      "Healing Harbour Live — Free Monthly Masterclass (exclusively inside WHOLE Life Design™)",
     ],
     forWho:
       "The woman who has taken the Wound Point Assessment and is ready to enter a structured, intentional environment for formation — not just information.",
-    cta: { label: "Explore WHOLE Design™", href: "/whole-design", external: false },
+    cta: { label: "Explore WHOLE Life Design™", href: "/whole-life-design", external: false },
     dark: false,
   },
   {
@@ -81,16 +81,16 @@ const stages = [
     name: "RESTORE",
     tagline: "Attend Healing Harbour Live.",
     description:
-      "RESTORE is where the monthly work happens. Healing Harbour Live is the free monthly masterclass exclusively available inside WHOLE Design™. Every 4th Friday. 90 Minutes. Zoom + Skool Live. One Wound Point. One Framework. One Pathway Forward. This is not a general teaching session — it is structured, targeted restoration work.",
+      "RESTORE is where the monthly work happens. Healing Harbour Live is the free monthly masterclass exclusively available inside WHOLE Life Design™. Every 4th Friday. 90 Minutes. Zoom + Skool Live. One Wound Point. One Framework. One Pathway Forward. This is not a general teaching session — it is structured, targeted restoration work.",
     what: [
       "Free Monthly Masterclass — every 4th Friday, 90 minutes",
       "One Wound Point addressed per session with a full framework",
       "Live on Zoom + Skool — accessible wherever you are",
       "A single, clear pathway forward from each session",
-      "Exclusively available inside WHOLE Design™",
+      "Exclusively available inside WHOLE Life Design™",
     ],
     forWho:
-      "Every woman inside WHOLE Design™. Healing Harbour Live exists as the consistent, structured, free monthly touchpoint — the heartbeat of the ecosystem.",
+      "Every woman inside WHOLE Life Design™. Healing Harbour Live exists as the consistent, structured, free monthly touchpoint — the heartbeat of the ecosystem.",
     cta: { label: "Register For Healing Harbour Live", href: "/inner-circle", external: false },
     dark: true,
   },
@@ -406,13 +406,13 @@ export default function TransformationPathwayPage() {
               </span>
             </h2>
             <p className="font-sans text-[17px] leading-relaxed" style={{ color: "var(--muted-foreground)" }}>
-              WHOLE Design™ is the foundational learning ecosystem — the place where women
+              WHOLE Life Design™ is the foundational learning ecosystem — the place where women
               return to God&apos;s original design through structured courses, guided learning,
               community, formation tools, and Healing Harbour Live (the free monthly masterclass).
             </p>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-2">
-              <LinkButton to="/whole-design" variant="primary" size="md" className="gap-3">
-                Explore WHOLE Design™
+              <LinkButton to="/whole-life-design" variant="primary" size="md" className="gap-3">
+                Explore WHOLE Life Design™
                 <ArrowRight size={14} />
               </LinkButton>
               <a

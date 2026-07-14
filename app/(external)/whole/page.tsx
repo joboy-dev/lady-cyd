@@ -188,7 +188,7 @@ export default function WHOLEPage() {
           >
             Begin in{" "}
             <span className="italic" style={{ color: "var(--gold)" }}>
-              WHOLE Design™.
+              WHOLE Life Design™.
             </span>
           </h2>
           <p
@@ -196,16 +196,16 @@ export default function WHOLEPage() {
             style={{ color: "rgba(255,255,255,0.65)" }}
           >
             The foundational formation environment where women enter the ecosystem, do the
-            structural work, and build the internal readiness for WHOLE™. WHOLE Design™ is
+            structural work, and build the internal readiness for WHOLE™. WHOLE Life Design™ is
             free to enter and available now.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a
-              href="/whole-design"
+              href="/whole-life-design"
               className="inline-flex items-center gap-3 font-cinzel text-sm tracking-widest uppercase px-8 py-3 transition-all duration-200"
               style={{ background: "var(--primary)", color: "white" }}
             >
-              Enter WHOLE Design™
+              Enter WHOLE Life Design™
             </a>
             <a
               href="/transformation-pathway"
