@@ -177,7 +177,7 @@ export default function EdenLifeDesignPage() {
             className="font-great-vibes leading-none animate-fade-in-up"
             style={{ color: "var(--primary)", fontSize: "clamp(3rem, 8vw, 6.5rem)", animationDelay: "150ms" }}
           >
-            WHOLE Life Design™
+            <span className="font-cormorant font-light tracking-widest uppercase" style={{ fontSize: "0.88em", verticalAlign: "middle", letterSpacing: "0.25em" }}>WHOLE</span>{" "}Life Design™
           </p>
 
           <div className="animate-fade-in-up" style={{ animationDelay: "300ms" }}>
