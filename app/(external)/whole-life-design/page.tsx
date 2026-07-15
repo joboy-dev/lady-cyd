@@ -1,4 +1,5 @@
 import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
+import TestimonialsGrid from "@/components/shared/TestimonialsGrid";
 import Footer from "@/components/shared/Footer";
 import OrnamentalDivider from "@/components/shared/OrnamentalDivider";
 import SectionBreadcrumb from "@/components/shared/breadcrumb/SectionBreadcrumb";
@@ -106,32 +107,6 @@ const forWho = [
   "The woman who is done with surface-level spaces and wants structured, intentional transformation",
 ];
 
-const testimonials = [
-  {
-    quote:
-      "Working with Lady Cyd helped me to deal with imposter syndrome and let me to actually start creating. I went from zero discipline to being able to build my own company as a teenager.",
-    name: "Ruth",
-    role: "",
-  },
-  {
-    quote:
-      "I met Lady Cyd at a retreat she was invited to speak at. I am glad I went. Not only did she show me how to up level my mind but she helped me detox lies I built around my life. I recommend that every woman, girl, lady, listens to Lady Cyd.",
-    name: "I.J.",
-    role: "",
-  },
-  {
-    quote:
-      "Lady Cyd has a gift for helping you see what you couldn't see on your own. The clarity I gained was unlike anything I'd experienced in any other coaching space.",
-    name: "Nicola",
-    role: "Interior Decorator & Life Coach",
-  },
-  {
-    quote:
-      "The frameworks Lady Cyd teaches are not motivational — they are structural. I left understanding why I was doing what I was doing, and with a real path forward.",
-    name: "Eunice",
-    role: "Entrepreneur",
-  },
-];
 
 const pathwayStages = [
   { code: "01", name: "RECOGNIZE", current: false },
@@ -616,56 +591,7 @@ export default function EdenLifeDesignPage() {
             </h2>
           </AnimateOnScroll>
 
-          <div className="grid sm:grid-cols-2 gap-8">
-            {testimonials.map((t, i) => (
-              <AnimateOnScroll key={t.name} animation="scale" delay={i * 120}>
-                <div
-                  className="flex flex-col gap-5 p-8 relative h-full"
-                  style={{
-                    background: "rgba(255,255,255,0.03)",
-                    border: "1px solid rgba(255,255,255,0.06)",
-                  }}
-                >
-                  <span
-                    className="font-cormorant text-6xl leading-none absolute top-4 left-6"
-                    style={{ color: "var(--primary)", opacity: 0.2 }}
-                  >
-                    &ldquo;
-                  </span>
-                  <p
-                    className="font-cormorant italic text-xl leading-relaxed mt-6"
-                    style={{ color: "rgba(255,255,255,0.8)" }}
-                  >
-                    {t.quote}
-                  </p>
-                  <div
-                    className="flex items-center gap-3 pt-4 border-t"
-                    style={{ borderColor: "rgba(255,255,255,0.07)" }}
-                  >
-                    <div
-                      className="w-8 h-8 flex items-center justify-center font-cinzel text-xs text-white shrink-0"
-                      style={{ background: "var(--primary)" }}
-                    >
-                      {t.name[0]}
-                    </div>
-                    <div className="flex flex-col gap-0.5">
-                      <span
-                        className="font-cinzel text-xs tracking-widest uppercase"
-                        style={{ color: "var(--gold)", opacity: 0.7 }}
-                      >
-                        {t.name}
-                      </span>
-                      {t.role && (
-                        <span className="font-sans text-xs" style={{ color: "rgba(255,255,255,0.35)" }}>
-                          {t.role}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </AnimateOnScroll>
-            ))}
-          </div>
+          <TestimonialsGrid theme="dark" />
         </div>
       </section>
 

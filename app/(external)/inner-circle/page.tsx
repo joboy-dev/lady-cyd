@@ -354,7 +354,7 @@ export default function HealingHarbourLivePage() {
                 <ArrowRight size={14} />
               </LinkButton>
               <LinkButton to="/transformation-pathway" variant="outline" size="md">
-                See The WHOLE Pathway™
+                See The WHOLE™ Pathway™
               </LinkButton>
             </div>
           </div>
@@ -432,7 +432,7 @@ export default function HealingHarbourLivePage() {
               <ArrowRight size={16} />
             </LinkButton>
             <LinkButton to="/transformation-pathway" variant="outlineLight" size="lg">
-              See The WHOLE Pathway™
+              See The WHOLE™ Pathway™
             </LinkButton>
           </div>
 

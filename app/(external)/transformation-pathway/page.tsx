@@ -9,14 +9,14 @@ import { ArrowRight, ShoppingBag } from "lucide-react";
 import { SELAR_URL } from "@/lib/constants/site";
 
 export const metadata: Metadata = {
-  title: "The WHOLE Pathway™ | 5-Stage Journey to Wholeness | Lady Cyd",
+  title: "The WHOLE™ Pathway™ | 5-Stage Journey to Wholeness | Lady Cyd",
   description:
     "Five stages from recognition to wholeness: Recognize, Reveal, Rebuild, Restore, WHOLE™. The structured transformational pathway by Lady Cyd — Grit & Graceful Coaching Company — for high-capacity women returning to God's original design.",
   keywords: [
     "soul restoration coach",
     "identity restoration coach",
     "trauma-informed coaching for Christian women",
-    "WHOLE Pathway Lady Cyd",
+    "WHOLE™ Pathway Lady Cyd",
     "WHOLE Life Design",
     "Wound Point Assessment",
   ],
@@ -146,7 +146,7 @@ export default function TransformationPathwayPage() {
 
         <div className="section-padding relative z-10 flex flex-col items-center text-center gap-8 mt-32 sm:mt-40 pb-20">
           <div className="animate-fade-in-up">
-            <SectionBreadcrumb title="The WHOLE Pathway™" light />
+            <SectionBreadcrumb title="The WHOLE™ Pathway™" light />
           </div>
 
           <h1
@@ -157,7 +157,7 @@ export default function TransformationPathwayPage() {
             <span className="italic" style={{ color: "var(--primary)" }}>
               One destination:
             </span>{" "}
-            WHOLE.
+            WHOLE™.
           </h1>
 
           <div className="animate-fade-in-up" style={{ animationDelay: "300ms" }}>
@@ -171,7 +171,7 @@ export default function TransformationPathwayPage() {
             >
               This is not a programme. It is a pathway — a structured, intentional journey from
               where you are to where you were always designed to be. Each stage is a threshold.
-              Each threshold is an invitation toward WHOLE.
+              Each threshold is an invitation toward WHOLE™.
             </p>
             <p
               className="font-cinzel text-xs tracking-widest uppercase mt-4"

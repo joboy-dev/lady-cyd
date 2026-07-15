@@ -87,7 +87,7 @@ export default function WHOLEPage() {
             style={{ color: "rgba(255,255,255,0.65)", animationDelay: "650ms" }}
           >
             Designed for high-capacity women who have moved through the foundational stages of
-            The WHOLE Pathway™ and are ready for the most intimate, rigorous, and structured
+            The WHOLE™ Pathway™ and are ready for the most intimate, rigorous, and structured
             level of personal transformation available within the Grit &amp; Graceful ecosystem.
             WHOLE™ is not open yet — but it is coming.
           </p>
@@ -211,7 +211,7 @@ export default function WHOLEPage() {
               href="/transformation-pathway"
               className="inline-flex items-center gap-3 font-cinzel text-sm tracking-widest uppercase px-8 py-3 border border-white/30 text-white/70 hover:border-white/60 hover:text-white transition-all duration-200"
             >
-              See The WHOLE Pathway™
+              See The WHOLE™ Pathway™
             </a>
           </div>
         </div>

@@ -6,7 +6,7 @@ import OrnamentalDivider from "@/components/shared/OrnamentalDivider";
 import SectionBreadcrumb from "@/components/shared/breadcrumb/SectionBreadcrumb";
 import LinkButton from "@/components/shared/button/LinkButton";
 import PublicNavbar from "@/components/shared/navbar/PublicNavbar";
-import RandomLadyCydImage from "@/components/shared/RandomLadyCydImage";
+import TestimonialsGrid from "@/components/shared/TestimonialsGrid";
 import { SELAR_URL } from "@/lib/constants/site";
 import { ArrowRight, ChevronDown, ShoppingBag } from "lucide-react";
 
@@ -63,18 +63,6 @@ const stages = [
   },
 ];
 
-const testimonials = [
-  {
-    quote:
-      "Working with Lady Cyd helped me to deal with imposter syndrome and let me to actually start creating. I went from zero discipline to being able to build my own company as a teenager.",
-    name: "Ruth",
-  },
-  {
-    quote:
-      "I met Lady Cyd at a retreat she was invited to speak at. I am glad I went. Not only did she show me how to up level my mind but she helped me detox lies I built around my life. I recommend that every woman, girl, lady, listens to Lady Cyd.",
-    name: "I.J.",
-  },
-];
 
 /* ─── Page ───────────────────────────────────────────────────────── */
 
@@ -278,14 +266,14 @@ export default function Home() {
         />
         <div className="max-w-5xl mx-auto flex flex-col gap-14 relative z-10">
           <AnimateOnScroll animation="left" className="flex flex-col gap-4">
-            <SectionBreadcrumb title="The WHOLE Pathway™" light align="left" />
+            <SectionBreadcrumb title="The WHOLE™ Pathway™" light align="left" />
             <h2
               className="font-cormorant font-light text-4xl sm:text-5xl leading-tight max-w-2xl"
               style={{ color: "var(--dark-section-foreground)" }}
             >
               Five stages. One destination:{" "}
               <span className="italic" style={{ color: "var(--primary)" }}>
-                WHOLE.
+                WHOLE™.
               </span>
             </h2>
           </AnimateOnScroll>
@@ -336,7 +324,7 @@ export default function Home() {
           <AnimateOnScroll animation="up">
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <LinkButton to="/transformation-pathway" variant="outlineGold" size="sm" className="gap-3">
-              See The WHOLE Pathway™
+              See The WHOLE™ Pathway™
               <ArrowRight size={14} />
             </LinkButton>
             <a
@@ -362,7 +350,11 @@ export default function Home() {
           {/* Image */}
           <AnimateOnScroll animation="left">
           <div className="w-full aspect-3/4 max-w-sm mx-auto lg:mx-0 rounded-sm overflow-hidden">
-            <RandomLadyCydImage />
+            <img
+              src="/images/lady-cyd/image-3.jpg"
+              alt="Cyd Alex-Emenike - Lady Cyd"
+              className="w-full h-full object-cover"
+            />
           </div>
           </AnimateOnScroll>
 
@@ -423,35 +415,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-8">
-            {testimonials.map((t, i) => (
-              <AnimateOnScroll key={t.name} animation="scale" delay={i * 150}>
-              <div
-                className="flex flex-col gap-6 p-8 bg-card rounded-sm relative h-full"
-                style={{ boxShadow: "0 2px 20px rgba(197,75,140,0.06)" }}
-              >
-                <span
-                  className="font-cormorant text-6xl leading-none absolute top-4 left-6"
-                  style={{ color: "var(--primary)", opacity: 0.15 }}
-                >
-                  "
-                </span>
-                <p className="font-cormorant italic text-xl leading-relaxed text-foreground/85 mt-6">
-                  {t.quote}
-                </p>
-                <div className="flex items-center gap-3 pt-2 border-t" style={{ borderColor: "var(--border)" }}>
-                  <div
-                    className="w-8 h-8 rounded-full flex items-center justify-center font-cinzel text-xs text-white shrink-0"
-                    style={{ background: "var(--primary)" }}
-                  >
-                    {t.name[0]}
-                  </div>
-                  <span className="font-cinzel text-xs tracking-widest uppercase text-muted-foreground">
-                    {t.name}
-                  </span>
-                </div>
-              </div>              </AnimateOnScroll>            ))}
-          </div>
+          <TestimonialsGrid theme="light" />
         </div>
       </section>
 
@@ -474,7 +438,7 @@ export default function Home() {
             className="font-great-vibes text-4xl sm:text-5xl"
             style={{ color: "var(--primary)" }}
           >
-            WHOLE Life Design™
+            Whole Life Design™
           </p>
           <OrnamentalDivider />
           <h2

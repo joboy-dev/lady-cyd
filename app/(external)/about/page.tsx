@@ -1,4 +1,5 @@
 import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
+import TestimonialsGrid from "@/components/shared/TestimonialsGrid";
 import Footer from "@/components/shared/Footer";
 import OrnamentalDivider from "@/components/shared/OrnamentalDivider";
 import SectionBreadcrumb from "@/components/shared/breadcrumb/SectionBreadcrumb";
@@ -531,58 +532,7 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-8">
-            {[
-              {
-                quote:
-                  "Working with Lady Cyd helped me to deal with imposter syndrome and let me to actually start creating. I went from zero discipline to being able to build my own company as a teenager.",
-                name: "Ruth",
-              },
-              {
-                quote:
-                  "I met Lady Cyd at a retreat she was invited to speak at. I am glad I went. Not only did she show me how to up level my mind but she helped me detox lies I built around my life. I recommend that every woman, girl, lady, listens to Lady Cyd.",
-                name: "I.J.",
-              },
-            ].map((t, i) => (
-              <AnimateOnScroll key={t.name} animation="scale" delay={i * 150}>
-              <div
-                className="flex flex-col gap-6 p-8 relative h-full"
-                style={{
-                  background: "rgba(255,255,255,0.03)",
-                  border: "1px solid rgba(255,255,255,0.06)",
-                }}
-              >
-                <span
-                  className="font-cormorant text-6xl leading-none absolute top-4 left-6"
-                  style={{ color: "var(--primary)", opacity: 0.2 }}
-                >
-                  &ldquo;
-                </span>
-                <p className="font-cormorant italic text-xl leading-relaxed mt-6"
-                  style={{ color: "rgba(255,255,255,0.8)" }}>
-                  {t.quote}
-                </p>
-                <div
-                  className="flex items-center gap-3 pt-4 border-t"
-                  style={{ borderColor: "rgba(255,255,255,0.07)" }}
-                >
-                  <div
-                    className="w-8 h-8 flex items-center justify-center font-cinzel text-xs text-white shrink-0"
-                    style={{ background: "var(--primary)" }}
-                  >
-                    {t.name[0]}
-                  </div>
-                  <span
-                    className="font-cinzel text-xs tracking-widest uppercase"
-                    style={{ color: "var(--gold)", opacity: 0.7 }}
-                  >
-                    {t.name}
-                  </span>
-                </div>
-              </div>
-              </AnimateOnScroll>
-            ))}
-          </div>
+          <TestimonialsGrid theme="dark" />
         </div>
       </section>
 
@@ -628,7 +578,7 @@ export default function AboutPage() {
               <ArrowRight size={16} />
             </LinkButton>
             <LinkButton to="/transformation-pathway" variant="outlineLight" size="lg">
-              See The WHOLE Pathway™
+              See The WHOLE™ Pathway™
             </LinkButton>
           </div>
         </AnimateOnScroll>

@@ -246,7 +246,7 @@ export default function PodcastPage() {
           >
             Cyd Alex-Emenike (fondly called Lady Cyd) is a Soul Restoration Coach, author, and
             speaker. She is the Founder of Grit &amp; Graceful Coaching Company and the architect
-            of The WHOLE Pathway™ — a structured, transformational pathway for high-capacity women
+            of The WHOLE™ Pathway™ — a structured, transformational pathway for high-capacity women
             returning to God&apos;s original design. META-FORMATION HQ is an extension of her
             coaching work into the public space — formation content, accessible to every woman
             who encounters it.

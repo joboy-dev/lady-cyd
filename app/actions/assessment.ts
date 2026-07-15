@@ -9,6 +9,7 @@ import type { Scores } from '@/lib/assessment/scoring';
 import { woundResults } from '@/lib/assessment/results';
 
 const FROM = process.env.RESEND_FROM_EMAIL ?? 'noreply@ladycyd.online';
+const SOUL_AUDIT_PDF_URL = process.env.SOUL_AUDIT_PDF_URL ?? '';
 
 const resultsSchema = z.object({
   name: z.string().min(1),
@@ -75,8 +76,8 @@ export async function requestSoulAuditPDF(data: {
     await resend.emails.send({
       from: `Lady Cyd <${FROM}>`,
       to: email,
-      subject: 'The Soul Audit PDF — The 10 Wound Points™ Assessment',
-      react: AssessmentPdfRequestEmail({ name }),
+      subject: 'Your Soul Audit PDF — The 10 Wound Points™ Assessment',
+      react: AssessmentPdfRequestEmail({ name, pdfUrl: SOUL_AUDIT_PDF_URL }),
     });
 
     return { success: true };
