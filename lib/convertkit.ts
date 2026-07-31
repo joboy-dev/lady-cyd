@@ -109,6 +109,46 @@ export async function createSubscriber(
 //   return true;
 // }
 
+/* ─── Tagging ─────────────────────────────────────────────────────── */
+
+import type { SoulAuditWoundId } from '@/lib/assessment/soul-audit-wounds';
+
+const WOUND_TAG_IDS: Record<SoulAuditWoundId, string | undefined> = {
+  identity: process.env.CONVERTKIT_TAG_IDENTITY,
+  worth: process.env.CONVERTKIT_TAG_WORTH,
+  voice: process.env.CONVERTKIT_TAG_VOICE,
+  trust: process.env.CONVERTKIT_TAG_TRUST,
+  purpose: process.env.CONVERTKIT_TAG_PURPOSE,
+  rhythm: process.env.CONVERTKIT_TAG_RHYTHM,
+  control: process.env.CONVERTKIT_TAG_CONTROL,
+  grief: process.env.CONVERTKIT_TAG_GRIEF,
+  relational: process.env.CONVERTKIT_TAG_RELATIONAL,
+  legacy: process.env.CONVERTKIT_TAG_LEGACY,
+};
+
+/**
+ * Apply a ConvertKit tag to a subscriber by email address.
+ * Silently skips if the tag ID env var is not set.
+ */
+export async function tagSubscriberByWound(
+  email: string,
+  wound: SoulAuditWoundId
+): Promise<void> {
+  const tagId = WOUND_TAG_IDS[wound];
+  if (!tagId) return;
+
+  const res = await fetch(`${BASE}/tags/${tagId}/subscribers`, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify({ email_address: email }),
+  });
+
+  if (!res.ok) {
+    const body = await res.text();
+    console.error(`[kit] tagSubscriberByWound(${wound}) failed:`, res.status, body);
+  }
+}
+
 /* ─── Main export ─────────────────────────────────────────────────── */
 
 /**

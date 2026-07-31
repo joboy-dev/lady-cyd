@@ -1,4 +1,5 @@
-import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
+"use client";
+
 import { testimonials } from "@/lib/data/testimonials";
 
 interface TestimonialsGridProps {
@@ -8,75 +9,102 @@ interface TestimonialsGridProps {
 export default function TestimonialsGrid({ theme = "dark" }: TestimonialsGridProps) {
   const isDark = theme === "dark";
 
+  const cardBg = isDark
+    ? "rgba(255,255,255,0.03)"
+    : "var(--card)";
+  const cardBorder = isDark
+    ? "1px solid rgba(255,255,255,0.07)"
+    : "1px solid var(--border)";
+  const quoteColor = isDark ? "rgba(255,255,255,0.8)" : "var(--foreground)";
+  const dividerColor = isDark ? "rgba(255,255,255,0.07)" : "var(--border)";
+  const nameColor = isDark ? "var(--gold)" : "var(--muted-foreground)";
+  const roleColor = isDark ? "rgba(255,255,255,0.35)" : "var(--muted-foreground)";
+  const bigQuoteOpacity = isDark ? 0.18 : 0.12;
+
   return (
-    <div className="grid sm:grid-cols-2 gap-8">
-      {testimonials.map((t, i) => (
-        <AnimateOnScroll key={t.name} animation="scale" delay={i * 120}>
-          <div
-            className="flex flex-col gap-5 p-8 relative h-full"
-            style={
-              isDark
-                ? {
-                    background: "rgba(255,255,255,0.03)",
-                    border: "1px solid rgba(255,255,255,0.06)",
-                  }
-                : {
-                    background: "var(--card)",
-                    border: "1px solid var(--border)",
-                    borderRadius: "2px",
-                    boxShadow: "0 2px 20px rgba(197,75,140,0.06)",
-                  }
-            }
-          >
-            <span
-              className="font-cormorant text-6xl leading-none absolute top-4 left-6"
-              style={{ color: "var(--primary)", opacity: isDark ? 0.2 : 0.15 }}
-            >
-              &ldquo;
-            </span>
-            <p
-              className="font-cormorant italic text-xl leading-relaxed mt-6"
-              style={{ color: isDark ? "rgba(255,255,255,0.8)" : "var(--foreground)" }}
-            >
-              {t.quote}
-            </p>
+    <>
+      <style>{`
+        @keyframes testimonials-scroll {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .testimonials-track {
+          animation: testimonials-scroll 55s linear infinite;
+          will-change: transform;
+        }
+        .testimonials-wrapper:hover .testimonials-track {
+          animation-play-state: paused;
+        }
+      `}</style>
+
+      {/* Fade edges */}
+      <div
+        className="testimonials-wrapper relative overflow-hidden select-none"
+        style={{
+          maskImage: isDark
+            ? "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)"
+            : "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
+          WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
+        }}
+      >
+        <div className="testimonials-track flex gap-5" style={{ width: "max-content" }}>
+          {/* Two identical sets for seamless loop */}
+          {[...testimonials, ...testimonials].map((t, i) => (
             <div
-              className="flex items-center gap-3 pt-4 border-t"
+              key={`${t.name}-${i}`}
+              className="flex flex-col gap-5 p-7 relative shrink-0"
               style={{
-                borderColor: isDark ? "rgba(255,255,255,0.07)" : "var(--border)",
+                width: "340px",
+                background: cardBg,
+                border: cardBorder,
+                boxShadow: isDark ? "none" : "0 2px 20px rgba(197,75,140,0.05)",
               }}
             >
-              <div
-                className="w-8 h-8 flex items-center justify-center font-cinzel text-xs text-white shrink-0"
-                style={{ background: "var(--primary)" }}
+              {/* Decorative quote mark */}
+              <span
+                className="font-cormorant text-6xl leading-none absolute top-3 left-5 pointer-events-none"
+                style={{ color: "var(--primary)", opacity: bigQuoteOpacity }}
               >
-                {t.name[0]}
-              </div>
-              <div className="flex flex-col gap-0.5">
-                <span
-                  className="font-cinzel text-xs tracking-widest uppercase"
-                  style={{
-                    color: isDark ? "var(--gold)" : "var(--muted-foreground)",
-                    opacity: isDark ? 0.7 : 1,
-                  }}
+                &ldquo;
+              </span>
+
+              {/* Quote */}
+              <p
+                className="font-cormorant italic text-[18px] leading-relaxed mt-5"
+                style={{ color: quoteColor, minHeight: "80px" }}
+              >
+                {t.quote}
+              </p>
+
+              {/* Attribution */}
+              <div
+                className="flex items-center gap-3 pt-4 border-t mt-auto"
+                style={{ borderColor: dividerColor }}
+              >
+                <div
+                  className="w-8 h-8 shrink-0 flex items-center justify-center font-cinzel text-xs text-white"
+                  style={{ background: "var(--primary)" }}
                 >
-                  {t.name}
-                </span>
-                {t.role && (
+                  {t.name[0]}
+                </div>
+                <div className="flex flex-col gap-0.5">
                   <span
-                    className="font-sans text-xs"
-                    style={{
-                      color: isDark ? "rgba(255,255,255,0.35)" : "var(--muted-foreground)",
-                    }}
+                    className="font-cinzel text-[10px] tracking-widest uppercase"
+                    style={{ color: nameColor }}
                   >
-                    {t.role}
+                    {t.name}
                   </span>
-                )}
+                  {t.role && (
+                    <span className="font-sans text-[11px]" style={{ color: roleColor }}>
+                      {t.role}
+                    </span>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        </AnimateOnScroll>
-      ))}
-    </div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 }

@@ -157,7 +157,8 @@ export default function PublicNavbar() {
         <div className="hidden lg:flex items-center gap-4">
           <ThemeToggle />
           <Link
-            href="/inner-circle"
+            // href="/inner-circle"
+            href="/whole/assessment"
             className="font-cinzel text-[11px] xl:text-xs tracking-[0.15em] xl:tracking-widest uppercase px-4 xl:px-5 py-2.5 border border-gold text-gold hover:bg-gold hover:text-foreground transition-all duration-200"
           >
             Take The Assessment
