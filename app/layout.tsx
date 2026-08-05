@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: "Lady Cyd — Trauma-Informed Coach Nigeria | Generational Healing & Identity Restoration",
     description:
       "Trauma-informed certified coach for women in Nigeria & Africa. Break generational cycles, restore identity, heal family systems through Christian coaching.",
-    url: "https://ladycyd.online",
+    url: "https://www.ladycyd.online",
     siteName: "Lady Cyd",
     locale: "en_US",
     type: "website",

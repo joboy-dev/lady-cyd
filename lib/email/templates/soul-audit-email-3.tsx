@@ -16,7 +16,7 @@ interface Props {
   name: string;
 }
 
-const BASE_URL = 'https://ladycyd.online';
+const BASE_URL = 'https://www.ladycyd.online';
 
 export function SoulAuditEmail3({ name }: Props) {
   const firstName = name.split(' ')[0];

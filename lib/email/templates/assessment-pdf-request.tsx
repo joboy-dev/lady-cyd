@@ -105,9 +105,9 @@ export function AssessmentPdfRequestEmail({ name, pdfUrl }: Props) {
               A Lady Cyd Alex-Emenike Proprietary Framework · All Rights Reserved
             </Text>
             <Text style={{ ...footer, marginTop: '8px' }}>
-              <Link href="https://ladycyd.online" style={footerLink}>ladycyd.online</Link>
+              <Link href="https://www.ladycyd.online" style={footerLink}>ladycyd.online</Link>
               {'  ·  '}
-              <Link href="https://ladycyd.online/whole-life-design" style={footerLink}>
+              <Link href="https://www.ladycyd.online/whole-life-design" style={footerLink}>
                 WHOLE Life Design™
               </Link>
             </Text>

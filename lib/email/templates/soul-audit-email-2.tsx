@@ -17,7 +17,7 @@ interface Props {
   wounds: SoulAuditWound[];
 }
 
-const BASE_URL = 'https://ladycyd.online';
+const BASE_URL = 'https://www.ladycyd.online';
 
 export function SoulAuditEmail2({ name, wounds }: Props) {
   const firstName = name.split(' ')[0];

@@ -8,8 +8,8 @@ export default function StructuredData() {
     "@type": "Organization",
     "name": "Lady Cyd",
     "alternateName": "Cyd Alex-Emenike",
-    "url": "https://ladycyd.online",
-    "logo": "https://ladycyd.online/images/logo.png",
+    "url": "https://www.ladycyd.online",
+    "logo": "https://www.ladycyd.online/images/logo.png",
     "description": "Certified trauma-informed coach and family systems strategist helping high-capacity women in Nigeria and Africa break generational cycles, restore identity, and heal family trauma through Christian Kingdom coaching.",
     "email": "Hello@ladycyd.online",
     "sameAs": [
