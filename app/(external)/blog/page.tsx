@@ -4,12 +4,11 @@ import ListEmpty from "@/components/shared/ListEmpty";
 import OrnamentalDivider from "@/components/shared/OrnamentalDivider";
 import SectionBreadcrumb from "@/components/shared/breadcrumb/SectionBreadcrumb";
 import LinkButton from "@/components/shared/button/LinkButton";
-import Card from "@/components/shared/card/Card";
 import PublicNavbar from "@/components/shared/navbar/PublicNavbar";
 import SubscribeForm from "@/components/shared/form/appForms/SubscribeForm";
+import { fetchSubstackPosts } from "@/lib/substack";
 import type { Metadata } from "next";
 import { ArrowRight, BookOpen } from "lucide-react";
-import Badge from "@/components/shared/Badge";
 
 export const metadata: Metadata = {
   title: "The Journal | Trauma Healing & Generational Patterns | Lady Cyd",
@@ -25,42 +24,8 @@ export const metadata: Metadata = {
   ],
 };
 
-/* ─── Types ─────────────────────────────────────────────────────── */
-
-type Category = "Identity" | "Healing" | "Emotional Wellness" | "Faith" | "Coaching";
-
-type Post = {
-  slug: string;
-  title: string;
-  excerpt: string;
-  category: Category;
-  date: string;
-  readTime: string;
-};
-
-const categories: Category[] = [
-  "Identity",
-  "Healing",
-  "Emotional Wellness",
-  "Faith",
-  "Coaching",
-];
-
-/* ─── Sample posts — replace with CMS / API data when ready ─────── */
-const posts: Post[] = [];
-
-/* ─── Category pill colour map ──────────────────────────────────── */
-const categoryColour: Record<Category, string> = {
-  Identity: "var(--primary)",
-  Healing: "var(--gold)",
-  "Emotional Wellness": "#9b59b6",
-  Faith: "#4a9e8a",
-  Coaching: "#c0392b",
-};
-
-/* ─── Page ───────────────────────────────────────────────────────── */
-
-export default function BlogPage() {
+export default async function BlogPage() {
+  const posts = await fetchSubstackPosts(12);
   const hasPosts = posts.length > 0;
 
   return (
@@ -125,70 +90,44 @@ export default function BlogPage() {
       </section>
 
       {/* ══════════════════════════════════════════════════
-          CATEGORY FILTERS
-      ══════════════════════════════════════════════════ */}
-      <section className="section-padding pb-0 bg-background">
-        <AnimateOnScroll animation="up" className="max-w-5xl mx-auto flex flex-col gap-6">
-          <div className="flex flex-col gap-2">
-            <SectionBreadcrumb title="Browse by Topic" align="left" />
-          </div>
-          <div className="flex flex-wrap gap-3">
-            <Badge
-              variant="primary"
-              className="cursor-pointer"
-            >
-              All
-            </Badge>
-            {categories.map((cat) => (
-              <span
-                key={cat}
-                className="inline-flex items-center px-3 py-1 font-cinzel text-xs tracking-wider uppercase border transition-colors duration-200"
-                style={{
-                  borderColor: categoryColour[cat],
-                  color: categoryColour[cat],
-                  background: "transparent",
-                }}
-              >
-                {cat}
-              </span>
-            ))}
-          </div>
-          <div className="h-px w-full" style={{ background: "var(--border)" }} />
-        </AnimateOnScroll>
-      </section>
-
-      {/* ══════════════════════════════════════════════════
           POST GRID / EMPTY STATE
       ══════════════════════════════════════════════════ */}
       <section className="section-padding bg-background">
         <div className="max-w-5xl mx-auto flex flex-col gap-12">
           {hasPosts ? (
-            <>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {posts.map((post, i) => (
-                  <AnimateOnScroll key={post.slug} animation="up" delay={i * 80}>
-                    <Card linkTo={`/blog/${post.slug}`} className="flex flex-col gap-0 p-0 overflow-hidden group">
-                      {/* Category bar */}
-                      <div
-                        className="h-1 w-full"
-                        style={{ background: categoryColour[post.category] }}
-                      />
-                      <div className="p-6 flex flex-col gap-4">
-                        {/* Meta */}
-                        <div className="flex items-center justify-between">
-                          <span
-                            className="font-cinzel text-[10px] tracking-widest uppercase"
-                            style={{ color: categoryColour[post.category] }}
-                          >
-                            {post.category}
-                          </span>
-                          <span
-                            className="font-sans text-xs"
-                            style={{ color: "var(--muted-foreground)" }}
-                          >
-                            {post.readTime}
-                          </span>
-                        </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {posts.map((post, i) => (
+                <AnimateOnScroll key={post.url} animation="up" delay={i * 80}>
+                  <a
+                    href={post.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block group h-full"
+                  >
+                    <div
+                      className="flex flex-col h-full overflow-hidden transition-shadow duration-200 group-hover:shadow-lg"
+                      style={{ border: "1px solid var(--border)", background: "var(--card)" }}
+                    >
+                      {/* Cover image */}
+                      {post.coverImage && (
+                        <img
+                          src={post.coverImage}
+                          alt={post.title}
+                          className="w-full h-48 object-cover"
+                        />
+                      )}
+
+                      {/* Pink accent bar */}
+                      <div className="h-1 w-full" style={{ background: "var(--primary)" }} />
+
+                      <div className="p-6 flex flex-col gap-4 flex-1">
+                        {/* Date */}
+                        <span
+                          className="font-cinzel text-[10px] tracking-widest uppercase"
+                          style={{ color: "var(--muted-foreground)" }}
+                        >
+                          {post.date}
+                        </span>
 
                         {/* Title */}
                         <h3
@@ -202,26 +141,26 @@ export default function BlogPage() {
                         <div className="h-px w-8" style={{ background: "var(--primary)" }} />
 
                         {/* Excerpt */}
-                        <p className="font-sans text-[17px] leading-relaxed text-muted-foreground line-clamp-3">
+                        <p className="font-sans text-[15px] leading-relaxed text-muted-foreground line-clamp-3 flex-1">
                           {post.excerpt}
                         </p>
 
                         {/* Read link */}
-                        <div className="flex items-center gap-2 mt-auto pt-2">
+                        <div className="flex items-center gap-2 pt-2 mt-auto">
                           <span
                             className="font-cinzel text-[10px] tracking-widest uppercase"
                             style={{ color: "var(--primary)" }}
                           >
-                            Read more
+                            Read on Substack
                           </span>
                           <ArrowRight size={12} style={{ color: "var(--primary)" }} />
                         </div>
                       </div>
-                    </Card>
-                  </AnimateOnScroll>
-                ))}
-              </div>
-            </>
+                    </div>
+                  </a>
+                </AnimateOnScroll>
+              ))}
+            </div>
           ) : (
             <AnimateOnScroll animation="scale">
               <ListEmpty
@@ -350,7 +289,7 @@ export default function BlogPage() {
       </section>
 
       {/* ══════════════════════════════════════════════════
-          CTA — ENTER EDEN LIFE DESIGN TO GET NOTIFIED
+          CTA — ENTER WHOLE LIFE DESIGN TO GET NOTIFIED
       ══════════════════════════════════════════════════ */}
       <section
         className="section-padding relative overflow-hidden"
