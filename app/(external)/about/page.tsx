@@ -1,5 +1,5 @@
 import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
-import TestimonialsGrid from "@/components/shared/TestimonialsGrid";
+import TestimonialSpotlight from "@/components/shared/TestimonialSpotlight";
 import Footer from "@/components/shared/Footer";
 import OrnamentalDivider from "@/components/shared/OrnamentalDivider";
 import SectionBreadcrumb from "@/components/shared/breadcrumb/SectionBreadcrumb";
@@ -43,6 +43,10 @@ const certifications = [
   {
     title: "Advanced Formation & Leadership Studies",
     detail: "Mathetheuo Institute · Under Dr. Dele Osunmakinde — a rigorous formation programme designed to develop leaders of depth, character, and sustained influence.",
+  },
+  {
+    title: "Advanced Formation & Leadership Studies",
+    detail: "Immerse Coaching Company — advanced training in formation and leadership development, equipping her for structured, high-capacity coaching practice.",
   },
 ];
 
@@ -183,6 +187,55 @@ export default function AboutPage() {
           </div>
         </div>
 
+      </section>
+
+      {/* ══════════════════════════════════════════════════
+          PROFESSIONAL FORMATION & RECOGNITION
+      ══════════════════════════════════════════════════ */}
+      <section className="section-padding bg-secondary">
+        <AnimateOnScroll animation="up" className="max-w-3xl mx-auto flex flex-col gap-8">
+          <div className="flex flex-col gap-3 text-center">
+            <SectionBreadcrumb title="Professional Formation &amp; Recognition" />
+            <h2
+              className="font-cormorant font-light text-3xl sm:text-4xl leading-tight"
+              style={{ color: "var(--foreground)" }}
+            >
+              Professional Formation &amp; Recognition
+            </h2>
+          </div>
+
+          <OrnamentalDivider theme="dark" />
+
+          <p className="font-sans text-muted-foreground leading-[1.9] text-[17px] text-center">
+            Lady Cyd Alex-Emenike is a Trauma-Informed Coach, Soul Restoration Coach, Family
+            Restoration Strategist and Visionary Leadership Mentor whose work integrates
+            trauma-informed practice, identity formation, family systems thinking and
+            faith-aligned transformation.
+          </p>
+
+          <div className="grid sm:grid-cols-3 gap-6 pt-2">
+            {[
+              { stat: "5", label: "Years in Practice" },
+              { stat: "1,700+", label: "Women Coached & Transformed" },
+              { stat: "3,900+", label: "Young Emerging Leaders Mentored" },
+            ].map((item) => (
+              <div key={item.label} className="flex flex-col items-center gap-2 text-center">
+                <span
+                  className="font-cormorant font-light text-4xl sm:text-5xl"
+                  style={{ color: "var(--primary)" }}
+                >
+                  {item.stat}
+                </span>
+                <span
+                  className="font-cinzel text-[10px] tracking-widest uppercase"
+                  style={{ color: "var(--muted-foreground)" }}
+                >
+                  {item.label}
+                </span>
+              </div>
+            ))}
+          </div>
+        </AnimateOnScroll>
       </section>
 
       {/* ══════════════════════════════════════════════════
@@ -341,6 +394,15 @@ export default function AboutPage() {
       </section>
 
       {/* ══════════════════════════════════════════════════
+          TESTIMONIAL — AWELE
+      ══════════════════════════════════════════════════ */}
+      <section className="section-padding bg-background">
+        <AnimateOnScroll animation="scale">
+          <TestimonialSpotlight id="awele-godbless" theme="light" />
+        </AnimateOnScroll>
+      </section>
+
+      {/* ══════════════════════════════════════════════════
           BEYOND THE PLATFORM
       ══════════════════════════════════════════════════ */}
       <section className="section-padding bg-secondary">
@@ -480,7 +542,7 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-col gap-4">
               {certifications.map((cert, i) => (
-                <AnimateOnScroll key={cert.title} animation="up" delay={i * 80}>
+                <AnimateOnScroll key={`${cert.title}-${i}`} animation="up" delay={i * 80}>
                 <div
                   className="flex gap-4 items-start p-6 border border-border hover:border-primary/20 transition-colors duration-200"
                 >
@@ -501,38 +563,6 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════════════════
-          WHAT WOMEN SAY
-      ══════════════════════════════════════════════════ */}
-      <section
-        className="section-padding relative overflow-hidden"
-        style={{ background: "var(--dark-section)" }}
-      >
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background:
-              "radial-gradient(ellipse 70% 60% at 20% 50%, rgba(197,75,140,0.08) 0%, transparent 60%)",
-          }}
-        />
-        <div className="max-w-5xl mx-auto flex flex-col gap-12 relative z-10">
-          <div className="flex flex-col gap-4 text-center">
-            <SectionBreadcrumb title="Transformation Stories" light />
-            <h2
-              className="font-cormorant font-light text-4xl sm:text-5xl leading-tight"
-              style={{ color: "white" }}
-            >
-              She walks them through.{" "}
-              <span className="italic" style={{ color: "var(--primary)" }}>
-                They emerge different.
-              </span>
-            </h2>
-          </div>
-
-          <TestimonialsGrid theme="dark" />
         </div>
       </section>
 

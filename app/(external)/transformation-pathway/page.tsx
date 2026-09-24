@@ -11,7 +11,7 @@ import { SELAR_URL } from "@/lib/constants/site";
 export const metadata: Metadata = {
   title: "The WHOLE™ Pathway™ | 5-Stage Journey to Wholeness | Lady Cyd",
   description:
-    "Five stages from recognition to wholeness: Recognize, Reveal, Rebuild, Restore, WHOLE™. The structured transformational pathway by Lady Cyd — Grit & Graceful Coaching Company — for high-capacity women returning to God's original design.",
+    "Five stages from recognition to wholeness: Recognize, Reveal, Rebuild, Restore, WHOLE Restoration™. The structured transformational pathway by Lady Cyd — Grit & Graceful Coaching Company — for high-capacity women returning to God's original design.",
   keywords: [
     "soul restoration coach",
     "identity restoration coach",
@@ -96,10 +96,10 @@ const stages = [
   },
   {
     code: "05",
-    name: "WHOLE™",
+    name: "WHOLE Restoration™",
     tagline: "Enter the flagship coaching programme.",
     description:
-      "WHOLE™ is the primary transformational coaching experience within the Grit & Graceful ecosystem. Designed for high-capacity women who have moved through the foundational stages and are ready for the most intimate, rigorous, and structured level of personal transformation available. WHOLE™ is not open yet — but it is coming.",
+      "WHOLE Restoration™ is the primary transformational coaching experience within the Grit & Graceful ecosystem. Designed for high-capacity women who have moved through the foundational stages and are ready for the most intimate, rigorous, and structured level of personal transformation available. WHOLE Restoration™ is not open yet — but it is coming.",
     what: [
       "Identity Restoration — rebuilding selfhood at the root",
       "Emotional Formation — structured healing of emotional architecture",
@@ -157,7 +157,7 @@ export default function TransformationPathwayPage() {
             <span className="italic" style={{ color: "var(--primary)" }}>
               One destination:
             </span>{" "}
-            WHOLE™.
+            WHOLE Restoration™.
           </h1>
 
           <div className="animate-fade-in-up" style={{ animationDelay: "300ms" }}>
@@ -171,7 +171,7 @@ export default function TransformationPathwayPage() {
             >
               This is not a programme. It is a pathway — a structured, intentional journey from
               where you are to where you were always designed to be. Each stage is a threshold.
-              Each threshold is an invitation toward WHOLE™.
+              Each threshold is an invitation toward WHOLE Restoration™.
             </p>
             <p
               className="font-cinzel text-xs tracking-widest uppercase mt-4"
@@ -369,7 +369,7 @@ export default function TransformationPathwayPage() {
                     className="inline-flex items-center gap-3 font-cinzel text-sm tracking-widest uppercase px-5 py-2.5 border cursor-not-allowed opacity-40"
                     style={{ borderColor: "var(--primary)", color: "var(--primary)" }}
                   >
-                    WHOLE™ — Coming Soon
+                    WHOLE Restoration™ — Coming Soon
                   </button>
                 </div>
               )}

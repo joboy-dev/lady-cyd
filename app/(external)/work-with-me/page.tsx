@@ -327,6 +327,13 @@ export default function WorkWithMePage() {
               Be honest. Be specific. The quality of your application determines the depth
               of your session — and Lady Cyd reads every one personally.
             </p>
+            <p
+              className="font-cinzel text-[11px] tracking-widest uppercase"
+              style={{ color: "var(--gold)", opacity: 0.75 }}
+            >
+              This is a premium, application-only engagement for women ready to invest at a
+              private-coaching level.
+            </p>
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="scale">

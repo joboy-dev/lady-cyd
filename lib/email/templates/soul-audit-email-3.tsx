@@ -94,7 +94,7 @@ export function SoulAuditEmail3({ name }: Props) {
                 of women doing the same honest internal work you started in the audit.
               </Text>
               <Text style={bodyMuted}>
-                If you are not yet sure about WHOLE™ — start here. Come to the next Healing Harbour
+                If you are not yet sure about WHOLE Restoration™ — start here. Come to the next Healing Harbour
                 session and let the work speak for itself.
               </Text>
               <Button href={`${BASE_URL}/inner-circle`} style={ctaButtonPrimary}>
@@ -105,16 +105,16 @@ export function SoulAuditEmail3({ name }: Props) {
             {/* Pathway 2 */}
             <Section style={pathwayBlock}>
               <Text style={pathwayNumber}>Pathway 2</Text>
-              <Text style={pathwayTitle}>WHOLE™</Text>
+              <Text style={pathwayTitle}>WHOLE Restoration™</Text>
               <Text style={pathwaySubtitle}>
                 For the woman who is ready for the full journey — from wound awareness to sustainable personal wholeness.
               </Text>
               <Hr style={pathwayDivider} />
               <Text style={body}>
-                WHOLE™ is the flagship transformational coaching experience built entirely around
-                The WHOLE Framework™. It takes everything your Soul Audit revealed — and walks you
-                through the full, structured pathway of naming, healing, rebuilding, restoring,
-                and returning.
+                WHOLE Restoration™ is the flagship transformational coaching experience built
+                entirely around The WHOLE Framework™. It takes everything your Soul Audit revealed
+                — and walks you through the full, structured pathway of naming, healing, rebuilding,
+                restoring, and returning.
               </Text>
               <Text style={body}>
                 This is not another information programme. It is a transformation experience. With
@@ -123,10 +123,10 @@ export function SoulAuditEmail3({ name }: Props) {
               </Text>
               <Text style={bodyMuted}>
                 If your Soul Audit scored 7 or above on any of your top three Wound Points —
-                WHOLE™ is where you need to be.
+                WHOLE Restoration™ is where you need to be.
               </Text>
               <Button href={`${BASE_URL}/whole`} style={ctaButtonSecondary}>
-                Learn More About WHOLE™ →
+                Learn More About WHOLE Restoration™ →
               </Button>
             </Section>
 

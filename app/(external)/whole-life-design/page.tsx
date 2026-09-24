@@ -1,5 +1,5 @@
 import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
-import TestimonialsGrid from "@/components/shared/TestimonialsGrid";
+import TestimonialSpotlight from "@/components/shared/TestimonialSpotlight";
 import Footer from "@/components/shared/Footer";
 import OrnamentalDivider from "@/components/shared/OrnamentalDivider";
 import SectionBreadcrumb from "@/components/shared/breadcrumb/SectionBreadcrumb";
@@ -113,7 +113,7 @@ const pathwayStages = [
   { code: "02", name: "REVEAL", current: false },
   { code: "03", name: "REBUILD", current: true, label: "WHOLE Life Design™" },
   { code: "04", name: "RESTORE", current: false },
-  { code: "05", name: "WHOLE™", current: false, comingSoon: true },
+  { code: "05", name: "WHOLE Restoration™", current: false, comingSoon: true },
 ];
 
 export default function EdenLifeDesignPage() {
@@ -251,6 +251,15 @@ export default function EdenLifeDesignPage() {
               — Lady Cyd Alex-Emenike (fondly called Lady Cyd)
             </p>
           </div>
+        </AnimateOnScroll>
+      </section>
+
+      {/* ══════════════════════════════════════════════════
+          TESTIMONIAL — MARIA
+      ══════════════════════════════════════════════════ */}
+      <section className="section-padding bg-secondary">
+        <AnimateOnScroll animation="scale">
+          <TestimonialSpotlight id="maria" theme="light" />
         </AnimateOnScroll>
       </section>
 
@@ -413,6 +422,15 @@ export default function EdenLifeDesignPage() {
       </section>
 
       {/* ══════════════════════════════════════════════════
+          TESTIMONIAL — LENA
+      ══════════════════════════════════════════════════ */}
+      <section className="section-padding bg-background">
+        <AnimateOnScroll animation="scale">
+          <TestimonialSpotlight id="lena" theme="light" />
+        </AnimateOnScroll>
+      </section>
+
+      {/* ══════════════════════════════════════════════════
           WHO IT IS FOR
       ══════════════════════════════════════════════════ */}
       <section
@@ -560,38 +578,6 @@ export default function EdenLifeDesignPage() {
               <ArrowRight size={13} />
             </LinkButton>
           </AnimateOnScroll>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════════════════
-          TESTIMONIALS
-      ══════════════════════════════════════════════════ */}
-      <section
-        className="section-padding relative overflow-hidden"
-        style={{ background: "var(--dark-section)" }}
-      >
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background:
-              "radial-gradient(ellipse 70% 60% at 20% 50%, rgba(197,75,140,0.07) 0%, transparent 60%)",
-          }}
-        />
-        <div className="max-w-5xl mx-auto flex flex-col gap-12 relative z-10">
-          <AnimateOnScroll animation="up" className="flex flex-col gap-4 text-center">
-            <SectionBreadcrumb title="Transformation Stories" light />
-            <h2
-              className="font-cormorant font-light text-4xl sm:text-5xl leading-tight"
-              style={{ color: "white" }}
-            >
-              Women who walked through.{" "}
-              <span className="italic" style={{ color: "var(--primary)" }}>
-                Emerged different.
-              </span>
-            </h2>
-          </AnimateOnScroll>
-
-          <TestimonialsGrid theme="dark" />
         </div>
       </section>
 

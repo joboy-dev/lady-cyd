@@ -4,9 +4,9 @@ import PublicNavbar from "@/components/shared/navbar/PublicNavbar";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "WHOLE™ | Flagship Coaching Programme | Lady Cyd",
+  title: "WHOLE Restoration™ | Flagship Coaching Programme | Lady Cyd",
   description:
-    "WHOLE™ is the flagship transformational coaching programme of Grit & Graceful Coaching Company — founded by Lady Cyd Alex-Emenike. Coming soon.",
+    "WHOLE Restoration™ is the flagship transformational coaching programme of Grit & Graceful Coaching Company — founded by Lady Cyd Alex-Emenike. Coming soon.",
 };
 
 const pillars = [
@@ -56,9 +56,9 @@ export default function WHOLEPage() {
 
           <p
             className="font-great-vibes leading-none animate-fade-in-up"
-            style={{ color: "var(--primary)", fontSize: "clamp(4rem, 10vw, 8rem)", animationDelay: "150ms" }}
+            style={{ color: "var(--primary)", fontSize: "clamp(3rem, 8vw, 6.5rem)", animationDelay: "150ms" }}
           >
-            WHOLE™
+            WHOLE Restoration™
           </p>
 
           <div className="animate-fade-in-up" style={{ animationDelay: "300ms" }}>
@@ -89,7 +89,7 @@ export default function WHOLEPage() {
             Designed for high-capacity women who have moved through the foundational stages of
             The WHOLE™ Pathway™ and are ready for the most intimate, rigorous, and structured
             level of personal transformation available within the Grit &amp; Graceful ecosystem.
-            WHOLE™ is not open yet — but it is coming.
+            WHOLE Restoration™ is not open yet — but it is coming.
           </p>
         </div>
       </section>
@@ -114,7 +114,7 @@ export default function WHOLEPage() {
               className="font-cinzel text-xs tracking-widest uppercase"
               style={{ color: "var(--gold)", opacity: 0.65 }}
             >
-              What WHOLE™ Covers
+              What WHOLE Restoration™ Covers
             </span>
             <h2
               className="font-cormorant font-light text-4xl sm:text-5xl leading-tight"
@@ -179,7 +179,7 @@ export default function WHOLEPage() {
             className="font-great-vibes text-4xl sm:text-5xl"
             style={{ color: "var(--primary)" }}
           >
-            While you wait for WHOLE™
+            While you wait for WHOLE Restoration™
           </p>
           <OrnamentalDivider theme="light" />
           <h2
@@ -196,8 +196,8 @@ export default function WHOLEPage() {
             style={{ color: "rgba(255,255,255,0.65)" }}
           >
             The foundational formation environment where women enter the ecosystem, do the
-            structural work, and build the internal readiness for WHOLE™. WHOLE Life Design™ is
-            free to enter and available now.
+            structural work, and build the internal readiness for WHOLE Restoration™. WHOLE Life
+            Design™ is free to enter and available now.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a

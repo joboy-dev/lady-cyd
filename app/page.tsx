@@ -6,7 +6,7 @@ import OrnamentalDivider from "@/components/shared/OrnamentalDivider";
 import SectionBreadcrumb from "@/components/shared/breadcrumb/SectionBreadcrumb";
 import LinkButton from "@/components/shared/button/LinkButton";
 import PublicNavbar from "@/components/shared/navbar/PublicNavbar";
-import TestimonialsGrid from "@/components/shared/TestimonialsGrid";
+import TestimonialsShowcase from "@/components/shared/TestimonialsShowcase";
 import { SELAR_URL } from "@/lib/constants/site";
 import { ArrowRight, ChevronDown, ShoppingBag } from "lucide-react";
 
@@ -57,7 +57,7 @@ const stages = [
   },
   {
     code: "05",
-    name: "WHOLE™",
+    name: "WHOLE Restoration™",
     tagline: "Enter the flagship coaching programme.",
     description: "The primary transformational coaching experience within Grit & Graceful. Designed for high-capacity women ready to move beyond awareness into deeper, structured transformation.",
   },
@@ -138,14 +138,21 @@ export default function Home() {
             </p>
           </div>
 
-          {/* CTAs */}
+          {/* Credibility line */}
+          <div className="animate-fade-in-up" style={{ animationDelay: "550ms" }}>
+            <p
+              className="font-cinzel text-[11px] sm:text-xs tracking-widest uppercase"
+              style={{ color: "var(--hero-foreground)", opacity: 0.5 }}
+            >
+              Trauma-Informed Coaching Certified · Founder, Grit &amp; Graceful Coaching Company
+            </p>
+          </div>
+
+          {/* CTA */}
           <div className="flex flex-col sm:flex-row items-center gap-4 mt-4 animate-fade-in-up" style={{ animationDelay: "600ms" }}>
             <LinkButton to="/whole/assessment" variant="primary" size="lg" className="gap-3">
-              Take The Wound Point Assessment
+              Start Here — Take The Wound Point Assessment
               <ArrowRight size={16} />
-            </LinkButton>
-            <LinkButton to="/inner-circle" variant="outlineGold" size="lg">
-              Register For Healing Harbour Live
             </LinkButton>
           </div>
 
@@ -273,7 +280,7 @@ export default function Home() {
             >
               Five stages. One destination:{" "}
               <span className="italic" style={{ color: "var(--primary)" }}>
-                WHOLE™.
+                WHOLE Restoration™.
               </span>
             </h2>
           </AnimateOnScroll>
@@ -408,14 +415,30 @@ export default function Home() {
           <div className="flex flex-col gap-4 text-center">
             <SectionBreadcrumb title="Transformation Stories" />
             <h2 className="font-cormorant font-light text-4xl sm:text-5xl leading-tight">
-              Women who walked through the{" "}
+              What changes when the work{" "}
               <span className="italic" style={{ color: "var(--primary)" }}>
-                harbour.
+                becomes structured?
               </span>
             </h2>
           </div>
 
-          <TestimonialsGrid theme="light" />
+          <TestimonialsShowcase
+            theme="light"
+            ids={["nicola", "ruth", "awele-frameworks", "ijeoma", "lilian"]}
+          />
+
+          <div className="text-center flex flex-col items-center gap-4">
+            <p
+              className="font-cormorant italic text-2xl sm:text-3xl"
+              style={{ color: "var(--primary)" }}
+            >
+              Your restoration has a pathway.
+            </p>
+            <LinkButton to="/whole/assessment" variant="primary" size="lg" className="gap-3">
+              Start With The Wound Point Assessment
+              <ArrowRight size={16} />
+            </LinkButton>
+          </div>
         </div>
       </section>
 

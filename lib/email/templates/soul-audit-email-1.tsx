@@ -126,14 +126,14 @@ export function SoulAuditEmail1({ name, wounds }: Props) {
             </Section>
 
             <Section style={ctaBlock}>
-              <Text style={ctaTitle}>WHOLE™ — The Full Restoration Journey</Text>
+              <Text style={ctaTitle}>WHOLE Restoration™ — The Full Restoration Journey</Text>
               <Text style={ctaBody}>
                 The flagship transformational coaching experience built entirely around The WHOLE
                 Framework™. For the woman who is done with surface-level change and ready for the
                 deepest, most lasting transformation of her life.
               </Text>
               <Button href={`${BASE_URL}/whole`} style={ctaButtonSecondary}>
-                Learn About WHOLE™ →
+                Learn About WHOLE Restoration™ →
               </Button>
             </Section>
 
