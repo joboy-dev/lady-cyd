@@ -6,7 +6,6 @@ import LinkButton from "@/components/shared/button/LinkButton";
 import PublicNavbar from "@/components/shared/navbar/PublicNavbar";
 import type { Metadata } from "next";
 import { ArrowRight, ShoppingBag } from "lucide-react";
-import { SELAR_URL } from "@/lib/constants/site";
 
 export const metadata: Metadata = {
   title: "The WHOLE™ Pathway™ | 5-Stage Journey to Wholeness | Lady Cyd",
@@ -415,16 +414,10 @@ export default function TransformationPathwayPage() {
                 Explore WHOLE Life Design™
                 <ArrowRight size={14} />
               </LinkButton>
-              <a
-                href={SELAR_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 font-cinzel text-xs tracking-widest uppercase px-4 py-2.5 border transition-all duration-200"
-                style={{ borderColor: "var(--primary)", color: "var(--primary)" }}
-              >
+              <LinkButton to="/courses" variant="outline" size="md" className="gap-2">
                 <ShoppingBag size={12} />
                 Browse Courses
-              </a>
+              </LinkButton>
             </div>
           </div>
 

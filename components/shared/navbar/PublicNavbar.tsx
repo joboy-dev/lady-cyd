@@ -6,7 +6,6 @@ import Logo from '../Logo';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
-import { SELAR_URL } from '@/lib/constants/site';
 import ThemeToggle from '../ThemeToggle';
 
 type NavItem =
@@ -143,14 +142,15 @@ export default function PublicNavbar() {
               </Link>
             )
           )}
-          <a
-            href={SELAR_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-cinzel text-[11px] xl:text-xs tracking-[0.15em] xl:tracking-widest uppercase transition-colors duration-200 text-white/80 hover:text-gold"
+          <Link
+            href="/courses"
+            className={clsx(
+              'font-cinzel text-[11px] xl:text-xs tracking-[0.15em] xl:tracking-widest uppercase transition-colors duration-200',
+              location === '/courses' ? 'text-gold' : 'text-white/80 hover:text-gold'
+            )}
           >
-            Courses ↗
-          </a>
+            Courses
+          </Link>
         </nav>
 
         {/* CTA */}
@@ -238,15 +238,16 @@ export default function PublicNavbar() {
               </Link>
             )
           )}
-          <a
-            href={SELAR_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/courses"
             onClick={() => setMobileOpen(false)}
-            className="py-3 font-cinzel text-sm tracking-widest uppercase transition-colors duration-200 text-white/80 hover:text-gold"
+            className={clsx(
+              'py-3 font-cinzel text-sm tracking-widest uppercase transition-colors duration-200',
+              location === '/courses' ? 'text-gold' : 'text-white/80 hover:text-gold'
+            )}
           >
-            Courses ↗
-          </a>
+            Courses
+          </Link>
           <div className="mt-3 pt-4 border-t border-white/10">
             <Link
               href="/inner-circle"

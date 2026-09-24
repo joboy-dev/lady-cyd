@@ -1,7 +1,6 @@
 import Logo from "./Logo";
 import Link from "next/link";
 import { LucideInstagram, LucideYoutube, LucideLinkedin } from "lucide-react";
-import { SELAR_URL } from "@/lib/constants/site";
 
 const footerNav = [
   {
@@ -18,7 +17,7 @@ const footerNav = [
     heading: "Work With Me",
     links: [
       { name: "Healing Harbour Live", href: "/inner-circle", external: false },
-      { name: "Courses & Programmes", href: SELAR_URL, external: true },
+      { name: "Courses & Programmes", href: "/courses", external: false },
       { name: "Clarity Call", href: "/work-with-me", external: false },
     ],
   },

@@ -7,7 +7,6 @@ import SectionBreadcrumb from "@/components/shared/breadcrumb/SectionBreadcrumb"
 import LinkButton from "@/components/shared/button/LinkButton";
 import PublicNavbar from "@/components/shared/navbar/PublicNavbar";
 import TestimonialsShowcase from "@/components/shared/TestimonialsShowcase";
-import { SELAR_URL } from "@/lib/constants/site";
 import { ArrowRight, ChevronDown, ShoppingBag } from "lucide-react";
 
 /* ─── Data ──────────────────────────────────────────────────────── */
@@ -334,16 +333,16 @@ export default function Home() {
               See The WHOLE™ Pathway™
               <ArrowRight size={14} />
             </LinkButton>
-            <a
-              href={SELAR_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-cinzel text-xs tracking-widest uppercase px-4 py-2 border border-primary/50 text-primary hover:bg-primary hover:text-white transition-all duration-200"
+            <LinkButton
+              to="/courses"
+              variant="outline"
+              size="sm"
+              className="gap-2"
             >
               <ShoppingBag size={12} />
               Browse Courses
               <ArrowRight size={12} />
-            </a>
+            </LinkButton>
           </div>
           </AnimateOnScroll>
         </div>
