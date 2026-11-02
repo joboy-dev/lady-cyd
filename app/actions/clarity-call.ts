@@ -5,6 +5,7 @@ import { resend } from '@/lib/email/resend';
 import { ClarityCallNotificationEmail } from '@/lib/email/templates/clarity-call-notification';
 import { ClarityCallConfirmationEmail } from '@/lib/email/templates/clarity-call-confirmation';
 import { clarityCallSchema } from '@/lib/validators/general';
+import { tierLabel } from '@/lib/data/coaching-tiers';
 
 type ClarityCallData = z.infer<typeof clarityCallSchema>;
 
@@ -19,7 +20,7 @@ export async function submitClarityCall(
     return { success: false, error: 'Invalid form data. Please check your entries and try again.' };
   }
 
-  const { name, email, heard_via, current_place, desired_outcome, readiness } = parsed.data;
+  const { name, email, heard_via, tier, current_place, desired_outcome, readiness } = parsed.data;
 
   try {
     // Send notification to Lady Cyd (reply-to set to applicant so she can reply directly)
@@ -32,6 +33,7 @@ export async function submitClarityCall(
         name,
         email,
         heard_via,
+        tier: tierLabel(tier),
         current_place,
         desired_outcome,
         readiness,

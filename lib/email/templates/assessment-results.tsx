@@ -1,5 +1,6 @@
 import {
   Body,
+  Button,
   Container,
   Head,
   Heading,
@@ -18,9 +19,10 @@ interface Props {
   primary: WoundType;
   scores: Scores;
   multipleActive: boolean;
+  pdfUrl?: string;
 }
 
-export function AssessmentResultsEmail({ name, primary, scores, multipleActive }: Props) {
+export function AssessmentResultsEmail({ name, primary, scores, multipleActive, pdfUrl }: Props) {
   const firstName = name.split(' ')[0];
   const result = woundResults[primary];
 
@@ -69,6 +71,22 @@ export function AssessmentResultsEmail({ name, primary, scores, multipleActive }
 
           <Hr style={divider} />
 
+          {pdfUrl && (
+            <>
+              <Section style={section}>
+                <Text style={nextStepLabel}>YOUR SOUL AUDIT PDF</Text>
+                <Text style={body}>
+                  Go deeper with all ten wound points. Set aside 45 to 60 minutes of private,
+                  honest work with the full Soul Audit.
+                </Text>
+                <Button href={pdfUrl} style={pdfButton}>
+                  Download The Soul Audit PDF →
+                </Button>
+              </Section>
+              <Hr style={divider} />
+            </>
+          )}
+
           <Section style={section}>
             <Text style={nextStepLabel}>YOUR RECOMMENDED NEXT STEP</Text>
             <Text style={body}>{result.primaryCta.label}</Text>
@@ -78,7 +96,7 @@ export function AssessmentResultsEmail({ name, primary, scores, multipleActive }
               <>
                 <Text style={multipleNote}>
                   Your results show significant activity across multiple wound points.
-                  The most direct path to comprehensive restoration is a private Clarity Call with Lady Cyd.
+                  The most direct path to comprehensive restoration is a free Clarity Call with Lady Cyd.
                 </Text>
                 <Text style={body}>Apply For a Clarity Call</Text>
                 <Text style={ctaUrl}>ladycyd.online/work-with-me</Text>
@@ -133,3 +151,5 @@ const quoteText = { fontSize: '18px', fontStyle: 'italic', color: 'rgba(255,255,
 const quoteAttr = { fontSize: '11px', letterSpacing: '0.15em', textTransform: 'uppercase' as const, color: '#c54b8c', margin: 0 };
 const divider = { borderColor: 'rgba(255,255,255,0.08)', margin: '20px 0' };
 const footer = { fontSize: '11px', color: 'rgba(255,255,255,0.3)', margin: '3px 0' };
+
+const pdfButton = { backgroundColor: '#c54b8c', color: '#ffffff', fontSize: '11px', letterSpacing: '0.18em', textTransform: 'uppercase' as const, textDecoration: 'none', padding: '14px 28px', display: 'inline-block' };

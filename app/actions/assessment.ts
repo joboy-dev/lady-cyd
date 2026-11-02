@@ -3,7 +3,6 @@
 import { z } from 'zod';
 import { resend } from '@/lib/email/resend';
 import { AssessmentResultsEmail } from '@/lib/email/templates/assessment-results';
-import { AssessmentPdfRequestEmail } from '@/lib/email/templates/assessment-pdf-request';
 import { SoulAuditEmail1 } from '@/lib/email/templates/soul-audit-email-1';
 import { SoulAuditEmail2 } from '@/lib/email/templates/soul-audit-email-2';
 import { SoulAuditEmail3 } from '@/lib/email/templates/soul-audit-email-3';
@@ -15,6 +14,24 @@ import { subscribeToConvertKit, tagSubscriberByWound } from '@/lib/convertkit';
 
 const FROM = process.env.RESEND_FROM_EMAIL ?? 'noreply@ladycyd.online';
 const SOUL_AUDIT_PDF_URL = process.env.SOUL_AUDIT_PDF_URL ?? '';
+const TO = process.env.LADY_CYD_EMAIL ?? 'Hello@ladycyd.online';
+// Inbox notification per submission is opt-in: set NOTIFY_ON_ASSESSMENT=true once Lady Cyd confirms she wants it.
+const NOTIFY_ON_ASSESSMENT = process.env.NOTIFY_ON_ASSESSMENT === 'true';
+
+async function notifyLadyCyd(data: { source: string; name: string; email: string; detail: string }) {
+  if (!NOTIFY_ON_ASSESSMENT) return;
+  try {
+    await resend.emails.send({
+      from: `Grit & Graceful <${FROM}>`,
+      to: TO,
+      replyTo: data.email,
+      subject: `New ${data.source} submission — ${data.name}`,
+      text: `${data.name} <${data.email}>\n${data.detail}\n\nSource: ${data.source}`,
+    });
+  } catch (err) {
+    console.error('[assessment] notification email failed:', err);
+  }
+}
 
 const resultsSchema = z.object({
   name: z.string().min(1),
@@ -31,11 +48,6 @@ const resultsSchema = z.object({
   multipleActive: z.boolean(),
 });
 
-const pdfSchema = z.object({
-  name: z.string().min(1),
-  email: z.string().email(),
-});
-
 export async function sendAssessmentResults(data: {
   name: string;
   email: string;
@@ -50,45 +62,41 @@ export async function sendAssessmentResults(data: {
 
   const { name, email, primary, scores, multipleActive } = parsed.data;
   const result = woundResults[primary as WoundType];
+  const firstName = name.split(' ')[0];
 
   try {
+    // Save the contact in ConvertKit (non-blocking — don't fail the whole action if CK errors)
+    await subscribeToConvertKit(email, firstName, 'wound-point-assessment').catch((e) =>
+      console.error('[assessment] ConvertKit subscribe error:', e)
+    );
+    await tagSubscriberByWound(email, primary).catch((e) =>
+      console.error('[assessment] ConvertKit tag error:', e)
+    );
+
     await resend.emails.send({
       from: `Lady Cyd <${FROM}>`,
       to: email,
       subject: `Your Wound Point Assessment — ${result.name}`,
-      react: AssessmentResultsEmail({ name, primary: primary as WoundType, scores, multipleActive }),
+      react: AssessmentResultsEmail({
+        name,
+        primary: primary as WoundType,
+        scores,
+        multipleActive,
+        pdfUrl: SOUL_AUDIT_PDF_URL || undefined,
+      }),
+    });
+
+    await notifyLadyCyd({
+      source: 'Wound Point Assessment (quiz)',
+      name,
+      email,
+      detail: `Primary wound point: ${result.name}`,
     });
 
     return { success: true };
   } catch (err) {
     console.error('[assessment] results email failed:', err);
     return { success: false, error: 'Could not send your results email. Please try again.' };
-  }
-}
-
-export async function requestSoulAuditPDF(data: {
-  name: string;
-  email: string;
-}): Promise<{ success: boolean; error?: string }> {
-  const parsed = pdfSchema.safeParse(data);
-  if (!parsed.success) {
-    return { success: false, error: 'Please enter a valid name and email.' };
-  }
-
-  const { name, email } = parsed.data;
-
-  try {
-    await resend.emails.send({
-      from: `Lady Cyd <${FROM}>`,
-      to: email,
-      subject: 'Your Soul Audit PDF — The 10 Wound Points™ Assessment',
-      react: AssessmentPdfRequestEmail({ name, pdfUrl: SOUL_AUDIT_PDF_URL }),
-    });
-
-    return { success: true };
-  } catch (err) {
-    console.error('[assessment] PDF request email failed:', err);
-    return { success: false, error: 'Could not send your email. Please try again.' };
   }
 }
 
@@ -134,7 +142,14 @@ export async function submitSoulAudit(data: {
       from: `Lady Cyd <${FROM}>`,
       to: email,
       subject: `Your Soul Audit results are here, ${firstName}.`,
-      react: SoulAuditEmail1({ name, wounds: woundObjects }),
+      react: SoulAuditEmail1({ name, wounds: woundObjects, pdfUrl: SOUL_AUDIT_PDF_URL || undefined }),
+    });
+
+    await notifyLadyCyd({
+      source: 'Soul Audit (PDF)',
+      name,
+      email,
+      detail: `Selected wound points: ${woundObjects.map((w) => w.name).join(', ')}`,
     });
 
     // Email 2 — +48 hours

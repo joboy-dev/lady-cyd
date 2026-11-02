@@ -16,6 +16,7 @@ interface Props {
   name: string;
   email: string;
   heard_via: string;
+  tier: string;
   current_place: string;
   desired_outcome: string;
   readiness: string;
@@ -25,6 +26,7 @@ export function ClarityCallNotificationEmail({
   name,
   email,
   heard_via,
+  tier,
   current_place,
   desired_outcome,
   readiness,
@@ -58,6 +60,10 @@ export function ClarityCallNotificationEmail({
               <Column>
                 <Text style={label}>HOW THEY FOUND YOU</Text>
                 <Text style={value}>{heard_via}</Text>
+              </Column>
+              <Column>
+                <Text style={label}>INTERESTED IN</Text>
+                <Text style={value}>{tier}</Text>
               </Column>
             </Row>
           </Section>

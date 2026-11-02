@@ -4,14 +4,16 @@ import OrnamentalDivider from "@/components/shared/OrnamentalDivider";
 import SectionBreadcrumb from "@/components/shared/breadcrumb/SectionBreadcrumb";
 import LinkButton from "@/components/shared/button/LinkButton";
 import PublicNavbar from "@/components/shared/navbar/PublicNavbar";
+import ClarityCallDetails from "@/components/shared/ClarityCallDetails";
 import ClarityCallForm from "@/components/shared/form/appForms/ClarityCallForm";
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { ArrowRight, CheckCircle2, Clock, MessageCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Apply for a Clarity Call | Private Coaching with Lady Cyd Nigeria",
+  title: "Book a Free Clarity Call | Lady Cyd",
   description:
-    "Apply for private 1:1 trauma-informed coaching with Lady Cyd. Identity restoration, family systems healing, and generational pattern work for high-achieving women in Nigeria and Africa. Christian Kingdom coaching.",
+    "Book a free 30-minute virtual Clarity Call with Lady Cyd — an introductory conversation and fit assessment to help you find the most suitable coaching pathway. Trauma-informed, Christian Kingdom coaching for women in Nigeria and Africa.",
   keywords: [
     "trauma-informed coach Nigeria",
     "private Christian life coach Africa",
@@ -33,12 +35,12 @@ const callIncludes = [
   {
     icon: <CheckCircle2 size={18} />,
     title: "Honest Discernment",
-    desc: "Together you and Lady Cyd discern what is truly at the root and whether private one-on-one coaching is the right and honest next step for you.",
+    desc: "Together you and Lady Cyd discern what is truly at the root and whether coaching is the right and honest next step for you.",
   },
   {
     icon: <Clock size={18} />,
     title: "Clarity on Your Next Step",
-    desc: "You leave with a precise understanding of where you are, what has been shaping it, and what the right path forward looks like — whether that path continues with Lady Cyd or not.",
+    desc: "You leave with a clearer understanding of where you are and what the right path forward looks like — including the coaching pathway best suited to you, if coaching is appropriate.",
   },
 ];
 
@@ -93,7 +95,7 @@ export default function WorkWithMePage() {
 
         <div className="section-padding relative z-10 flex flex-col items-center text-center gap-6 mt-32 sm:mt-44 pb-16">
           <div className="animate-fade-in-up">
-            <SectionBreadcrumb title="Private 1:1 Coaching" light />
+            <SectionBreadcrumb title="Clarity Call" light />
           </div>
 
           <div
@@ -133,10 +135,17 @@ export default function WorkWithMePage() {
               className="font-sans text-lg leading-relaxed font-light"
               style={{ color: "rgba(255,255,255,0.7)" }}
             >
-              A private, focused session with Lady Cyd. This is the threshold where you
-              and Lady Cyd discern together whether you are ready for the most intimate
-              and rigorous level of transformation work available. This is not open to everyone.
+              A free, private conversation with Lady Cyd. This is where you and Lady Cyd
+              discern together where you are, what you need, and which coaching pathway, if any,
+              is the right next step for you.
             </p>
+          </div>
+
+          <div
+            className="animate-fade-in-up w-full flex justify-center"
+            style={{ animationDelay: "600ms" }}
+          >
+            <ClarityCallDetails theme="dark" />
           </div>
 
           <div
@@ -183,8 +192,8 @@ export default function WorkWithMePage() {
               className="font-sans text-[17px] leading-relaxed"
               style={{ color: "var(--muted-foreground)" }}
             >
-              A Clarity Call is not a general coaching taster. It is a structured,
-              intentional session designed to help you move from internal overwhelm and
+              A Clarity Call is an introductory conversation and fit assessment. It is
+              structured and intentional, designed to help you move from internal overwhelm and
               reactive patterns into clear understanding and a defined next step.
             </p>
             <p
@@ -325,15 +334,9 @@ export default function WorkWithMePage() {
               style={{ color: "var(--muted-foreground)" }}
             >
               Be honest. Be specific. The quality of your application determines the depth
-              of your session — and Lady Cyd reads every one personally.
+              of your conversation — and Lady Cyd reads every one personally.
             </p>
-            <p
-              className="font-cinzel text-[11px] tracking-widest uppercase"
-              style={{ color: "var(--gold)", opacity: 0.75 }}
-            >
-              This is a premium, application-only engagement for women ready to invest at a
-              private-coaching level.
-            </p>
+            <ClarityCallDetails />
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="scale">
@@ -341,7 +344,9 @@ export default function WorkWithMePage() {
               className="border p-6 sm:p-10"
               style={{ borderColor: "rgba(197,75,140,0.15)", background: "var(--card)" }}
             >
-              <ClarityCallForm />
+              <Suspense fallback={null}>
+                <ClarityCallForm />
+              </Suspense>
             </div>
           </AnimateOnScroll>
         </div>
@@ -385,7 +390,7 @@ export default function WorkWithMePage() {
             className="font-sans text-[17px] leading-relaxed"
             style={{ color: "rgba(255,255,255,0.6)" }}
           >
-            If a private Clarity Call feels like a big step right now, begin in the foundational
+            If a Clarity Call feels like a big step right now, begin in the foundational
             ecosystem. WHOLE Life Design™ is the free formation environment where you receive Lady
             Cyd&apos;s structured teachings, access courses and resources, attend Healing Harbour
             Live (the free monthly masterclass), and get clear on exactly what you need.

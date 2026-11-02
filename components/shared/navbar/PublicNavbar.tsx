@@ -23,7 +23,14 @@ const navItems: NavItem[] = [
       { label: 'Healing Harbour Live', to: '/inner-circle', desc: 'Free monthly masterclass · Every 4th Friday' },
     ],
   },
-  { label: 'Work With Me', to: '/work-with-me' },
+  {
+    label: 'Work With Me',
+    children: [
+      { label: 'One-on-One Coaching', to: '/coaching', desc: 'Private and group coaching with Lady Cyd' },
+      { label: 'Clarity Call', to: '/work-with-me', desc: 'A free 30-minute virtual conversation' },
+      { label: 'Invite Lady Cyd', to: '/invite', desc: 'Speaking · Teaching · Ministry · Formation' },
+    ],
+  },
   {
     label: 'Content',
     children: [

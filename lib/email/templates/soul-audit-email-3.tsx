@@ -135,17 +135,18 @@ export function SoulAuditEmail3({ name }: Props) {
               <Text style={pathwayNumber}>Pathway 3</Text>
               <Text style={pathwayTitle}>Clarity Call with Lady Cyd</Text>
               <Text style={pathwaySubtitle}>
-                For the high-capacity woman who needs a personalised, strategic, private conversation before she takes her next step.
+                For the high-capacity woman who needs a personal, private conversation before she takes her next step.
               </Text>
               <Hr style={pathwayDivider} />
               <Text style={body}>
-                A Clarity Call is a private 30-minute coaching conversation with Lady Cyd —
-                designed specifically for women who have completed the Soul Audit and want to
-                understand their specific wound profile more deeply, map a personalised restoration
-                roadmap, and determine the most strategic next step for their specific season.
+                A Clarity Call is a free, 30-minute virtual introductory conversation and fit
+                assessment with Lady Cyd — for women who have completed the Soul Audit and want to
+                talk through their wound profile and discern the most suitable pathway for their
+                specific season. It is not a coaching session. If coaching is appropriate, you
+                will be guided toward the right coaching pathway.
               </Text>
               <Text style={bodyMuted}>
-                Spaces are limited. Lady Cyd takes a small number of Clarity Calls each month.
+                Lady Cyd takes a limited number of Clarity Calls each month.
               </Text>
               <Button href={`${BASE_URL}/work-with-me`} style={ctaButtonSecondary}>
                 Book Your Clarity Call →

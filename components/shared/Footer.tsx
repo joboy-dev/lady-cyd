@@ -18,7 +18,9 @@ const footerNav = [
     links: [
       { name: "Healing Harbour Live", href: "/inner-circle", external: false },
       { name: "Courses & Programmes", href: "/courses", external: false },
+      { name: "One-on-One Coaching", href: "/coaching", external: false },
       { name: "Clarity Call", href: "/work-with-me", external: false },
+      { name: "Invite Lady Cyd", href: "/invite", external: false },
     ],
   },
   {
@@ -82,7 +84,7 @@ function Footer() {
                 @
               </a>
               <a
-                href="https://www.youtube.com/@LADYCYD"
+                href="https://www.youtube.com/@LADYCYD/videos"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"

@@ -9,6 +9,8 @@ import FormInput from "@/components/shared/form/FormInput";
 import TextAreaInput from "@/components/shared/form/TextAreaInput";
 import SelectField from "@/components/shared/form/SelectField";
 import { submitClarityCall } from "@/app/actions/clarity-call";
+import { clarityCallTierOptions } from "@/lib/data/coaching-tiers";
+import { useSearchParams } from "next/navigation";
 import toast from "react-hot-toast";
 
 type ClarityCallData = z.infer<typeof clarityCallSchema>;
@@ -23,11 +25,24 @@ const heardViaOptions: Option[] = [
   { key: 7, label: "Other", value: "other" },
 ];
 
+const tierOptions: Option[] = clarityCallTierOptions.map((o, i) => ({
+  key: i + 1,
+  label: o.label,
+  value: o.value,
+}));
+
 export default function ClarityCallForm() {
+  const searchParams = useSearchParams();
+  const requestedTier = searchParams.get("tier") ?? "";
+  const defaultTier = clarityCallTierOptions.some((o) => o.value === requestedTier)
+    ? requestedTier
+    : "";
+
   const methods = useZodForm<ClarityCallData>(clarityCallSchema, {
     name: "",
     email: "",
     heard_via: "",
+    tier: defaultTier,
     current_place: "",
     desired_outcome: "",
     readiness: "",
@@ -82,6 +97,13 @@ export default function ClarityCallForm() {
         register={methods.register("heard_via")}
         error={methods.formState.errors.heard_via}
         options={heardViaOptions}
+      />
+
+      <SelectField
+        label="Which experience are you interested in?"
+        register={methods.register("tier")}
+        error={methods.formState.errors.tier}
+        options={tierOptions}
       />
 
       <TextAreaInput

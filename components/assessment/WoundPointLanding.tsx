@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { requestSoulAuditPDF, submitSoulAudit } from '@/app/actions/assessment';
+import { submitSoulAudit } from '@/app/actions/assessment';
 import WoundPointQuiz from './WoundPointQuiz';
 import OrnamentalDivider from '@/components/shared/OrnamentalDivider';
 import { ArrowRight, Loader2 } from 'lucide-react';

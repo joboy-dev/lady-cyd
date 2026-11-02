@@ -149,6 +149,28 @@ export async function tagSubscriberByWound(
   }
 }
 
+/**
+ * Apply a ConvertKit tag to a subscriber by email address, using a tag ID directly.
+ * Silently skips if no tag ID is provided (env var not set yet).
+ */
+export async function tagSubscriberById(
+  email: string,
+  tagId: string | undefined
+): Promise<void> {
+  if (!tagId) return;
+
+  const res = await fetch(`${BASE}/tags/${tagId}/subscribers`, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify({ email_address: email }),
+  });
+
+  if (!res.ok) {
+    const body = await res.text();
+    console.error(`[kit] tagSubscriberById(${tagId}) failed:`, res.status, body);
+  }
+}
+
 /* ─── Main export ─────────────────────────────────────────────────── */
 
 /**

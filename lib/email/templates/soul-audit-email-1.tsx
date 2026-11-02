@@ -16,11 +16,12 @@ import type { SoulAuditWound } from '@/lib/assessment/soul-audit-wounds';
 interface Props {
   name: string;
   wounds: SoulAuditWound[];
+  pdfUrl?: string;
 }
 
 const BASE_URL = 'https://www.ladycyd.online';
 
-export function SoulAuditEmail1({ name, wounds }: Props) {
+export function SoulAuditEmail1({ name, wounds, pdfUrl }: Props) {
   const firstName = name.split(' ')[0];
 
   return (
@@ -109,6 +110,27 @@ export function SoulAuditEmail1({ name, wounds }: Props) {
 
           <Hr style={divider} />
 
+          {/* Soul Audit PDF */}
+          {pdfUrl && (
+            <>
+              <Section style={ctaSection}>
+                <Text style={sectionLabel}>Your Soul Audit PDF</Text>
+                <Section style={ctaBlock}>
+                  <Text style={ctaTitle}>Download The Soul Audit</Text>
+                  <Text style={ctaBody}>
+                    Work through all ten wound points privately, at your own pace, with full
+                    scoring and honest reflection prompts. Set aside 45 to 60 minutes of
+                    uninterrupted time.
+                  </Text>
+                  <Button href={pdfUrl} style={ctaButtonPrimary}>
+                    Download The Soul Audit PDF →
+                  </Button>
+                </Section>
+              </Section>
+              <Hr style={divider} />
+            </>
+          )}
+
           {/* CTAs */}
           <Section style={ctaSection}>
             <Text style={sectionLabel}>Your Next Step</Text>
@@ -138,11 +160,11 @@ export function SoulAuditEmail1({ name, wounds }: Props) {
             </Section>
 
             <Section style={ctaBlock}>
-              <Text style={ctaTitle}>Clarity Call — Private 1:1 with Lady Cyd</Text>
+              <Text style={ctaTitle}>Clarity Call — Free 30-Minute Virtual Conversation</Text>
               <Text style={ctaBody}>
-                A personal, private coaching conversation with Lady Cyd — designed to help you
-                understand your specific wound profile, create a restoration roadmap, and
-                determine your most strategic next step.
+                An introductory conversation and fit assessment with Lady Cyd — designed to help
+                you talk through your wound profile and discern the most suitable coaching
+                pathway for your next step.
               </Text>
               <Button href={`${BASE_URL}/work-with-me`} style={ctaButtonSecondary}>
                 Book a Clarity Call →
